@@ -1,4 +1,5 @@
 class ContactsController < ApplicationController
+  #accepts_nested_attributes_for :contacts, reject_if: lambda {|contacts| contacts['kind'].blank?}
   def index
   	@contacts = Contact.all
   end
@@ -8,7 +9,7 @@ class ContactsController < ApplicationController
   end
 
   def create
-    @contact = Contact.new(params[:contact])
+    @contact = Contact.new(params[:contact].permit(:first, :last, :email, :inquiry, :comment))
     if @contact.save
         redirect_to @contact, alert: "User created successfully."
     else
@@ -19,4 +20,6 @@ class ContactsController < ApplicationController
   def show
   	@contacts = Contact.find(params[:id])
   end
+
+
 end

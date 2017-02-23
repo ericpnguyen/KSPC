@@ -12,12 +12,12 @@
 	<br>
 	<%= f.label :'Email *' %>
 	<br>
-	<%= f.text_field :email %>
+	<%= f.email_field :email, required: true %>
 	<br>
 	<br>
 	<%= f.label :'What is the nature of your inquiry *' %>
 	<br>
-	<%= f.select :inquiry, options_for_select([['General Inquiries/Comments'], ['Playlist Question'],['Concert Announcements'],['Request FREE KSPC License Plate Name (INCLUDE YOUR MAILING ADDRESS']]) %>
+	<%= f.select :inquiry, options_for_select([['Select One'],['General Inquiries/Comments'], ['Playlist Question'],['Concert Announcements'],['Request FREE KSPC License Plate Name (INCLUDE YOUR MAILING ADDRESS']], :required => true) %>
 	<br>
 	<br>
 	<%= f.label :comment %>
