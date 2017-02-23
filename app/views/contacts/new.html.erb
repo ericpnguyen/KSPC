@@ -1,19 +1,29 @@
 <%= form_for @contact, html:{multipart: true} do |f| %>
+	<br>
 	<%= f.label :'First Name' %>
+	<br>
 	<%= f.text_field :first %>
 	<br>
+	<br>
 	<%= f.label :'Last Name' %>
+	<br>
 	<%= f.text_field :last %>
 	<br>
-	<%= f.label :email %>
+	<br>
+	<%= f.label :'Email *' %>
+	<br>
 	<%= f.text_field :email %>
 	<br>
-	<%= f.label :inquiry %>
-	<%= f.text_field :inquiry %>
+	<br>
+	<%= f.label :'What is the nature of your inquiry *' %>
+	<br>
+	<%= f.select :inquiry, options_for_select([['General Inquiries/Comments'], ['Playlist Question'],['Concert Announcements'],['Request FREE KSPC License Plate Name (INCLUDE YOUR MAILING ADDRESS']]) %>
+	<br>
 	<br>
 	<%= f.label :comment %>
-	<%= f.text_field :comment %>
 	<br>
+	<%= f.text_field :comment %>
+	<br><br>
 	<%= f.submit :'Submit'%>
 
 <% end %>
