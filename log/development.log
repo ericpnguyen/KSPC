@@ -1076,3 +1076,589 @@ Processing by ArchivesController#index as HTML
 Completed 200 OK in 79ms (Views: 72.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-02-22 19:58:23 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  Rendered archives/index.html.erb within layouts/application (14.2ms)
+Started GET "/" for 127.0.0.1 at 2017-02-22 19:58:28 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  Rendered archives/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 11773ms (Views: 11731.0ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 7854ms (Views: 7820.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/archives/about" for 127.0.0.1 at 2017-02-22 19:58:42 -0800
+Processing by ArchivesController#about as HTML
+  Rendering archives/about.html.erb within layouts/application
+  Rendered archives/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 179ms (Views: 164.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-22 19:58:59 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  Rendered archives/index.html.erb within layouts/application (0.7ms)
+Started GET "/" for 127.0.0.1 at 2017-02-22 19:58:59 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  Rendered archives/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 686ms (Views: 677.6ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 502ms (Views: 485.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-22 20:06:05 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  Rendered archives/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 868ms (Views: 842.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-22 21:05:04 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  Rendered archives/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 837ms (Views: 809.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/archives/about" for 127.0.0.1 at 2017-02-22 21:05:14 -0800
+Processing by ArchivesController#about as HTML
+  Rendering archives/about.html.erb within layouts/application
+  Rendered archives/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 170ms (Views: 156.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/archives/blog" for 127.0.0.1 at 2017-02-22 21:05:15 -0800
+Processing by ArchivesController#blog as HTML
+  Rendering archives/blog.html.erb within layouts/application
+  Rendered archives/blog.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 216ms (Views: 204.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/archives/expo" for 127.0.0.1 at 2017-02-22 21:05:16 -0800
+Processing by ArchivesController#expo as HTML
+  Rendering archives/expo.html.erb within layouts/application
+  Rendered archives/expo.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 171ms (Views: 161.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/archives/media" for 127.0.0.1 at 2017-02-22 21:05:16 -0800
+Processing by ArchivesController#media as HTML
+  Rendering archives/media.html.erb within layouts/application
+  Rendered archives/media.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 173ms (Views: 162.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/archives/contact" for 127.0.0.1 at 2017-02-22 21:05:17 -0800
+Processing by ArchivesController#contact as HTML
+  Rendering archives/contact.html.erb within layouts/application
+  Rendered archives/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 170ms (Views: 161.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateContacts (20170223050637)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "contacts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first" varchar, "last" varchar, "email" varchar, "inquiry" varchar, "comment" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170223050637"]]
+  [1m[35m (14.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2017-02-22 21:29:11 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  Rendered archives/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 3445ms (Views: 3420.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-02-22 21:29:16 -0800
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 2.3ms)
+
+
+  
+SyntaxError (/mnt/c/Users/natch/Desktop/CS121/kspc_web/KSPC/app/views/contacts/new.html.erb:7: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/contacts/new.html.erb:7: syntax error, unexpected keyword_ensure, expecting keyword_end
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (104.7ms)
+Started GET "/contacts/new" for 127.0.0.1 at 2017-02-22 21:30:35 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 1.4ms)
+
+
+  
+SyntaxError (/mnt/c/Users/natch/Desktop/CS121/kspc_web/KSPC/app/views/contacts/new.html.erb:7: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/contacts/new.html.erb:7: syntax error, unexpected keyword_ensure, expecting keyword_end
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.4ms)
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (103.1ms)
+Started GET "/contacts/" for 127.0.0.1 at 2017-02-22 21:31:21 -0800
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.7ms)
+Started GET "/" for 127.0.0.1 at 2017-02-22 21:31:22 -0800
+Completed 200 OK in 845ms (Views: 835.0ms | ActiveRecord: 0.0ms)
+
+
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  Rendered archives/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 164ms (Views: 156.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/" for 127.0.0.1 at 2017-02-22 21:31:27 -0800
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 180ms (Views: 170.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-22 21:31:32 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  Rendered archives/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 195ms (Views: 183.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2017-02-22 21:31:38 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/contact"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [26 times] (14.1ms)
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (31.4ms)
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (152.3ms)
+Started GET "/Contact" for 127.0.0.1 at 2017-02-22 21:31:45 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/Contact"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [26 times] (8.2ms)
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (123.6ms)
+Started GET "/" for 127.0.0.1 at 2017-02-22 21:31:50 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  Rendered archives/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 179ms (Views: 171.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-02-22 21:31:54 -0800
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/mnt/c/Users/natch/Desktop/CS121/kspc_web/KSPC/app/views/contacts/new.html.erb:7: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/contacts/new.html.erb:7: syntax error, unexpected keyword_ensure, expecting keyword_end
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.7ms)
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (96.4ms)
+Started GET "/" for 127.0.0.1 at 2017-02-22 21:32:50 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  Rendered archives/index.html.erb within layouts/application (0.6ms)
+Started GET "/" for 127.0.0.1 at 2017-02-22 21:32:50 -0800
+Completed 200 OK in 222ms (Views: 213.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  Rendered archives/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 161ms (Views: 153.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-02-22 21:32:53 -0800
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 1.7ms)
+
+
+  
+SyntaxError (/mnt/c/Users/natch/Desktop/CS121/kspc_web/KSPC/app/views/contacts/new.html.erb:7: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/contacts/new.html.erb:7: syntax error, unexpected keyword_ensure, expecting keyword_end
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (86.9ms)
+Started GET "/contacts/new" for 127.0.0.1 at 2017-02-22 21:34:16 -0800
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/mnt/c/Users/natch/Desktop/CS121/kspc_web/KSPC/app/views/contacts/new.html.erb:7: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/contacts/new.html.erb:7: syntax error, unexpected keyword_ensure, expecting keyword_end
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (87.0ms)
+Started GET "/contacts/new" for 127.0.0.1 at 2017-02-22 21:34:58 -0800
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/mnt/c/Users/natch/Desktop/CS121/kspc_web/KSPC/app/views/contacts/new.html.erb:3: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/contacts/new.html.erb:3: syntax error, unexpected keyword_ensure, expecting keyword_end
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (89.8ms)
+Started GET "/contacts/new" for 127.0.0.1 at 2017-02-22 21:42:41 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 1.7ms)
+
+
+  
+SyntaxError (/mnt/c/Users/natch/Desktop/CS121/kspc_web/KSPC/app/views/contacts/new.html.erb:3: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/contacts/new.html.erb:3: syntax error, unexpected keyword_ensure, expecting keyword_end
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.1ms)
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (104.0ms)
+Started GET "/contacts/new" for 127.0.0.1 at 2017-02-22 21:42:59 -0800
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 802ms (Views: 791.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-02-22 21:43:02 -0800
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 154ms (Views: 142.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-02-22 21:43:05 -0800
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 170ms (Views: 153.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-02-22 21:43:11 -0800
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/mnt/c/Users/natch/Desktop/CS121/kspc_web/KSPC/app/views/contacts/new.html.erb:7: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/contacts/new.html.erb:7: syntax error, unexpected keyword_ensure, expecting keyword_end
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.6ms)
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (95.4ms)
+Started GET "/contacts/new" for 127.0.0.1 at 2017-02-22 21:44:30 -0800
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/mnt/c/Users/natch/Desktop/CS121/kspc_web/KSPC/app/views/contacts/new.html.erb:5: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/contacts/new.html.erb:5: syntax error, unexpected keyword_ensure, expecting keyword_end
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.1ms)
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (94.8ms)
+Started GET "/" for 127.0.0.1 at 2017-02-22 21:45:36 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  Rendered archives/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 188ms (Views: 179.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/archives/about" for 127.0.0.1 at 2017-02-22 21:45:38 -0800
+Processing by ArchivesController#about as HTML
+  Rendering archives/about.html.erb within layouts/application
+  Rendered archives/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 160ms (Views: 153.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/archives/blog" for 127.0.0.1 at 2017-02-22 21:45:39 -0800
+Processing by ArchivesController#blog as HTML
+  Rendering archives/blog.html.erb within layouts/application
+  Rendered archives/blog.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 172ms (Views: 164.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/archives/media" for 127.0.0.1 at 2017-02-22 21:45:40 -0800
+Processing by ArchivesController#media as HTML
+  Rendering archives/media.html.erb within layouts/application
+  Rendered archives/media.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 179ms (Views: 164.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-02-22 21:45:42 -0800
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/mnt/c/Users/natch/Desktop/CS121/kspc_web/KSPC/app/views/contacts/new.html.erb:5: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/contacts/new.html.erb:5: syntax error, unexpected keyword_ensure, expecting keyword_end
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.4ms)
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (103.2ms)
+Started GET "/archives/contact" for 127.0.0.1 at 2017-02-22 21:47:46 -0800
+Processing by ArchivesController#contact as HTML
+  Rendering archives/contact.html.erb within layouts/application
+  Rendered archives/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 193ms (Views: 184.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-02-22 21:47:49 -0800
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/mnt/c/Users/natch/Desktop/CS121/kspc_web/KSPC/app/views/contacts/new.html.erb:5: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/contacts/new.html.erb:5: syntax error, unexpected keyword_ensure, expecting keyword_end
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (75.8ms)
+Started GET "/contacts/new" for 127.0.0.1 at 2017-02-22 21:48:11 -0800
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (81.3ms)
+Completed 200 OK in 260ms (Views: 247.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-02-22 21:50:33 -0800
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 186ms (Views: 176.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-02-22 21:50:57 -0800
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 176ms (Views: 168.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-02-22 21:51:08 -0800
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 211ms (Views: 197.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-02-22 21:51:24 -0800
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/mnt/c/Users/natch/Desktop/CS121/kspc_web/KSPC/app/views/contacts/new.html.erb:2: syntax error, unexpected tCONSTANT, expecting ')'
+r.append=( f.label :First Name );@output_buffer.safe_append=
+                              ^):
+  
+app/views/contacts/new.html.erb:2: syntax error, unexpected tCONSTANT, expecting ')'
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/nsuaysom/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (89.4ms)
+Started GET "/contacts/new" for 127.0.0.1 at 2017-02-22 21:51:31 -0800
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 184ms (Views: 177.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-02-22 21:52:15 -0800
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 227ms (Views: 216.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-02-22 21:52:34 -0800
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 200ms (Views: 191.8ms | ActiveRecord: 0.0ms)
+
+
