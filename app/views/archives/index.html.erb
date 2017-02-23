@@ -1,97 +1,27 @@
-<%= stylesheet_link_tag "archives.scss" %>
-<!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <%= link_to "Home", root_url, class: "navbar-brand"%>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li>
-                    <%= link_to "Store", 'http://coopstore.pomona.edu/collections/kspc' %>
-                </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Upcoming Events</h1>
     </div>
-    <!-- /.container -->
-</nav>
-
-<!-- Page Content -->
-<div class="container">
-
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">Upcoming Events</h1>
-        </div>
-        <div class="col-lg-12">
-            <h1 class="page-header">Spotlight</h1>
-        </div>
-        <div class="col-lg-2 col-md-4 col-xs-6 thumb">
-            <a class="thumbnail" href="http://kspc.org/beach-goth-2016-preview/">
-                <img class="img-responsive" src="http://kspc.org/blog/wp-content/uploads/2016/10/beach-goth-lineup-182x100.png" alt="">
-            </a>
-            <dateComment>October 21 2016 | 0 comments</dateComment>
-            <!-- Change this 0 comment and date to a variable -->
-            <%= link_to "Beach Goth 2016 Preview", 'http://kspc.org/beach-goth-2016-preview/', {:style=>'color: green;', :class => "css_class"} %>
-            <p>Beach goth 2016 is this weekend .......</p>
-        </div>
-        <div class="col-lg-2 col-md-4 col-xs-6 thumb">
-            <a class="thumbnail" href="http://kspc.org/show-review-crying-and-the-hotelier-at-the-echo/">
-                <img class="img-responsive" src="http://kspc.org/blog/wp-content/uploads/2016/10/hot2-182x100.jpg" alt="">
-            </a>
-            <dateComment>October 14 2016 | 0 comments</dateComment>
-            <%= link_to "SHOW REVIEW: Crying and The Hotelier at The Echo", 'http://kspc.org/show-review-crying-and-the-hotelier-at-the-echo/', {:style=>'color: green;', :class => "css_class"} %>
-            <!-- Change this 0 comment and date to a variable -->
-            
-        </div>
-
+    <div class="col-lg-12">
+        <h1 class="page-header">Spotlight</h1>
     </div>
-
-    <hr>
-
-    <!-- Footer -->
-
-    <div class = "col-md-4"
-      <titlePage>MULTIMEDIA</titlePage>
-      <p> </p>
-      <%= link_to "Interview", 'http://kspc.org/multimedia/audio/interviews/', {:style=>'color: lightblue;', :class => "css_class"} %>
-    </div>
-    <div class = "col-md-4"
-    <titlePage>GET INVOLVED!</titlePage>
-    <p> </p>
-      <%= link_to "Volunteer", 'http://kspc.org/multimedia/audio/interviews/', {:style=>'color: lightblue;', :class => "css_class"} %>
-    </div>
-    <div class = "col-md-3"
-      <p> THE CLAREMONT COLLEGES </p>
-      <p> </p>
-      <a class="thumbnail" href="www.hmc.edu">
-                <img class="img-responsive" src="http://kspc.org/blog/wp-content/themes/kspc2/images/hmclogo.png" alt="">
+    <div class="col-lg-2 col-md-4 col-xs-6 thumb">
+        <a class="thumbnail" href="http://kspc.org/beach-goth-2016-preview/">
+            <img class="img-responsive" src="http://kspc.org/blog/wp-content/uploads/2016/10/beach-goth-lineup-182x100.png" alt="">
         </a>
+        <dateComment>October 21 2016 | 0 comments</dateComment>
+        <!-- Change this 0 comment and date to a variable -->
+        <%= link_to "Beach Goth 2016 Preview", 'http://kspc.org/beach-goth-2016-preview/', {:style=>'color: green;', :class => "css_class"} %>
+        <p>Beach goth 2016 is this weekend .......</p>
     </div>
-    <footer>
+    <div class="col-lg-2 col-md-4 col-xs-6 thumb">
+        <a class="thumbnail" href="http://kspc.org/show-review-crying-and-the-hotelier-at-the-echo/">
+            <img class="img-responsive" src="http://kspc.org/blog/wp-content/uploads/2016/10/hot2-182x100.jpg" alt="">
+        </a>
+        <dateComment>October 14 2016 | 0 comments</dateComment>
+        <%= link_to "SHOW REVIEW: Crying and The Hotelier at The Echo", 'http://kspc.org/show-review-crying-and-the-hotelier-at-the-echo/', {:style=>'color: green;', :class => "css_class"} %>
+        <!-- Change this 0 comment and date to a variable -->
 
-        <div class="row">
-            <div class="col-lg-12">
-            <p> </p>
-        <p> </p>
-                <p>Copyright &copy; KSPC 2017</p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-12">
-                <p>KSPC is located @ Thatcher Music Building, 340 N. College Ave., Claremont, CA 91711</p>
-            </div>
-        </div>
-    </footer>
+    </div>
 
 </div>
