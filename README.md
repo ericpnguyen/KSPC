@@ -1,1 +1,4 @@
-# KSPC-Radio-History-Website
+# README
+
+### kspc.org
+Migrating to Ruby on Rails
