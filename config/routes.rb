@@ -1,23 +1,19 @@
 Rails.application.routes.draw do
-  get 'contacts/index'
+  get 'contacts/contact'
 
-  get 'contacts/new'
+  get 'blogs/blog'
 
-  get 'contacts/create'
+  get 'mains/about'
 
-  get 'contacts/show'
+  get 'mains/expo'
 
-  get 'archives/about'
+  get 'mains/index'
 
-  get 'archives/blog'
+  get 'mains/media'
 
-  get 'archives/expo'
+  get 'archives/archive'
 
-  get 'archives/media'
-
-  get 'archives/contact'
-
-  root 'archives#index'
+  root 'mains#index'
   resources :archives
   resources :contacts
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
