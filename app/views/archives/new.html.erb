@@ -3,10 +3,10 @@
 
 <%= form_for @archive, html: { multipart: true } do |f| %>
   <%= f.label :media %>
-  <%= f.file_field :media %>
+  <%= f.file_field :media, {required: true} %>
   <br>
   <%= f.label :title %>
-  <%= f.text_area :title %>
+  <%= f.text_area :title, {required: true} %>
   <br>
-  <%= f.submit %>
+  <%= f.submit 'Submit', {class: 'btn btn-success'} %>
 <% end %>
