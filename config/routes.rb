@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'archives/index'
+
+  get 'archives/new'
+
+  get 'archives/show'
+
   get 'contacts/contact'
 
   get 'blogs/blog'
@@ -10,8 +16,6 @@ Rails.application.routes.draw do
   get 'mains/index'
 
   get 'mains/media'
-
-  get 'archives/archive'
 
   root 'mains#index'
   resources :archives

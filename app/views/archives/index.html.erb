@@ -1,0 +1,11 @@
+<h1>Archives#index</h1>
+<p>Find me in app/views/archives/index.html.erb</p>
+<%= link_to "New Archive", new_archive_path %>
+
+<% @archives.each do |archive| %>
+  <div>
+    <%= image_tag archive.media.url %>
+    <br>
+    <%= archive.title %>
+  </div>
+<% end %>

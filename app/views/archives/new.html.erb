@@ -1,0 +1,12 @@
+<h2>New Archive</h2>
+<hr>
+
+<%= form_for @archive, html: { multipart: true } do |f| %>
+  <%= f.label :media %>
+  <%= f.file_field :media %>
+  <br>
+  <%= f.label :title %>
+  <%= f.text_area :title %>
+  <br>
+  <%= f.submit %>
+<% end %>
