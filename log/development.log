@@ -2464,3 +2464,1401 @@ Processing by ArchivesController#index as HTML
 Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/archives" for ::1 at 2017-02-26 17:31:41 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (17.7ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.5ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 192ms (Views: 178.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 17:36:07 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 60ms (Views: 52.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 17:36:40 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 17:36:42 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 17:36:53 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 42ms (Views: 40.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 17:37:01 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives/new" for ::1 at 2017-02-26 17:39:36 -0800
+Processing by ArchivesController#new as HTML
+  Rendering archives/new.html.erb within layouts/application
+  Rendered archives/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 43ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/archives" for ::1 at 2017-02-26 17:39:48 -0800
+Processing by ArchivesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6MZGWVpcI+9P4BegKznr/NE/Rtrg8WwxaZUUclr85FCO6p6txZ6QwBTLHGF4TQPEE6HyPQhaGp4o1WxdcU6s0w==", "archive"=>{"media"=>#<ActionDispatch::Http::UploadedFile:0x007fe22be10928 @tempfile=#<Tempfile:/var/folders/8g/kdp_94rn3_gc5knn1zygvq4c0000gn/T/RackMultipart20170226-2452-2kclbn.mp3>, @original_filename="03 Shooting Stars.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"archive[media]\"; filename=\"03 Shooting Stars.mp3\"\r\nContent-Type: audio/mp3\r\n">, "title"=>"Meme!"}, "commit"=>"Submit"}
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/8g/kdp_94rn3_gc5knn1zygvq4c0000gn/T/84eb366f20bb93c654501be0bd750c8620170226-2452-137to60.mp3'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/8g/kdp_94rn3_gc5knn1zygvq4c0000gn/T/84eb366f20bb93c654501be0bd750c8620170226-2452-tk77re.mp3'
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `archives` (`title`, `created_at`, `updated_at`, `media_file_name`, `media_content_type`, `media_file_size`, `media_updated_at`) VALUES ('Meme!', '2017-02-27 01:39:48', '2017-02-27 01:39:48', '03_Shooting_Stars.mp3', 'audio/mp3', 7981948, '2017-02-27 01:39:48')[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/archives
+Completed 302 Found in 46ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 17:39:48 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 17:43:39 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (12.0ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `attachment_content_type' for #<Archive:0x007fe227c2bcb0>):
+     5:   <% @archives.each do |archive| %>
+     6:     <div class="archive">
+     7:       <% #image_tag archive.media.url %>
+     8:       <%= archive.media.instance.attachment_content_type %>
+     9:       <br>
+    10:       <span class="archive-title">
+    11:         <%= archive.title %>
+  
+app/views/archives/index.html.erb:8:in `block in _app_views_archives_index_html_erb___1838337208930501509_70304635837900'
+app/views/archives/index.html.erb:5:in `_app_views_archives_index_html_erb___1838337208930501509_70304635837900'
+  Rendering /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.5ms)
+Started GET "/archives" for ::1 at 2017-02-26 17:43:51 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `attachment_content_type' for #<Paperclip::Attachment:0x007fe225b939d0>):
+     5:   <% @archives.each do |archive| %>
+     6:     <div class="archive">
+     7:       <% #image_tag archive.media.url %>
+     8:       <%= archive.media.attachment_content_type %>
+     9:       <br>
+    10:       <span class="archive-title">
+    11:         <%= archive.title %>
+  
+app/views/archives/index.html.erb:8:in `block in _app_views_archives_index_html_erb___1838337208930501509_70304653622940'
+app/views/archives/index.html.erb:5:in `_app_views_archives_index_html_erb___1838337208930501509_70304653622940'
+  Rendering /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.2ms)
+  Rendering /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (43.4ms)
+Started GET "/archives" for ::1 at 2017-02-26 17:48:54 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 34ms (Views: 32.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 17:52:25 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.3ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 17:53:09 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 34ms (Views: 32.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/system/archives/media/000/000/002/Song/03_Shooting_Stars.mp3?1488159588" for ::1 at 2017-02-26 17:53:10 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/system/archives/media/000/000/002/Song/03_Shooting_Stars.mp3"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [26 times] (9.3ms)
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendering /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (65.7ms)
+Started GET "/system/archives/media/000/000/002/Song/03_Shooting_Stars.mp3?1488159588" for ::1 at 2017-02-26 17:53:25 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/system/archives/media/000/000/002/Song/03_Shooting_Stars.mp3"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered collection of /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [26 times] (5.8ms)
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendering /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (62.8ms)
+Started GET "/system/archives/media/000/000/002/Song/03_Shooting_Stars.mp3?1488159588" for ::1 at 2017-02-26 17:53:36 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/system/archives/media/000/000/002/Song/03_Shooting_Stars.mp3"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered collection of /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [26 times] (5.0ms)
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendering /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (58.8ms)
+Started GET "/archives" for ::1 at 2017-02-26 17:54:19 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 17:54:28 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 17:54:35 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 145ms (Views: 134.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 17:55:05 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 41ms (Views: 39.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/system/archives/media/000/000/002/original/03_Shooting_Stars.mp3?1488159588" for ::1 at 2017-02-26 17:55:05 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/system/archives/media/000/000/002/original/03_Shooting_Stars.mp3"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered collection of /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [26 times] (5.5ms)
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.7ms)
+  Rendering /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (64.5ms)
+Started GET "/archives" for ::1 at 2017-02-26 17:57:06 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 17:59:04 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 48ms (Views: 46.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 17:59:21 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.5ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:05:53 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:06:13 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:08:20 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:13:04 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.5ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 34ms (Views: 32.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:20:52 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:27:39 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:28:05 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 46ms (Views: 44.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:28:06 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:28:07 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:28:12 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:29:56 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:34:24 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /Users/gus/Local Documents/Coding/kspc/app/assets/config
+  /Users/gus/Local Documents/Coding/kspc/app/assets/images
+  /Users/gus/Local Documents/Coding/kspc/app/assets/javascripts
+  /Users/gus/Local Documents/Coding/kspc/app/assets/stylesheets
+  /Users/gus/Local Documents/Coding/kspc/vendor/assets/javascripts
+  /Users/gus/Local Documents/Coding/kspc/vendor/assets/stylesheets
+  /Users/gus/.rvm/gems/ruby-2.4.0/gems/jquery-rails-4.2.2/vendor/assets/javascripts
+  /Users/gus/.rvm/gems/ruby-2.4.0/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /Users/gus/.rvm/gems/ruby-2.4.0/gems/actioncable-5.0.1/lib/assets/compiled
+  /Users/gus/.rvm/gems/ruby-2.4.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts
+  /Users/gus/.rvm/gems/ruby-2.4.0/gems/bootstrap-4.0.0.alpha6/assets/stylesheets
+  /Users/gus/.rvm/gems/ruby-2.4.0/gems/bootstrap-4.0.0.alpha6/assets/javascripts
+  /Users/gus/.rvm/gems/ruby-2.4.0/gems/bootstrap-4.0.0.alpha6/assets/stylesheets):
+    4:     <title>Radio</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:14
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__2872780693258964204_70161742265620'
+  Rendering /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.3ms)
+  Rendering /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (45.1ms)
+Started GET "/archives" for ::1 at 2017-02-26 18:35:50 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 2275ms (Views: 2273.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:37:34 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 1260ms (Views: 1258.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:39:10 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 46ms (Views: 45.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:40:20 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:42:42 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:44:43 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:45:37 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:46:08 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 1200ms (Views: 1199.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:46:16 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.3ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 1389ms (Views: 1388.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:47:29 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 44ms (Views: 42.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:47:49 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 51ms (Views: 49.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:48:13 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:48:20 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.6ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:48:37 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:49:07 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.5ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:49:50 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:50:02 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:50:26 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:50:42 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.3ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:51:03 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 1217ms (Views: 1216.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:51:09 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (1.3ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 1290ms (Views: 1287.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:51:23 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 1262ms (Views: 1260.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:51:38 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 1261ms (Views: 1259.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:51:45 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 1287ms (Views: 1285.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:51:52 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 39ms (Views: 37.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:51:57 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 1257ms (Views: 1255.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:52:03 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.3ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:52:07 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 1286ms (Views: 1284.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:52:19 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 39ms (Views: 37.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:52:28 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 57ms (Views: 55.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:53:23 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 40ms (Views: 38.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 18:54:34 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  Rendered archives/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/gus/Local Documents/Coding/kspc/app/views/archives/index.html.erb:13: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+le, {class: 'archive-title'} );@output_buffer.safe_append='
+                              ^
+/Users/gus/Local Documents/Coding/kspc/app/views/archives/index.html.erb:16: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/gus/Local Documents/Coding/kspc/app/views/archives/index.html.erb:18: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/gus/Local Documents/Coding/kspc/app/views/archives/index.html.erb:20: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/archives/index.html.erb:13: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+app/views/archives/index.html.erb:16: syntax error, unexpected keyword_end, expecting ')'
+app/views/archives/index.html.erb:18: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/archives/index.html.erb:20: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/gus/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (38.7ms)
+Started GET "/archives" for ::1 at 2017-02-26 18:58:36 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 1230ms (Views: 1228.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:05:04 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 1795ms (Views: 1780.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:05:57 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 1245ms (Views: 1243.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:06:28 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.6ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:06:35 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 1265ms (Views: 1264.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:06:54 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 1278ms (Views: 1276.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:12:01 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:12:02 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.4ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:12:15 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 50ms (Views: 48.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:12:22 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 40ms (Views: 37.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:13:03 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:13:15 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 42ms (Views: 39.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:13:27 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 42ms (Views: 39.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:17:47 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:19:44 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:19:53 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.4ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-02-26 19:19:57 -0800
+Processing by MainsController#index as HTML
+  Rendering mains/index.html.erb within layouts/application
+  Rendered mains/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mains/about" for ::1 at 2017-02-26 19:19:59 -0800
+Processing by MainsController#about as HTML
+  Rendering mains/about.html.erb within layouts/application
+  Rendered mains/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mains/about" for ::1 at 2017-02-26 19:20:10 -0800
+Processing by MainsController#about as HTML
+  Rendering mains/about.html.erb within layouts/application
+  Rendered mains/about.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mains/about" for ::1 at 2017-02-26 19:20:12 -0800
+Processing by MainsController#about as HTML
+  Rendering mains/about.html.erb within layouts/application
+  Rendered mains/about.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mains/about" for ::1 at 2017-02-26 19:20:22 -0800
+Processing by MainsController#about as HTML
+  Rendering mains/about.html.erb within layouts/application
+  Rendered mains/about.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mains/about" for ::1 at 2017-02-26 19:21:06 -0800
+Processing by MainsController#about as HTML
+  Rendering mains/about.html.erb within layouts/application
+  Rendered mains/about.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mains/about" for ::1 at 2017-02-26 19:21:14 -0800
+Processing by MainsController#about as HTML
+  Rendering mains/about.html.erb within layouts/application
+  Rendered mains/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:21:15 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.6ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 36ms (Views: 33.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2017-02-26 19:21:44 -0800
+Processing by MainsController#index as HTML
+  Rendering mains/index.html.erb within layouts/application
+  Rendered mains/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-26 19:21:45 -0800
+Processing by MainsController#index as HTML
+  Rendering mains/index.html.erb within layouts/application
+  Rendered mains/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:21:49 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:22:02 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.5ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:22:04 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.4ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:24:24 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:25:02 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:25:03 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.3ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:25:35 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:25:41 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:25:44 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blogs/blog" for ::1 at 2017-02-26 19:25:46 -0800
+Processing by BlogsController#blog as HTML
+  Rendering blogs/blog.html.erb within layouts/application
+  Rendered blogs/blog.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mains/media" for ::1 at 2017-02-26 19:25:48 -0800
+Processing by MainsController#media as HTML
+  Rendering mains/media.html.erb within layouts/application
+  Rendered mains/media.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/contact" for ::1 at 2017-02-26 19:25:49 -0800
+Processing by ContactsController#contact as HTML
+  Rendering contacts/contact.html.erb within layouts/application
+  Rendered contacts/contact.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs/blog" for ::1 at 2017-02-26 19:25:50 -0800
+Processing by BlogsController#blog as HTML
+  Rendering blogs/blog.html.erb within layouts/application
+  Rendered blogs/blog.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 47ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:25:51 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (1.0ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 50ms (Views: 47.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:26:07 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:26:14 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 33ms (Views: 31.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2017-02-26 19:26:17 -0800
+Processing by MainsController#index as HTML
+  Rendering mains/index.html.erb within layouts/application
+  Rendered mains/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-26 19:26:22 -0800
+Processing by MainsController#index as HTML
+  Rendering mains/index.html.erb within layouts/application
+  Rendered mains/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 30ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-26 19:26:32 -0800
+Processing by MainsController#index as HTML
+  Rendering mains/index.html.erb within layouts/application
+  Rendered mains/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-26 19:27:01 -0800
+Processing by MainsController#index as HTML
+  Rendering mains/index.html.erb within layouts/application
+  Rendered mains/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 30ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-26 19:27:17 -0800
+Processing by MainsController#index as HTML
+  Rendering mains/index.html.erb within layouts/application
+  Rendered mains/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 34ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-26 19:27:26 -0800
+Processing by MainsController#index as HTML
+  Rendering mains/index.html.erb within layouts/application
+  Rendered mains/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:27:29 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:33:10 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/mains/about" for ::1 at 2017-02-26 19:33:14 -0800
+Processing by MainsController#about as HTML
+  Rendering mains/about.html.erb within layouts/application
+  Rendered mains/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs/blog" for ::1 at 2017-02-26 19:33:15 -0800
+Processing by BlogsController#blog as HTML
+  Rendering blogs/blog.html.erb within layouts/application
+  Rendered blogs/blog.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:33:16 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (9.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 58ms (Views: 46.5ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/mains/expo" for ::1 at 2017-02-26 19:33:18 -0800
+Processing by MainsController#expo as HTML
+  Rendering mains/expo.html.erb within layouts/application
+  Rendered mains/expo.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mains/media" for ::1 at 2017-02-26 19:33:19 -0800
+Processing by MainsController#media as HTML
+  Rendering mains/media.html.erb within layouts/application
+  Rendered mains/media.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/contact" for ::1 at 2017-02-26 19:33:19 -0800
+Processing by ContactsController#contact as HTML
+  Rendering contacts/contact.html.erb within layouts/application
+  Rendered contacts/contact.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:33:20 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (10.7ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 63ms (Views: 51.1ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:33:22 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (2.3ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 39ms (Views: 35.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/blogs/blog" for ::1 at 2017-02-26 19:33:23 -0800
+Processing by BlogsController#blog as HTML
+  Rendering blogs/blog.html.erb within layouts/application
+  Rendered blogs/blog.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:33:24 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (3.9ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 50ms (Views: 42.6ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:34:02 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blogs/blog" for ::1 at 2017-02-26 19:34:06 -0800
+Processing by BlogsController#blog as HTML
+  Rendering blogs/blog.html.erb within layouts/application
+  Rendered blogs/blog.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:34:09 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (2.1ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 65ms (Views: 60.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/blogs/blog" for ::1 at 2017-02-26 19:34:10 -0800
+Processing by BlogsController#blog as HTML
+  Rendering blogs/blog.html.erb within layouts/application
+  Rendered blogs/blog.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 44ms (Views: 42.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mains/about" for ::1 at 2017-02-26 19:34:12 -0800
+Processing by MainsController#about as HTML
+  Rendering mains/about.html.erb within layouts/application
+  Rendered mains/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:34:14 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (10.4ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 58ms (Views: 46.4ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/blogs/blog" for ::1 at 2017-02-26 19:34:16 -0800
+Processing by BlogsController#blog as HTML
+  Rendering blogs/blog.html.erb within layouts/application
+  Rendered blogs/blog.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 45ms (Views: 44.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:34:16 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (6.4ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 61ms (Views: 53.8ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:34:17 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (8.9ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 49ms (Views: 38.9ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/blogs/blog" for ::1 at 2017-02-26 19:34:18 -0800
+Processing by BlogsController#blog as HTML
+  Rendering blogs/blog.html.erb within layouts/application
+  Rendered blogs/blog.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 43ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:34:18 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (8.0ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 62ms (Views: 53.2ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/blogs/blog" for ::1 at 2017-02-26 19:34:22 -0800
+Processing by BlogsController#blog as HTML
+  Rendering blogs/blog.html.erb within layouts/application
+  Rendered blogs/blog.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 47ms (Views: 45.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:34:24 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (5.5ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 54ms (Views: 47.6ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:35:54 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.4ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-02-26 19:36:13 -0800
+Processing by MainsController#index as HTML
+  Rendering mains/index.html.erb within layouts/application
+  Rendered mains/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-26 19:37:48 -0800
+Processing by MainsController#index as HTML
+  Rendering mains/index.html.erb within layouts/application
+  Rendered mains/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-26 19:37:52 -0800
+Processing by MainsController#index as HTML
+  Rendering mains/index.html.erb within layouts/application
+  Rendered mains/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:37:57 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (0.2ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2017-02-26 19:37:58 -0800
+Processing by MainsController#index as HTML
+  Rendering mains/index.html.erb within layouts/application
+  Rendered mains/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 44ms (Views: 41.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:37:59 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (5.5ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 70ms (Views: 63.4ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/" for ::1 at 2017-02-26 19:38:04 -0800
+Processing by MainsController#index as HTML
+  Rendering mains/index.html.erb within layouts/application
+  Rendered mains/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 44ms (Views: 43.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/archives" for ::1 at 2017-02-26 19:38:05 -0800
+Processing by ArchivesController#index as HTML
+  Rendering archives/index.html.erb within layouts/application
+  [1m[36mArchive Load (5.1ms)[0m  [1m[34mSELECT `archives`.* FROM `archives`[0m
+  Rendered archives/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 54ms (Views: 47.7ms | ActiveRecord: 5.1ms)
+
+

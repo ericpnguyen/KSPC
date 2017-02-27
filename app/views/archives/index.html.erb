@@ -1,13 +1,19 @@
 <h1>Archives</h1>
-<%= button_to "New Archive", new_archive_path, {class: 'btn btn-success', method: "get"} %>
-
-<div class="archives">
+<br>
+<div class="row">
   <% @archives.each do |archive| %>
-    <div class="archive">
-      <%= image_tag archive.media.url %>
-      <span class="archive-title">
-        <%= archive.title %>
-      </span>
+    <div class="archive card text-center">
+      <%- if archive.media.content_type.start_with?("image") %>
+        <%= image_tag archive.media.url, {width: '265', class: 'card-img-top'} %>
+      <% else %>
+        <%= audio_tag archive.media.url, :controls => true %>
+      <% end %>
+      <div class="card-block">
+        <h5 class="archive-title"><%= archive.title %></h5>
+      </div>
     </div>
   <% end %>
 </div>
+
+<br>
+<%= button_to "New Archive", new_archive_path, {class: 'btn btn-success', method: "get"} %>

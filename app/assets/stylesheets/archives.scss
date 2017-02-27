@@ -1,17 +1,15 @@
 // Place all the styles related to the Archives controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.archives {
-  padding-top: 1em;
-}
 
 .archive {
-  border: 2px solid black;
-  display: inline-block;
-  padding: 2px;
-  text-align: center;
+  margin-right: 2em;
 }
 
-img {
-  display: block;
+.archive-title {
+  margin-bottom: 0;
+}
+
+audio {
+  width: 265px;
 }
