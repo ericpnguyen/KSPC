@@ -12,9 +12,6 @@
         width:250px;
         object-fit: contain;
     }
-    .thumbnails audio {
-        width: 250px;
-    }
 </style>
 </head>
 <div class="row">
@@ -24,8 +21,7 @@
           <%- if archive.media.content_type.start_with?("image") %>
             <%= image_tag archive.media.url %>
           <% else %>
-            <%= audio_tag archive.media.url, :controls => true%>
-            <!--<%= image_tag ("/audioImage.png"), class: 'albumart'%>-->
+            <%= videojs_rails sources: {mp4: archive.media.url, type:'audio/mp3'}, class: "video-js vjs-default-skin", setup: "{}", poster: "/defaultImage.png", width:"250" ,height:"250"%>
           <% end %>
       </div>
       <div class="card-block">
