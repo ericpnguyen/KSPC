@@ -3,12 +3,28 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .archive {
-  margin-right: 2em;
   margin-bottom: 2em;
+  margin-right: 2em;
 }
 
 .archive-title {
   margin-bottom: 0;
+}
+
+.thumbnails {
+  height: 250px;
+  object-fit: none;
+  overflow: hidden;
+  width: 250px;
+}
+
+.thumbnails img {
+  object-fit: contain;
+  width:250px;
+}
+
+.thumbnails audio {
+  width: 250px;
 }
 
 audio {
