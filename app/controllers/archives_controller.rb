@@ -1,6 +1,6 @@
 class ArchivesController < ApplicationController
   def index
-    @archives = Archive.paginate(:page => params[:page], :per_page => 1)
+    @archives = Archive.paginate(:page => params[:page], :per_page => 10)
   end
 
   def new
