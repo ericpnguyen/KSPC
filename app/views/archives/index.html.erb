@@ -1,13 +1,33 @@
 <h1>Archives</h1>
 <br>
+<head>
+<style>
+    .thumbnails {
+        object-fit: none;
+        width: 250px;
+        height: 250px;
+        overflow: hidden;
+    }
+    .thumbnails img {
+        width:250px;
+        object-fit: contain;
+    }
+    .thumbnails audio {
+        width: 250px;
+    }
+</style>
+</head>
 <div class="row">
   <% @archives.each do |archive| %>
     <div class="archive card text-center">
-      <%- if archive.media.content_type.start_with?("image") %>
-        <%= image_tag archive.media.url, {width: '265', class: 'card-img-top'} %>
-      <% else %>
-        <%= audio_tag archive.media.url, :controls => true %>
-      <% end %>
+      <div class="thumbnails">
+          <%- if archive.media.content_type.start_with?("image") %>
+            <%= image_tag archive.media.url %>
+          <% else %>
+            <%= audio_tag archive.media.url, :controls => true%>
+            <!--<%= image_tag ("/audioImage.png"), class: 'albumart'%>-->
+          <% end %>
+      </div>
       <div class="card-block">
         <h5 class="archive-title"><%= archive.title %></h5>
       </div>
