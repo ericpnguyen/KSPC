@@ -6,8 +6,12 @@ git_source(:github) do |repo_name|
 end
 
 # Custom
+<<<<<<< HEAD
 gem 'devise'
 gem 'tinymce-rails'
+=======
+gem 'will_paginate', '~> 3.1.0'
+>>>>>>> Added pagination to archives page
 gem "paperclip", "~> 5.0.0"
 gem 'bootstrap', '~> 4.0.0.alpha6'
 source 'https://rails-assets.org' do

@@ -1,19 +1,5 @@
 <h1>Archives</h1>
 <br>
-<head>
-<style>
-    .thumbnails {
-        object-fit: none;
-        width: 250px;
-        height: 250px;
-        overflow: hidden;
-    }
-    .thumbnails img {
-        width:250px;
-        object-fit: contain;
-    }
-</style>
-</head>
 <div class="row">
   <% @archives.each do |archive| %>
     <div class="archive card text-center">
@@ -30,6 +16,8 @@
     </div>
   <% end %>
 </div>
+<!-- Render page links -->
+<%= will_paginate @posts %>
 
 <br>
 <%= button_to "New Archive", new_archive_path, {class: 'btn btn-success', method: "get"} %>
