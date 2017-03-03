@@ -14,6 +14,8 @@ class Archive < ApplicationRecord
       'audio/x-mpeg3',
       'audio/mpg',
       'audio/x-mpg',
-      'audio/x-mpegaudio'
+      'audio/x-mpegaudio',
+      'video/mp4',
+      'video/x-msvideo'
     ]
 end
