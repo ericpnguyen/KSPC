@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'contacts/index'
+
+  get 'contacts/new'
+
+  get 'contacts/create'
+
+  get 'contacts/show'
+
   get 'archives/index'
 
   get 'archives/new'
