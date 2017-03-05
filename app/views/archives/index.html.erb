@@ -1,18 +1,23 @@
 <h1>Archives</h1>
 <br>
 <div class="row">
-  <% @archives.each do |archive| %>
+  <% @archives.each_with_index do |archive, i| %>
     <div class="archive card text-center">
       <div class="thumbnails">
           <%- if archive.media.content_type.start_with?("image") %>
-            <%= image_tag archive.media.url %>
+            <%= link_to image_tag(archive.media.url), archive.media.url,
+                data: {
+                  toggle: "lightbox",
+                  title: archive.title,
+                  footer: archive.description,
+                }
+            %>
           <% else %>
             <%= videojs_rails sources: {mp4: archive.media.url, type:'audio/mp3'}, class: "video-js vjs-default-skin", setup: "{}", poster: "/defaultImage.png", width:"250" ,height:"250"%>
           <% end %>
       </div>
       <div class="card-block">
         <h5 class="archive-title"><%= archive.title %></h5>
-        <div><%= archive.description %></div>
         <div><%= archive.date %></div>
         <div><%= archive.tag_list %></div>
       </div>

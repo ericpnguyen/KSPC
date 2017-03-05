@@ -19,4 +19,6 @@
 //= require_tree .
 //= require tinymce
 //= require bootstrap-tagsinput
+//= require lightbox-bootstrap
+//= require_tree .
 

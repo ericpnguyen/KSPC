@@ -16,6 +16,7 @@
 *= require bootstrap-tagsinput
 */
 @import "bootstrap";
+<<<<<<< HEAD
 @import "*";
 
 body{
@@ -26,3 +27,7 @@ body{
   background-color: white;
   padding-top: px;
 }
+=======
+@import "lightbox-bootstrap";
+@import "*"
+>>>>>>> Added lightbox preview for images using http://ashleydw.github.io/lightbox/
