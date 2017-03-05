@@ -6,9 +6,10 @@ git_source(:github) do |repo_name|
 end
 
 # Custom
-
 gem 'devise'
 gem 'tinymce-rails'
+gem 'bootstrap-tagsinput-rails'
+gem 'acts-as-taggable-on', '~> 4.0'
 
 gem 'will_paginate', '~> 3.1.0'
 

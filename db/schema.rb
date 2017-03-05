@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20170307045103) do
 
   create_table "abouts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -35,6 +36,9 @@ ActiveRecord::Schema.define(version: 20170307045103) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
   end
 
+ActiveRecord::Schema.define(version: 20170305042457) do
+
+
   create_table "archives", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "title",              limit: 65535
     t.datetime "created_at",                       null: false
@@ -47,6 +51,7 @@ ActiveRecord::Schema.define(version: 20170307045103) do
     t.date     "date"
   end
 
+<<<<<<< HEAD
   create_table "contacts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "first"
     t.string   "last"
@@ -62,6 +67,7 @@ ActiveRecord::Schema.define(version: 20170307045103) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end
+
 
   create_table "taggings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "tag_id"

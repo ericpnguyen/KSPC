@@ -1,3 +1,5 @@
+<%# stylesheet_link_tag "bootstrap-tagsinput" %>
+
 <h2>New Archive</h2>
 <hr>
 
@@ -6,7 +8,17 @@
   <%= f.file_field :media, {required: true} %>
   <br>
   <%= f.label :title %>
-  <%= f.text_area :title, {required: true} %>
+  <%= f.text_field :title, {required: true} %>
   <br>
+  <%= f.label :description %>
+  <%= f.text_area :description, {required: true} %>
+  <br>
+  <%= f.label :date %>
+  <%= f.date_field :date, {required: true} %>
+  <br>
+  <%= f.label :tags %>
+  <%= f.text_field :tags, {'data-role' => 'tagsinput', 'value' => ''} %>
+  <br>
+  <div id="taglist"></div>
   <%= f.submit 'Submit', {class: 'btn btn-success'} %>
 <% end %>
