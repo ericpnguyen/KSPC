@@ -20,8 +20,8 @@
         <li>
           <%= link_to "Store", 'http://coopstore.pomona.edu/collections/kspc', class: "nav-item nav-link" %>
         </li>
-        <li class="<%= 'active' if current_page?(mains_about_path) %>">
-          <%= link_to "About", mains_about_path, class: "nav-item nav-link" %>
+        <li class="<%= 'active' if current_page?(abouts_path) %>">
+          <%= link_to "About", abouts_path, class: "nav-item nav-link" %>
         </li>
         <li class="<%= 'active' if current_page?(blogs_blog_path) %>">
           <%= link_to "Blog", blogs_blog_path, class: "nav-item nav-link" %>
@@ -29,8 +29,8 @@
         <li class="<%= 'active' if current_page?(archives_path) %>">
           <%= link_to "Archives", archives_path, class: "nav-item nav-link" %>
         </li>
-        <li class="<%= 'active' if current_page?(mains_expo_path) %>">
-          <%= link_to "EXPO", mains_expo_path, class: "nav-item nav-link" %>
+        <li class="<%= 'active' if current_page?(expos_path) %>">
+          <%= link_to "EXPO", expos_path, class: "nav-item nav-link" %>
         </li>
         <li class="<%= 'active' if current_page?(mains_media_path) %>">
           <%= link_to "Media", mains_media_path, class: "nav-item nav-link" %>
@@ -71,17 +71,10 @@
     </div>
 
       <footer>
-          <div class="row">
-              <div class="col-lg-12">
-                <p>Copyright &copy; KSPC 2017</p>
-              </div>
-          </div>
-
-          <div class="row">
-              <div class="col-lg-12">
-                  <p>KSPC is located @ Thatcher Music Building, 340 N. College Ave., Claremont, CA 91711</p>
-              </div>
-          </div>
+        <div class="container">
+          <p>Copyright &copy; KSPC 2017</p>
+          <p>KSPC is located @ Thatcher Music Building, 340 N. College Ave., Claremont, CA 91711</p>
+        </div>
       </footer>
 
   </div>

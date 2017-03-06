@@ -21,4 +21,9 @@ class MainsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get edit" do
+    get mains_edit_url
+    assert_response :success
+  end
+
 end

@@ -1,0 +1,21 @@
+<h1>KSPC’s CD &amp RECORD EXPO – A ONE DAY MUSIC SALE!</h1>
+<div class="container">
+    <% @expos.each do |expo| %>
+      <%= raw expo.content %>
+      <div class="row">
+        <div class="col">
+          <%= button_to "Edit Content", edit_expo_path(expo), {class: 'btn btn-success', method: "get"} %>
+        </div>
+        <div class="col">
+          <div class="text-right">
+            <%= link_to 'Delete Content', expo, :method => :delete, :confirm => "Are you sure?", class: 'btn btn-danger', method: "get" %>
+          </div>
+        </div>
+      </div>
+      <br>
+    <% end %>
+  </div>
+  <br>
+  <br>
+  <%= button_to "New Content", new_expo_path, {class: 'btn btn-success', method: "get"} %>
+</div>
