@@ -1,0 +1,53 @@
+Contact
+<br>
+Fields marked with an * are required
+<br>
+To reach the DJ on air, please call the request line (909) 626-5772 OR join the live Spinitron chat here: CURRENT PLAYLIST/LIVE CHAT
+<br>
+To submit music for airplay consideration, please click here for more information.
+<br>
+To submit a Public Service Announcement (PSA), please click here
+<br>
+If you are interested in volunteering at KSPC, please click here for more information.
+<br>
+KSPC
+<br>
+Thatcher Music Building
+<br>
+340 N. College Ave., Claremont, CA 91711
+<br>
+Business Line: (909) 621-8157
+<br>
+Request Line: (909) 626-KSPC (5772)
+
+
+
+<%= form_for @contact, html:{multipart: true} do |f| %>
+	<br>
+	<%= f.label :'First Name' %>
+	<br>
+	<%= f.text_field :first %>
+	<br>
+	<br>
+	<%= f.label :'Last Name' %>
+	<br>
+	<%= f.text_field :last %>
+	<br>
+	<br>
+	<%= f.label :'Email *' %>
+	<br>
+	<%= f.email_field :email, required: true %>
+	<br>
+	<br>
+	<%= f.label :'What is the nature of your inquiry *' %>
+	<br>
+	<%= f.select :inquiry, options_for_select([['Select One'],['General Inquiries/Comments'], ['Playlist Question'],['Concert Announcements'],['Request FREE KSPC License Plate Name (INCLUDE YOUR MAILING ADDRESS']], :required => true) %>
+	<br>
+	<br>
+	<%= f.label :comment %>
+	<br>
+	<%= f.text_field :comment %>
+	<br><br>
+	<%= f.submit :'Submit'%>
+
+<% end %>

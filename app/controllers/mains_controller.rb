@@ -6,6 +6,7 @@ class MainsController < ApplicationController
   end
 
   def index
+  	@contact = Contact.new
   end
 
   def media

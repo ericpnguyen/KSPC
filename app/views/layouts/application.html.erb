@@ -36,35 +36,36 @@
           <%= link_to "Media", mains_media_path, class: "nav-item nav-link" %>
         </li>
         <li class="<%= 'active' if current_page?(contacts_contact_path) %>">
-          <%= link_to "Contact", contacts_contact_path, class: "nav-item nav-link" %>
+          <%= link_to "Contact", contacts_new_path, class: "nav-item nav-link" %>
         </li>
       </ul>
     </div>
   </nav>
 
   <!-- Page Content -->
-  <div class="container">
+  <div class="container white">
       <%= yield %>
       <hr>
 
       <!-- Footer -->
-
-      <div class = "col-md-4"
-        <titlePage>MULTIMEDIA</titlePage>
+      <div class = "row">
+        <div class = "col-4">
+          <titlePage>MULTIMEDIA</titlePage>
+          <p> </p>
+          <%= link_to "Interview", 'http://kspc.org/multimedia/audio/interviews/', {:style=>'color: lightblue;', :class => "css_class"} %>
+        </div>
+        <div class = "col-4">
+        <titlePage>GET INVOLVED!</titlePage>
         <p> </p>
-        <%= link_to "Interview", 'http://kspc.org/multimedia/audio/interviews/', {:style=>'color: lightblue;', :class => "css_class"} %>
-      </div>
-      <div class = "col-md-4"
-      <titlePage>GET INVOLVED!</titlePage>
-      <p> </p>
-        <%= link_to "Volunteer", 'http://kspc.org/multimedia/audio/interviews/', {:style=>'color: lightblue;', :class => "css_class"} %>
-      </div>
-      <div class = "col-md-3"
-        <p> THE CLAREMONT COLLEGES </p>
-        <p> </p>
-        <a class="thumbnail" href="www.hmc.edu">
-                  <img class="img-responsive" src="http://kspc.org/blog/wp-content/themes/kspc2/images/hmclogo.png" alt="">
-          </a>
+          <%= link_to "Volunteer", 'http://kspc.org/multimedia/audio/interviews/', {:style=>'color: lightblue;', :class => "css_class"} %>
+        </div>
+        <div class = "col-4">
+          <p> THE CLAREMONT COLLEGES </p>
+          <p> </p>
+          <a class="thumbnail" href="www.hmc.edu">
+                    <img class="img-responsive" src="http://kspc.org/blog/wp-content/themes/kspc2/images/hmclogo.png" alt="">
+            </a>
+        </div>
       </div>
       <footer>
 

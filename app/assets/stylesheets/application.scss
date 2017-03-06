@@ -11,4 +11,14 @@
  * It is generally better to create a new file per style scope.
  */
 @import "bootstrap";
-@import "*"
+@import "*";
+
+body{
+	background-color: black;
+}
+
+.white {
+  background-color: white;
+  padding-top: px;
+}
+
