@@ -1,0 +1,21 @@
+<h1>About</h1>
+<div class="container">
+    <% @abouts.each do |about| %>
+      <%= raw about.content %>
+      <div class="row">
+        <div class="col">
+          <%= button_to "Edit Content", edit_about_path(about), {class: 'btn btn-success', method: "get"} %>
+        </div>
+        <div class="col">
+          <div class="text-right">
+            <%= link_to 'Delete Content', about, :method => :delete, :confirm => "Are you sure?", class: 'btn btn-danger', method: "get" %>
+          </div>
+        </div>
+      </div>
+      <br>
+    <% end %>
+  </div>
+  <br>
+  <br>
+  <%= button_to "New Content", new_about_path, {class: 'btn btn-success', method: "get"} %>
+</div>
