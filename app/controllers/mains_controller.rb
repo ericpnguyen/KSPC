@@ -5,4 +5,7 @@ class MainsController < ApplicationController
 
   def media
   end
+
+  def admin
+  end
 end
