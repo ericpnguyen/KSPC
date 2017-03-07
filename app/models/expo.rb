@@ -1,0 +1,2 @@
+class Expo < ApplicationRecord
+end

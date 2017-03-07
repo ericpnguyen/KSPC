@@ -1,0 +1,6 @@
+<h1>Editor</h1>
+<%= tinymce %>
+<%= form_for @expo do |f| %>
+  <%= f.text_area :content, :class => "tinymce", :rows => 40, :cols => 120 %>
+  <%= f.submit 'Save', {class: 'btn btn-success'} %>
+<% end %>
