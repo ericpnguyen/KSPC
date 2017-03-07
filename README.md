@@ -4,6 +4,12 @@
 Migrating to Ruby on Rails
 
 # Changelog
+### Gus, 3/6 - Added admin account
+The archives page needed an admin account to create new archives, so I created one that should work site wide. To log in, visit localhost:3000/admin and enter the credentials (message me for email/pass).
+
+I made sure to disable registration so people can't create new admin accounts. I think the assumption is that there will be just one admin account shared between the people at KSPC.
+
+Only thing that's a little off is that the real URL for the admin page is /mains/admin. Ideally we could find a way to get rid of that mains prefix everywhere. This is fine, but it means if you go to localhost:3000/admin it won't highlight the proper tab you are on. Also added a TODO to move the admin nav buttons to the right to separate them from the rest.
 
 ### Judy, 3/6 - Made content editable
 The About and Expo pages contain general info, but we do not want that info to be static. Now you can use a rich text editor (tinymce used by Evernote, LinkedIn, WordPress, and more) to edit the content through our front-end. Admin privileges will be added later.
