@@ -44,6 +44,7 @@ class ExposController < ApplicationController
 
   # The destroy action removes the expo permanently from the database
   def destroy
+    @expo = Expo.find(params[:id])
     if @expo.destroy
       flash[:notice] = "Successfully deleted expo!"
       redirect_to expos_path

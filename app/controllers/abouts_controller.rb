@@ -40,6 +40,7 @@ class AboutsController < ApplicationController
 
   # The destroy action removes the about permanently from the database
   def destroy
+    @about = About.find(params[:id])
     if @about.destroy
       flash[:notice] = "Successfully deleted about!"
       redirect_to abouts_path

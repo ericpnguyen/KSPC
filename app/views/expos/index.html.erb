@@ -8,7 +8,7 @@
         </div>
         <div class="col">
           <div class="text-right">
-            <%= link_to 'Delete Content', expo, :method => :delete, :confirm => "Are you sure?", class: 'btn btn-danger', method: "get" %>
+            <%= link_to "Delete Content", expo_path(expo), class: "btn btn-danger", data: {:confirm => "Are you sure?"}, method: :delete %>
           </div>
         </div>
       </div>
