@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :admins
   get 'mains/admin'
 
-  devise_for :admins
   get 'blogs/blog'
 
   get 'mains/index'
