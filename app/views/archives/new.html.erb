@@ -16,8 +16,8 @@
   <%= f.label :date %>
   <%= f.date_field :date, {required: true} %>
   <br>
-  <%= f.label :tags %>
-  <%= f.text_field :tags, {'data-role' => 'tagsinput', 'value' => ''} %>
+  <%= f.label :tag_list %>
+  <%= f.text_field :tag_list, {'data-role' => 'tagsinput', 'value' => ''} %>
   <br>
   <div id="taglist"></div>
   <%= f.submit 'Submit', {class: 'btn btn-success'} %>

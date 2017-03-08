@@ -8,21 +8,26 @@ class ArchivesController < ApplicationController
   end
 
   def create
-    @archive = Archive.new(permit_archive)
+    @archive = Archive.new({
+      :media => params[:archive]["media"],
+      :title => params[:archive]["title"],
+      :description => params[:archive]["description"],
+      :date => params[:archive]["date"],
+    })
     # Get and save the tags seperately since
     # they have to be saved in a special way
     begin
-      @archive.tag_list.add(params[:archive]["tags"], parse: true)
+      @archive.tag_list.add(params[:archive]["tag_list"], parse: true)
     rescue
       puts "Invalid tag list!"
       redirect_to new_archive_path
     end
-    return
+
     if @archive.save
       flash[:success] = "Success!"
       redirect_to archives_path
     else
-      puts @archive.errors.full_messages
+      puts "Upload error!" + @archive.errors.full_messages
       redirect_to new_archive_path
     end
   end
@@ -30,6 +35,6 @@ class ArchivesController < ApplicationController
   private
     # Return a "list" of the form values given for each required parameter
     def permit_archive
-      params.require(:archive).permit(:media, :title, :description, :date)
+      params.require(:archive).permit(:media, :title, :description, :date, :tag_list)
     end
 end
