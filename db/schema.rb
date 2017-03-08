@@ -10,8 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 20170308175918) do
 
-ActiveRecord::Schema.define(version: 20170307045103) do
 
   create_table "abouts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "content",    limit: 65535
@@ -47,8 +47,6 @@ ActiveRecord::Schema.define(version: 20170305042457) do
     t.string   "media_content_type"
     t.integer  "media_file_size"
     t.datetime "media_updated_at"
-    t.string   "description"
-    t.date     "date"
   end
 
   create_table "contacts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -66,7 +64,6 @@ ActiveRecord::Schema.define(version: 20170305042457) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end
-
 
   create_table "taggings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "tag_id"
