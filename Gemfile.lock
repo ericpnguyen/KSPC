@@ -175,12 +175,9 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.1.4)
       execjs (>= 0.3.0, < 3)
-<<<<<<< HEAD
     warden (1.2.7)
       rack (>= 1.0)
-=======
     videojs_rails (4.12.15)
->>>>>>> mp3 player happened. Used videojs_rails gem, which might also support mp4.
     web-console (3.4.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)

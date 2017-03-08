@@ -51,7 +51,6 @@ ActiveRecord::Schema.define(version: 20170305042457) do
     t.date     "date"
   end
 
-<<<<<<< HEAD
   create_table "contacts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "first"
     t.string   "last"
