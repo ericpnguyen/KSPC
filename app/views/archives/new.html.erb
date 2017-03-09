@@ -1,5 +1,9 @@
 <%# stylesheet_link_tag "bootstrap-tagsinput" %>
-
+<%- if !admin_signed_in? %>
+    <script type="text/javascript">
+    window.location.href="/archives"
+  </script>
+<% else %>
 <h2>New Archive</h2>
 <hr>
 
@@ -21,4 +25,5 @@
   <br>
   <div id="taglist"></div>
   <%= f.submit 'Submit', {class: 'btn btn-success'} %>
+<% end %>
 <% end %>
