@@ -2,8 +2,6 @@ Rails.application.routes.draw do
   devise_for :admins
   get 'mains/admin'
 
-  get 'blogs/blog'
-
   get 'mains/index'
 
   get 'mains/media'
@@ -15,5 +13,6 @@ Rails.application.routes.draw do
   resources :abouts
   resources :archives
   resources :expos
+  resources :blogs
   resources :contacts
 end
