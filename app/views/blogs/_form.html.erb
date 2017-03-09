@@ -1,0 +1,12 @@
+<h1>Editor</h1>
+<%= tinymce %>
+<%= form_for @blog, html: { multipart: true } do |f| %>
+  <%= f.label :image %>
+  <%= f.file_field :image %>
+  <%= f.label :title %>
+  <%= f.text_area :title, {required: true} %>
+  <%= f.label :author %>
+  <%= f.text_area :author, {required: true} %>
+  <%= f.text_area :content, :class => "tinymce", :rows => 40, :cols => 120 %>
+  <%= f.submit 'Save', {class: 'btn btn-success'} %>
+<% end %>
