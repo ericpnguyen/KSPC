@@ -1,3 +1,5 @@
+<%= stylesheet_link_tag "archives/new" %>
+<%= stylesheet_link_tag "archives/index" %>
 <h1>Archives</h1>
 <br>
 <div class="row">
@@ -19,7 +21,11 @@
       <div class="card-block">
         <h5 class="archive-title"><%= archive.title %></h5>
         <div><%= archive.date %></div>
-        <div><%= archive.tag_list %></div>
+        <div class="tag-box">
+          <% archive.tag_list.each do |tag| %>
+            <span class="tag"><%= tag %></span>
+          <% end %>  
+        </div>
       </div>
     </div>
   <% end %>

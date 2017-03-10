@@ -1,4 +1,4 @@
-<%# stylesheet_link_tag "bootstrap-tagsinput" %>
+<%= stylesheet_link_tag "archives/new" %>
 <%- if !admin_signed_in? %>
     <script type="text/javascript">
     window.location.href="/archives"
@@ -7,23 +7,27 @@
 <h2>New Archive</h2>
 <hr>
 
-<%= form_for @archive, html: { multipart: true } do |f| %>
-  <%= f.label :media %>
-  <%= f.file_field :media, {required: true} %>
-  <br>
-  <%= f.label :title %>
-  <%= f.text_field :title, {required: true} %>
-  <br>
-  <%= f.label :description %>
-  <%= f.text_area :description, {required: true} %>
-  <br>
-  <%= f.label :date %>
-  <%= f.date_field :date, {required: true} %>
-  <br>
-  <%= f.label :tag_list %>
-  <%= f.text_field :tag_list, {'data-role' => 'tagsinput', 'value' => ''} %>
-  <br>
-  <div id="taglist"></div>
+<%= form_for @archive, html: {class: "new-archive", multipart: true } do |f| %>
+  <div class="form-group">
+    <%= f.label :media %>
+    <%= f.file_field :media, {class: "form-control", required: true} %>
+  </div>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, {class: "form-control", required: true} %>
+  </div>
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, {class: "form-control", required: true} %>
+  </div>
+  <div class="form-group">
+    <%= f.label :date %>
+    <%= f.date_field :date, {class: "form-control", required: true} %>
+  </div>
+  <div class="form-group">
+    <%= f.label :tag_list %><br>
+    <%= f.text_field :tag_list, {'class' => 'form-control', 'data-role' => 'tagsinput', 'value' => ''} %>
+  </div>
   <%= f.submit 'Submit', {class: 'btn btn-success'} %>
 <% end %>
 <% end %>

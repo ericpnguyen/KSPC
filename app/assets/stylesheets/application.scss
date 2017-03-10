@@ -16,6 +16,7 @@
 *= require bootstrap-tagsinput
 */
 @import "bootstrap";
+@import "lightbox-bootstrap";
 @import "*";
 
 body{
@@ -26,4 +27,3 @@ body{
   background-color: white;
   padding-top: px;
 }
-@import "lightbox-bootstrap";
