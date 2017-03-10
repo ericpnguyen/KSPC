@@ -1,0 +1,48 @@
+.archive {
+  margin-bottom: 2em;
+  margin-right: 2em;
+  width: 250px;
+}
+
+.archive-title {
+  margin-bottom: 0;
+}
+
+.thumbnails {
+  height: 250px;
+  object-fit: none;
+  overflow: hidden;
+  width: 250px;
+}
+
+.thumbnails img {
+  object-fit: contain;
+  width:250px;
+}
+
+.thumbnails audio {
+  width: 250px;
+}
+
+.pagination a, .pagination em, .pagination .previous_page {
+  padding-right: 5px;
+}
+
+.tag [data-role="remove"]:after {
+  content: "";
+  cursor: pointer;
+  top: -8px;
+  right: 10px;
+  padding: 0px;
+  position: absolute;
+  z-index: 1;
+}
+
+.tag-box {
+  float: left;
+  position: relative;
+}
+
+audio {
+  width: 265px;
+}
