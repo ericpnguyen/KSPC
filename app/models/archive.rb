@@ -1,6 +1,13 @@
 class Archive < ApplicationRecord
   def self.search(search)
-    where("title LIKE ? OR description LIKE ?", "%#{search}%", "%#{search}%") 
+    search_length = search.split.length
+    if search_length > 0
+      where([(["title LIKE ? OR description LIKE ?"] * search_length).join(' OR ')] \
+              + search.split.map{ |name| "%#{name}%" } \
+              + search.split.map{ |name| "%#{name}%" })
+    else
+      where("title LIKE ?", "%#{search}%")
+    end
   end
   acts_as_taggable
   has_attached_file :media, styles: {}, default_url: "/images/missing.png"
