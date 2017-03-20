@@ -1,4 +1,7 @@
 class Archive < ApplicationRecord
+  def self.search(search)
+    where("title LIKE ? OR description LIKE ?", "%#{search}%", "%#{search}%") 
+  end
   acts_as_taggable
   has_attached_file :media, styles: {}, default_url: "/images/missing.png"
   validates_attachment_content_type :media, 

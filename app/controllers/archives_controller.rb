@@ -1,6 +1,9 @@
 class ArchivesController < ApplicationController
   def index
     @archives = Archive.paginate(:page => params[:page], :per_page => 10)
+    if params[:search]
+      @archives = Archive.search(params[:search]).order("created_at DESC").paginate(:page => params[:page], :per_page => 10)
+    end
   end
 
   def new
