@@ -14,6 +14,10 @@
 //= require tether
 //= require bootstrap-sprockets
 //= require jquery_ujs
+//= require horizontal-timeline/js/jquery-2.1.4
+//= require horizontal-timeline/js/jquery.mobile.custom.min
+//= require horizontal-timeline/js/main
+//= require horizontal-timeline/js/modernizr
 //= require video
 //= require turbolinks
 //= require_tree .

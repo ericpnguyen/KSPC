@@ -2,7 +2,114 @@
 <%= stylesheet_link_tag "archives/index" %>
 <h1>Archives</h1>
 <br>
+<%= javascript_include_tag 'horizontal-timeline' %>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700,900|Fira+Sans:400,400italic' rel='stylesheet' type='text/css'>
 
+  <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+  <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+  <script src="js/modernizr.js"></script> <!-- Modernizr -->
+    
+  <title>Horizontal Timeline | CodyHouse</title>
+</head>
+<body>
+<section class="cd-horizontal-timeline">
+  <div class="timeline">
+    <div class="events-wrapper">
+      <div class="events">
+        <ol>
+          <li><a href="#0" data-date="10/18/1956" class="selected">1956</a></li>
+          <li><a href="#0" data-date="01/01/1960">60s</a></li>
+          <li><a href="#0" data-date="01/01/1970">70s</a></li>
+          <li><a href="#0" data-date="01/01/1980">80s</a></li>
+          <li><a href="#0" data-date="01/01/1990">90s</a></li>
+          <li><a href="#0" data-date="01/01/2000">00s</a></li>
+          <li><a href="#0" data-date="01/01/2010">10s</a></li>
+        </ol>
+
+        <span class="filling-line" aria-hidden="true"></span>
+      </div> <!-- .events -->
+    </div> <!-- .events-wrapper -->
+      
+    <ul class="cd-timeline-navigation">
+      <li><a href="#0" class="prev inactive">Prev</a></li>
+      <li><a href="#0" class="next">Next</a></li>
+    </ul> <!-- .cd-timeline-navigation -->
+  </div> <!-- .timeline -->
+
+  <div class="events-content">
+    <ol>
+      <li class="selected" data-date="10/18/1956">
+        <h2>Beginning of Time</h2>
+        <em>1956</em>
+        <p> 
+          Dawn of KSPC, or whatever it was called at that time
+        </p>
+      </li>
+
+      <li data-date="01/01/1960">
+        <h2>60s</h2>
+        <em>1960~1969</em>
+        <p> 
+          Once upon a time there were 4Cs ... and Pitzer appeared out of nowhere
+        </p>
+      </li>
+
+      <li data-date="01/01/1970">
+        <h2>70s</h2>
+        <em>1970~1979</em>
+        <p> 
+          Nothing interesting happened
+        </p>
+      </li>
+
+      <li data-date="01/01/1980">
+        <h2>80s</h2>
+        <em>1980~1989</em>
+        <p> 
+          Dark age continues
+        </p>
+      </li>
+
+      <li data-date="01/01/1990">
+        <h2>90s</h2>
+        <em>1990~1999</em>
+        <p> 
+          #BestDecadeToBeBorn
+        </p>
+      </li>
+
+      <li data-date="01/01/2000">
+        <h2>00s</h2>
+        <em>2000~2009</em>
+        <p> 
+          It still feels like few years ago
+        </p>
+      </li>
+
+      <li data-date="01/01/2010">
+        <h2>10s</h2>
+        <em>2010~</em>
+        <p> 
+          Wait we are more than halfway done?
+        </p>
+      </li>
+    </ol>
+  </div> <!-- .events-content -->
+</section>
+<br>  
+<iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1BUERgBpEUUJHG4_rgqWVlJaJPjjVUPXCcEEr_K-hltk&font=Default&lang=en&initial_zoom=2&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+<br>
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/jquery.mobile.custom.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+</body>
+
+
+<br>
 <%= form_tag(archives_path, :method => "get", id: "search-form") do %>
 <%= text_field_tag :search, params[:search], placeholder: "Search Archives" %>
 <%= submit_tag "Search" %>
