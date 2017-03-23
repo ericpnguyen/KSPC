@@ -2,6 +2,10 @@
 <%= stylesheet_link_tag "archives/index" %>
 <h1>Archives</h1>
 <br>
+
+<!-- BEGINNING OF THE MESS -->
+
+<!-- OPTION1 (collapsing strongly suggested) -->
 <%= javascript_include_tag 'horizontal-timeline' %>
 <head>
   <meta charset="UTF-8">
@@ -101,15 +105,19 @@
   </div> <!-- .events-content -->
 </section>
 <br>  
+
+<!-- OPTION2 -->
 <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1BUERgBpEUUJHG4_rgqWVlJaJPjjVUPXCcEEr_K-hltk&font=Default&lang=en&initial_zoom=2&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
 <br>
 <script src="js/jquery-2.1.4.js"></script>
 <script src="js/jquery.mobile.custom.min.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
 </body>
-
-
 <br>
+
+<!-- BACK TO SANITY -->
+
+
 <%= form_tag(archives_path, :method => "get", id: "search-form") do %>
 <%= text_field_tag :search, params[:search], placeholder: "Search Archives" %>
 <%= submit_tag "Search" %>
