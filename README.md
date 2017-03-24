@@ -4,8 +4,12 @@
 Migrating to Ruby on Rails
 
 # Changelog
-### Judy and Tina, 3/8 Blogs
-We implemented the blog. The next step is integrating comments, then formatting the image, contents, and other aspects associated with each post.
+
+### Cha, 3/19 - Sending emails after signing up.
+
+In the homepage the subscription email will be sent when someone signups.
+The sender email is kspc.auto@gmail.com and can be changed to any appropriate ones.
+The content is blank but we can change it to what the client prefers.
 
 ### Gus, 3/6 - Added admin account
 The archives page needed an admin account to create new archives, so I created one that should work site wide. To log in, visit localhost:3000/admin and enter the credentials (message me for email/pass).

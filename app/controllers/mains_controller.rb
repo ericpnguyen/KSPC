@@ -1,6 +1,6 @@
 class MainsController < ApplicationController
   def index
-  	@contact = Contact.new
+  	@subscriber = Subscriber.new
   end
 
   def media

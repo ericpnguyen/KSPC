@@ -1,0 +1,7 @@
+<%= form_for @subscriber, html:{multipart: true} do |f| %>
+	<%= f.email_field :email, required: true,:placeholder => 'Your email address' %>
+	<br>
+	<br>
+	<%= f.submit :'Sign Up'%>
+
+<% end %>
