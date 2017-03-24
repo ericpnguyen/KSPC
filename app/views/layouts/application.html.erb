@@ -53,8 +53,11 @@
 
   <!-- Page Content -->
   <div class="container white">
-      <%= yield %>
-      <hr>
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+    <% end %>
+    <%= yield %>
+    <hr>
 
       <!-- Footer -->
     <div class="container">

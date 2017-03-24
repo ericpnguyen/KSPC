@@ -29,11 +29,10 @@ class ArchivesController < ApplicationController
     end
 
     if @archive.save
-      flash[:success] = "Success!"
-      redirect_to archives_path
+      flash[:success] = "Upload complete. Media URL is 
+        http://localhost:3000" + @archive.media.url
     else
-      puts "Upload error!" + @archive.errors.full_messages
-      redirect_to new_archive_path
+      flash[:error] = @archive.errors.full_messages
     end
   end
 
