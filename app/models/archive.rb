@@ -10,7 +10,7 @@ class Archive < ApplicationRecord
     end
   end
   acts_as_taggable
-  has_attached_file :media, styles: {}, default_url: "/images/missing.png"
+  has_attached_file :media, :styles => {:thumb => {:geometry => "250x250#", :format => 'jpg', :time => 0}}, :default_url => "/images/missing.png"
   validates_attachment_content_type :media, 
     :content_type => [
       "image/jpg",

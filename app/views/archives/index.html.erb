@@ -27,7 +27,7 @@
                   footer += "<span class='tag'>" + tag + "</span>"
                 end
                 footer += "</div>"
-                link_to image_tag(archive.media.url), archive.media.url,
+                link_to image_tag(archive.media.url(:thumb)), archive.media.url,
                 data: {
                   toggle: "lightbox",
                   title: archive.title,
@@ -35,7 +35,7 @@
                 }
             %>
           <% else %>
-            <%= videojs_rails sources: {mp4: archive.media.url, type:'audio/mp3'}, class: "video-js vjs-default-skin", setup: "{}", poster: "/defaultImage.png", width:"250" ,height:"250"%>
+            <%= videojs_rails sources: {mp4: archive.media.url, type:'audio/mp3'}, class: "video-js vjs-default-skin", setup: "{}", poster: archive.media.url(:thumb), width:"250" ,height:"250"%>
           <% end %>
       </div>
       <div class="card-block">
