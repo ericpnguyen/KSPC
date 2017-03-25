@@ -1,5 +1,23 @@
+<head>
+    <%= stylesheet_link_tag "blogs" %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
 <div class="col-sm-11 col-xs-12 blog-content">
-  <h2><%= @blog.title %></h2>
-  <h5>by <%= @blog.author %> on <%= @blog.created_at.strftime('%b %d, %Y') %></h5>
-  <div><%= raw @blog.content %></div>
+    <h2><%= @blog.title %></h2>
+    <hr>
+    <p>
+    <span class="fa fa-clock-o red-icon"></span>
+    Posted
+    <%= @blog.created_at.strftime('%b %d, %Y') %>  
+    <span class="fa fa-pencil red-icon"></span>
+    By
+    <%= @blog.author %></p>
+<hr>
+<div><%= raw @blog.content %></div>
+<h3><%= @blog.comments.count %>
+    Comments</h2>
+<%= render @blog.comments %>
+<hr>
+<h3>Add a Comment:</h2>
+<%= render 'comments/form' %>
 </div>

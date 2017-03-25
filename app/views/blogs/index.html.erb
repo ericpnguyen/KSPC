@@ -6,16 +6,17 @@
       <br>
       <p>Author: <%= blog.author %></p>
       <p>Written: <%= blog.updated_at %></p>
-      <%= raw(blog.content).truncate(358) %>
+      <%= raw blog.content.truncate(358) %>
+      <br>
       <%= link_to "READ MORE", blog_path(blog) %>
       <br>
       <div class="row">
         <div class="col">
-          <%= button_to "Edit Content", edit_blog_path(blog), {class: 'btn btn-success', method: "get"} %>
+          <%= button_to "Edit Post", edit_blog_path(blog), {class: 'btn btn-success', method: "get"} %>
         </div>
         <div class="col">
           <div class="text-right">
-            <%= link_to "Delete Content", blog_path(blog), class: "btn btn-danger", data: {:confirm => "Are you sure?"}, method: :delete %>          </div>
+            <%= link_to "Delete Post", blog_path(blog), class: "btn btn-danger", data: {:confirm => "Are you sure?"}, method: :delete %>          </div>
         </div>
       </div>
       <br>
@@ -23,5 +24,5 @@
   </div>
   <br>
   <br>
-  <%= button_to "New Content", new_blog_path, {class: 'btn btn-success', method: "get"} %>
+  <%= button_to "New Post", new_blog_path, {class: 'btn btn-success', method: "get"} %>
 </div>

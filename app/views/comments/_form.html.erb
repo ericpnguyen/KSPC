@@ -1,0 +1,11 @@
+<%= form_for([@blog, @blog.comments.build]) do |f| %>
+<div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, {class: "form-control", required: true} %>
+</div>
+<div class="form-group">
+    <%= f.label :comment %>
+    <%= f.text_area :body, {class: "form-control", required: true} %>
+</div>
+<%= f.submit 'Submit', {class: 'btn btn-success'} %>
+<% end %>

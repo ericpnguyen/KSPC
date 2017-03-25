@@ -14,7 +14,9 @@ Rails.application.routes.draw do
   resources :abouts
   resources :archives
   resources :expos
-  resources :blogs
+  resources :blogs do
+    resources :comments
+  end
   resources :contacts
   resources :subscribers
 end
