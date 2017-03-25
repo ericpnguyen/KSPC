@@ -1,0 +1,5 @@
+<div class="col-sm-11 col-xs-12 blog-content">
+  <h2><%= @blog.title %></h2>
+  <h5>by <%= @blog.author %> on <%= @blog.created_at.strftime('%b %d, %Y') %></h5>
+  <div><%= raw @blog.content %></div>
+</div>

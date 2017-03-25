@@ -4,9 +4,11 @@
       <%= blog.title %>
       <%= image_tag blog.image.url(:medium) %>
       <br>
-      <p>Author: </p><%= blog.author %>
-      <p>Written: </p><%= blog.updated_at %>
-      <%= raw blog.content %>
+      <p>Author: <%= blog.author %></p>
+      <p>Written: <%= blog.updated_at %></p>
+      <%= raw(blog.content).truncate(358) %>
+      <%= link_to "READ MORE", blog_path(blog) %>
+      <br>
       <div class="row">
         <div class="col">
           <%= button_to "Edit Content", edit_blog_path(blog), {class: 'btn btn-success', method: "get"} %>
