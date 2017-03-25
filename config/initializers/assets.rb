@@ -8,5 +8,7 @@ Devise.secret_key = '097ba96c3052a5542a3abd521c98d78e88bddc0a6d014d0eae78f00ded0
 # Rails.application.config.assets.paths << Emoji.images_path
 
 # Precompile additional assets.
+Rails.application.config.assets.precompile += %w( blogs.css )
+
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )

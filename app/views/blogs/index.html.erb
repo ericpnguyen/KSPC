@@ -1,0 +1,28 @@
+<h1>Blog</h1>
+<div class="container">
+    <% @blogs.each do |blog| %>
+      <%= blog.title %>
+      <%= image_tag blog.image.url(:medium) %>
+      <br>
+      <p>Author: <%= blog.author %></p>
+      <p>Written: <%= blog.updated_at %></p>
+      <%= raw blog.content.truncate(358) %>
+      <br>
+      <%= link_to "READ MORE", blog_path(blog) %>
+      <br>
+      <div class="row">
+        <div class="col">
+          <%= button_to "Edit Post", edit_blog_path(blog), {class: 'btn btn-success', method: "get"} %>
+        </div>
+        <div class="col">
+          <div class="text-right">
+            <%= link_to "Delete Post", blog_path(blog), class: "btn btn-danger", data: {:confirm => "Are you sure?"}, method: :delete %>          </div>
+        </div>
+      </div>
+      <br>
+    <% end %>
+  </div>
+  <br>
+  <br>
+  <%= button_to "New Post", new_blog_path, {class: 'btn btn-success', method: "get"} %>
+</div>

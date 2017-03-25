@@ -8,7 +8,7 @@ Migrating to Ruby on Rails
 ### Cha, 3/19 - Sending emails after signing up.
 
 In the homepage the subscription email will be sent when someone signups.
-The sender email is kspc.auto@gmail.com and can be changed to any appropriate ones. 
+The sender email is kspc.auto@gmail.com and can be changed to any appropriate ones.
 The content is blank but we can change it to what the client prefers.
 
 ### Gus, 3/6 - Added admin account
