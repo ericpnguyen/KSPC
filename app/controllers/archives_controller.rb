@@ -36,6 +36,12 @@ class ArchivesController < ApplicationController
     end
   end
 
+  def destroy
+    Archive.find(params[:id]).destroy
+    flash[:success] = "Archive deleted"
+    redirect_to archives_path
+  end
+
   private
     # Return a "list" of the form values given for each required parameter
     def permit_archive

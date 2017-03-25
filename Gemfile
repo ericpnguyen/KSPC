@@ -11,6 +11,7 @@ gem 'tinymce-rails'
 gem 'lightbox-bootstrap-rails', '5.1.0.1'
 gem 'bootstrap-tagsinput-rails'
 gem 'acts-as-taggable-on', '~> 4.0'
+gem 'google_drive'
 
 gem 'will_paginate', '~> 3.1.0'
 

@@ -1,6 +1,5 @@
 <%- if admin_signed_in? %>
   <h1>Admin logged in</h1>
-  <%= button_to "New Archive", new_archive_path, {class: 'btn btn-success', method: "get"} %>
 <% else %>
   <%= form_for(:admin, :url => session_path(:admin)) do |f| %>
     Email: <%= f.text_field :email %><br>
