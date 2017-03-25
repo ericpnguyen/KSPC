@@ -8,16 +8,13 @@
     <p>
     <span class="fa fa-clock-o red-icon"></span>
     Posted
-    <%= @blog.created_at.strftime('%b %d, %Y') %>  
+    <%= @blog.created_at.strftime('%b %d, %Y') %>
     <span class="fa fa-pencil red-icon"></span>
     By
     <%= @blog.author %></p>
 <hr>
 <div><%= raw @blog.content %></div>
-<h3><%= @blog.comments.count %>
+<h3><script id="dsq-count-scr" src="//kspc-1.disqus.com/count.js" async></script>
     Comments</h2>
-<%= render @blog.comments %>
-<hr>
-<h3>Add a Comment:</h2>
-<%= render 'comments/form' %>
+<%= render 'disqus' %>
 </div>
