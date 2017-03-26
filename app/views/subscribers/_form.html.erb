@@ -1,7 +1,6 @@
-<%= form_for @subscriber, html:{multipart: true} do |f| %>
-	<%= f.email_field :email, required: true,:placeholder => 'Your email address' %>
-	<br>
-	<br>
-	<%= f.submit :'Sign Up'%>
-
+<%= form_for @subscriber do |f| %>
+<div class="form-group">
+	<%= f.email_field :email, class: "form-control", required: true, :placeholder => 'Your email address' %>
+</div>
+	<%= f.submit 'Submit', class: 'btn btn-success' %>
 <% end %>
