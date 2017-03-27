@@ -7,13 +7,22 @@
                     <h1 class="page-header">Upcoming Events</h1>
                     <br>
                 </div>
-                
+
                 <div class="col">
                     <h1 class="page-header">Spotlight</h1>
                     <br>
                 </div>
                 <div class = "row">
                     <div class="col-lg-3 thumb">
+                        <% @blog.each do |blog| %>
+                        <h6><%= blog.title %></h6>
+                        <br>
+                        <%= link_to image_tag(blog.image.url(:medium), :class=>"img-responsive"), blog_path(blog) %>
+                        <p>by <%= blog.author %></p>
+                        <dateComment>Date Posted: <%= blog.updated_at %></dateComment>
+                        <p><%= raw blog.content.truncate(358) %><p>
+                        <% end %>
+                        <br>
                         <a class="thumbnail" href="http://kspc.org/beach-goth-2016-preview/">
                             <img class="img-responsive" src="http://kspc.org/blog/wp-content/uploads/2016/10/beach-goth-lineup-182x100.png" alt="">
                         </a>
@@ -43,8 +52,17 @@
                 <p>Search </p>
                 <%= render "subscribers/form", subscriber: @subscriber %>
                 <p>Today on KSPC </p>
+
+                <div class="widget-box">
+                    <h3>Recent spins on KSPC</h3>
+                    <div data-station="kspc" data-num="3" data-time="1" data-nolinks="1" id="spinitron-nowplaying"></div>
+                    <script src="//spinitron.com/js/npwidget.js"></script>
+                </div>
+                <div>
+                  <a class="twitter-timeline" href="https://twitter.com/kspc">Recent Tweets</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
             </div>
         </div>
     </div>
-    
+
 </div>
