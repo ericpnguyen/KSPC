@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(version: 20170326173134) do
     t.string   "media_content_type"
     t.integer  "media_file_size"
     t.datetime "media_updated_at"
+    t.string   "description"
+    t.date     "date"
   end
 
   create_table "blogs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

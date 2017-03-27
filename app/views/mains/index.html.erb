@@ -22,18 +22,18 @@
 
     <style>
     /* Ugly hacks to fix the container within navbar functionality - should be fixed in Bootstrap 4 beta */
-    
+
     .navbar-toggler {
         z-index: 1;
     }
-    
+
     @media (max-width: 576px) {
         nav > .container {
             width: 100%;
         }
     }
     /* Temporary fix for img-fluid sizing within the carousel */
-    
+
     .carousel-item.active,
     .carousel-item-next,
     .carousel-item-prev {
@@ -93,12 +93,23 @@
         <h2>Recent Blog Heading</h2>
 
         <div class="row">
+
             <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
                     <a href="#"><img class="card-img-top img-fluid" src="http://placehold.it/700x400" alt=""></a>
                     <div class="card-block">
                         <h4 class="card-title"><a href="#">Blog One</a></h4>
                         <p class="card-text">Blog Text</p>
+                        <!--- MAKE THIS DYNAMIC
+                        <% @blog.each do |blog| %>
+                        <h6><%= blog.title %></h6>
+                        <br>
+                        <%= link_to image_tag(blog.image.url(:medium), :class=>"img-responsive"), blog_path(blog) %>
+                        <p>by <%= blog.author %></p>
+                        <dateComment>Date Posted: <%= blog.updated_at %></dateComment>
+                        <p><%= raw blog.content.truncate(358) %><p>
+                        <% end %>
+                      -->
                     </div>
                 </div>
             </div>
@@ -108,6 +119,7 @@
                     <div class="card-block">
                         <h4 class="card-title"><a href="#">Blog Two</a></h4>
                         <p class="card-text">Blog Text</p>
+
                     </div>
                 </div>
             </div>
@@ -180,8 +192,27 @@
                   <a class="btn btn-social-icon btn-twitter" href="https://twitter.com/kspc">
                     <span class="fa fa-twitter"></span>
                   </a>
+            <div class ="col-4">
+                <br><br>
+                <p> SIGN UP FOR THE "SPACED OUT" EMAIL NEWSLETTER </p>
+                <br>
+                <p>Upcoming giveaways, concerts, events and charts delivered to your inbox! </p>
+                <%= render "subscribers/form", subscriber: @subscriber %>
+
+                <p>Today on KSPC </p>
+
+                <div class="widget-box">
+                    <h3>Recent spins on KSPC</h3>
+                    <div data-station="kspc" data-num="3" data-time="1" data-nolinks="1" id="spinitron-nowplaying"></div>
+                    <script src="//spinitron.com/js/npwidget.js"></script>
+                </div>
+                <div>
+                  <a class="twitter-timeline" href="https://twitter.com/kspc">Recent Tweets</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
         </div>
     </div>
+
     <!-- /.container -->
 
     <!-- jQuery Version 3.1.1 -->
@@ -199,5 +230,4 @@
     </script>
 
 </body>
-
 </html>

@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get '/admin' => 'mains#admin'
 
   root 'mains#index'
-
+  resources :program_schedule
   resources :abouts
   resources :archives
   resources :expos

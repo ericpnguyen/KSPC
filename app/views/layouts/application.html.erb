@@ -45,6 +45,9 @@
                   <li class="<%= 'active' if current_page?(contacts_path) %>">
                     <%= link_to "Contact", contacts_path, class: "nav-item nav-link" %>
                   </li>
+                  <li class="<%= 'active' if current_page?(program_schedule_index_path) %>">
+                    <%= link_to "Program Schedule", program_schedule_index_path, class: "nav-item nav-link" %>
+                  </li>
               </ul>
               <%- if admin_signed_in? %>
                 <ul class="navbar-nav">
@@ -56,6 +59,7 @@
               <% end %>
           </div>
       </div>
+
   </nav>
 
   <!-- Page Content -->
