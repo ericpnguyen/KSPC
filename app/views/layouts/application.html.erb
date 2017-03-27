@@ -20,8 +20,8 @@
                   <li class="<%= 'active' if current_page?(abouts_path) %>">
                     <%= link_to "About", abouts_path, class: "nav-item nav-link" %>
                   </li>
-                  <li class="<%= 'active' if current_page?(blogs_blog_path) %>">
-                    <%= link_to "Blog", blogs_blog_path, class: "nav-item nav-link" %>
+                  <li class="<%= 'active' if current_page?(blogs_path) %>">
+                    <%= link_to "Blog", blogs_path, class: "nav-item nav-link" %>
                   </li>
                   <li class="<%= 'active' if current_page?(archives_path) %>">
                     <%= link_to "Archives", archives_path, class: "nav-item nav-link" %>
@@ -43,7 +43,7 @@
                     <%= link_to "Store", 'http://coopstore.pomona.edu/collections/kspc', class: "nav-item nav-link" %>
                   </li>
                   <li class="<%= 'active' if current_page?(contacts_path) %>">
-                    <%= link_to "Contact", new_contact_path, class: "nav-item nav-link" %>
+                    <%= link_to "Contact", contacts_path, class: "nav-item nav-link" %>
                   </li>
               </ul>
               <%- if admin_signed_in? %>
