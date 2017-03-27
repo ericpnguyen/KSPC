@@ -16,5 +16,6 @@ Rails.application.routes.draw do
   resources :expos
   resources :blogs
   resources :contacts
+  resources :emails, only: [:new, :create]
   resources :subscribers
 end

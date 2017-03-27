@@ -1,0 +1,19 @@
+<%= form_for Email.new, html:{multipart: true} do |f| %>
+<div class="form-group">
+    <%= f.label :'Name' %>
+    <%= f.text_field :name, class: "form-control" %>
+</div>
+<div class="form-group">
+    <%= f.label :'Email *' %>
+    <%= f.email_field :email, class: "form-control", required: true %>
+</div>
+<div class="form-group">
+    <%= f.label :'What is the nature of your inquiry *' %>
+    <%= f.select :inquiry, options_for_select([['Select One'],['General Inquiries/Comments'], ['Playlist Question'],['Concert Announcements'],['Request FREE KSPC License Plate Name (INCLUDE YOUR MAILING ADDRESS']], class: "form-control", required: true)%>
+</div>
+<div class="form-group">
+    <%= f.label :Comment %>
+    <%= f.text_area :message, class: "form-control" %>
+</div>
+<%= f.submit 'Submit', class: 'btn btn-success' %>
+<% end %>

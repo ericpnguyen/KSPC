@@ -5,9 +5,13 @@ Migrating to Ruby on Rails
 
 # Changelog
 
-### Judy, 3/25 - Blog
+### Judy, 3/25 - Blog & contact/email page controller
 Blog editing, updating, deleting implemented. Formatting and Disqus comment feature finished for individual blog showings. Later, the blog front page will look nice too. Admin under kspc.auto@gmail.com can monitor comments.
 ![screen shot 2017-03-25 at 4 13 07 pm](https://cloud.githubusercontent.com/assets/5604374/24326872/f5ef4f10-1175-11e7-8246-b8cf4f097362.png)
+
+I've also added functionality and content editing to the contact page. All messages will go to kspc.auto@gmail.com as Cha set up.
+
+Lastly, I made TODO notes for the homepage and formatted the subscriber form to be consistent with our bootstrap theme. 
 
 ### Cha, 3/19 - Sending emails after signing up
 In the homepage the subscription email will be sent when someone signups.

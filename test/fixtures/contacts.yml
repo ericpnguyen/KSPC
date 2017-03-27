@@ -1,15 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  first: MyString
-  last: MyString
-  email: MyString
-  inquiry: MyString
-  comment: MyString
+  content: MyText
 
 two:
-  first: MyString
-  last: MyString
-  email: MyString
-  inquiry: MyString
-  comment: MyString
+  content: MyText
