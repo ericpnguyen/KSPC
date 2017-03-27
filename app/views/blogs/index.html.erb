@@ -1,6 +1,6 @@
 <h1>Blog</h1>
 <div class="container">
-    <% @blog.each do |blog| %>
+    <% @blogs.each do |blog| %>
       <%= blog.title %>
       <%= image_tag blog.image.url(:medium) %>
       <br>
