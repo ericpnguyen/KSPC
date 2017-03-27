@@ -1,50 +1,210 @@
-<div class="row">
-    <!-- After the slideshow -->
-    <div class = "col-12">
-        <div class="row">
-            <div class = "col-8">
-                <div class="col">
-                    <h1 class="page-header">Upcoming Events</h1>
-                    <br>
-                </div>
-                
-                <div class="col">
-                    <h1 class="page-header">Spotlight</h1>
-                    <br>
-                </div>
-                <div class = "row">
-                    <div class="col-lg-3 thumb">
-                        <a class="thumbnail" href="http://kspc.org/beach-goth-2016-preview/">
-                            <img class="img-responsive" src="http://kspc.org/blog/wp-content/uploads/2016/10/beach-goth-lineup-182x100.png" alt="">
-                        </a>
-                        <dateComment>October 21 2016 | 0 comments</dateComment>
-                        <!-- Change this 0 comment and date to a variable -->
-                        <%= link_to "Beach Goth 2016 Preview", 'http://kspc.org/beach-goth-2016-preview/', {:style=>'color: green;', :class => "css_class"} %>
-                        <p>Beach goth 2016 is this weekend .......</p>
-                    </div>
-                    <div class="col-lg-1 thumb">
-                    </div>
-                    <div class="col-lg-3 thumb">
-                        <a class="thumbnail" href="http://kspc.org/show-review-crying-and-the-hotelier-at-the-echo/">
-                            <img class="img-responsive" src="http://kspc.org/blog/wp-content/uploads/2016/10/hot2-182x100.jpg" alt="">
-                        </a>
-                        <dateComment>October 14 2016 | 0 comments</dateComment>
-                        <%= link_to "SHOW REVIEW: Crying and The Hotelier at The Echo", 'http://kspc.org/show-review-crying-and-the-hotelier-at-the-echo/', {:style=>'color: green;', :class => "css_class"} %>
-                        <!-- Change this 0 comment and date to a variable -->
-                    </div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Modern Business - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Font Awesome Style Sheet -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <style>
+    /* Ugly hacks to fix the container within navbar functionality - should be fixed in Bootstrap 4 beta */
+    
+    .navbar-toggler {
+        z-index: 1;
+    }
+    
+    @media (max-width: 576px) {
+        nav > .container {
+            width: 100%;
+        }
+    }
+    /* Temporary fix for img-fluid sizing within the carousel */
+    
+    .carousel-item.active,
+    .carousel-item-next,
+    .carousel-item-prev {
+        display: block;
+    }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <!-- Slide One - Set the background image for this slide in the line below -->
+            <div class="carousel-item active" style="background-image: url('http://more-sky.com/data/out/9/IMG_347836.jpg')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>First Slide</h3>
+                    <p>This is a description for the first slide.</p>
                 </div>
             </div>
-
-            <div class ="col-4">
-                <br><br>
-                <p> SIGN UP FOR THE "SPACED OUT" EMAIL NEWSLETTER </p>
-                <br>
-                <p>Upcoming giveaways, concerts, events and charts delivered to your inbox! </p>
-                <p>Search </p>
-                <%= render "subscribers/form", subscriber: @subscriber %>
-                <p>Today on KSPC </p>
+            <!-- Slide Two - Set the background image for this slide in the line below -->
+            <div class="carousel-item" style="background-image: url('http://more-sky.com/data/out/9/IMG_347836.jpg')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Second Slide</h3>
+                    <p>This is a description for the second slide.</p>
+                </div>
+            </div>
+            <!-- Slide Three - Set the background image for this slide in the line below -->
+            <div class="carousel-item" style="background-image: url('http://more-sky.com/data/out/9/IMG_347836.jpg')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Third Slide</h3>
+                    <p>This is a description for the third slide.</p>
+                </div>
             </div>
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-    
-</div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Recent Blog Section -->
+        <h2>Recent Blog Heading</h2>
+
+        <div class="row">
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top img-fluid" src="http://placehold.it/700x400" alt=""></a>
+                    <div class="card-block">
+                        <h4 class="card-title"><a href="#">Blog One</a></h4>
+                        <p class="card-text">Blog Text</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top img-fluid" src="http://placehold.it/700x400" alt=""></a>
+                    <div class="card-block">
+                        <h4 class="card-title"><a href="#">Blog Two</a></h4>
+                        <p class="card-text">Blog Text</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top img-fluid" src="http://placehold.it/700x400" alt=""></a>
+                    <div class="card-block">
+                        <h4 class="card-title"><a href="#">Blog Three</a></h4>
+                        <p class="card-text">Blog Text</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top img-fluid" src="http://placehold.it/700x400" alt=""></a>
+                    <div class="card-block">
+                        <h4 class="card-title"><a href="#">Blog Four</a></h4>
+                        <p class="card-text">Blog Text</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top img-fluid" src="http://placehold.it/700x400" alt=""></a>
+                    <div class="card-block">
+                        <h4 class="card-title"><a href="#">Blog Five</a></h4>
+                        <p class="card-text">Blog Text</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top img-fluid" src="http://placehold.it/700x400" alt=""></a>
+                    <div class="card-block">
+                        <h4 class="card-title"><a href="#">Blog Six</a></h4>
+                        <p class="card-text">Blog Text</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Features Section -->
+        <div class="row">
+            <div class="col-lg-6">
+                <h2>Title</h2>
+                <p>Title description:</p>
+                <ul>
+                    <li><strong>Feature 1</strong>
+                    </li>
+                    <li>Feature 2</li>
+                    <li>Feature 3</li>
+                    <li>Feature 4</li>
+                    <li>Feature 5</li>
+                </ul>
+                <p>Conclusion</p>
+            </div>
+            <div class="col-lg-6">
+                <img class="img-fluid rounded" src="http://placehold.it/700x450" alt="">
+            </div>
+        </div
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Call to Action Section -->
+        <div class="row">
+            <div class="col-md-8">
+                  <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/KSPCOnline/">
+                    <span class="fa fa-facebook"></span>
+                  </a>
+                  <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/kspcradio/">
+                    <span class="fa fa-instagram"></span>
+                  </a>
+                  <a class="btn btn-social-icon btn-twitter" href="https://twitter.com/kspc">
+                    <span class="fa fa-twitter"></span>
+                  </a>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 3.1.1 -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Tether -->
+    <script src="js/tether.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel()
+    </script>
+
+</body>
+
+</html>

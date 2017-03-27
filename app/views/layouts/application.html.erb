@@ -1,93 +1,83 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Radio</title>
+    <title>KSPC 88.7FM</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-<body style="padding-top: 0px;">
   <!-- Navigation -->
-  <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse" style="margin-bottom: 2em;">
-    <%= link_to "KSPC", root_url, class: "navbar-brand"%>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="<%= 'active' if current_page?(root_path) %>">
-          <%= link_to "Home", root_path, class: "nav-item nav-link" %>
-        </li>
-        <li>
-          <%= link_to "Store", 'http://coopstore.pomona.edu/collections/kspc', class: "nav-item nav-link" %>
-        </li>
-        <li class="<%= 'active' if current_page?(abouts_path) %>">
-          <%= link_to "About", abouts_path, class: "nav-item nav-link" %>
-        </li>
-        <li class="<%= 'active' if current_page?(blogs_blog_path) %>">
-          <%= link_to "Blog", blogs_blog_path, class: "nav-item nav-link" %>
-        </li>
-        <li class="<%= 'active' if current_page?(archives_path) %>">
-          <%= link_to "Archives", archives_path, class: "nav-item nav-link" %>
-        </li>
-        <li class="<%= 'active' if current_page?(expos_path) %>">
-          <%= link_to "EXPO", expos_path, class: "nav-item nav-link" %>
-        </li>
-        <li class="<%= 'active' if current_page?(mains_media_path) %>">
-          <%= link_to "Media", mains_media_path, class: "nav-item nav-link" %>
-        </li>
-        <li class="<%= 'active' if current_page?(contacts_path) %>">
-          <%= link_to "Contact", new_contact_path, class: "nav-item nav-link" %>
-        </li>
-      </ul>
-      <!-- TODO: Make these admin buttons align right -->
-      <%- if admin_signed_in? %>
-        <ul class="navbar-nav">
-          <li class="<%= 'active' if current_page?(mains_admin_path) %>">
-            <%= link_to "Admin", mains_admin_path, class: "nav-item nav-link" %>
-          </li>
-          <%= link_to "Logout", destroy_admin_session_path, method: :delete, class: "nav-item nav-link" %>
-        </ul>
-      <% end %>
-    </div>
+  <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="container">
+          <a class="navbar-brand" href="index.html"><%= link_to "KSPC", root_url, class: "navbar-brand"%></a>
+          <div class="collapse navbar-collapse" id="navbarExample">
+              <ul class="navbar-nav ml-auto">
+                  <li class="<%= 'active' if current_page?(abouts_path) %>">
+                    <%= link_to "About", abouts_path, class: "nav-item nav-link" %>
+                  </li>
+                  <li class="<%= 'active' if current_page?(blogs_blog_path) %>">
+                    <%= link_to "Blog", blogs_blog_path, class: "nav-item nav-link" %>
+                  </li>
+                  <li class="<%= 'active' if current_page?(archives_path) %>">
+                    <%= link_to "Archives", archives_path, class: "nav-item nav-link" %>
+                  </li>
+                  <li class="<%= 'active' if current_page?(expos_path) %>">
+                    <%= link_to "EXPO", expos_path, class: "nav-item nav-link" %>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown Example
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownExample">
+                          <a class="dropdown-item" href="">Link 1</a>
+                          <a class="dropdown-item" href="">Link 2</a>
+                          <a class="dropdown-item" href="">Link 3</a>
+                      </div>
+                  </li>
+                  <li>
+                    <%= link_to "Store", 'http://coopstore.pomona.edu/collections/kspc', class: "nav-item nav-link" %>
+                  </li>
+                  <li class="<%= 'active' if current_page?(contacts_path) %>">
+                    <%= link_to "Contact", new_contact_path, class: "nav-item nav-link" %>
+                  </li>
+              </ul>
+              <%- if admin_signed_in? %>
+                <ul class="navbar-nav">
+                  <li class="<%= 'active' if current_page?(mains_admin_path) %>">
+                    <%= link_to "Admin", mains_admin_path, class: "nav-item nav-link" %>
+                  </li>
+                  <%= link_to "Logout", destroy_admin_session_path, method: :delete, class: "nav-item nav-link" %>
+                </ul>
+              <% end %>
+          </div>
+      </div>
   </nav>
 
   <!-- Page Content -->
   <div class="container white">
-      <%= yield %>
-      <hr>
-
-      <!-- Footer -->
-    <div class="container">
-      <div class="row align-items-start">
-        <div class="col"
-          <titlePage>MULTIMEDIA</titlePage>
-          <p> </p>
-          <%= link_to "Interview", 'http://kspc.org/multimedia/audio/interviews/', {:style=>'color: lightblue;', :class => "css_class"} %>
-        </div>
-        <div class="col"
-        <titlePage>GET INVOLVED!</titlePage>
-        <p> </p>
-          <%= link_to "Volunteer", 'http://kspc.org/multimedia/audio/interviews/', {:style=>'color: lightblue;', :class => "css_class"} %>
-        </div>
-        <div class="col"
-          <p> THE CLAREMONT COLLEGES </p>
-          <p> </p>
-          <a class="thumbnail" href="www.hmc.edu">
-                    <img class="img-responsive" src="http://kspc.org/blog/wp-content/themes/kspc2/images/hmclogo.png" alt="">
-            </a>
-        </div>
-      </div>
-    </div>
-
-      <footer>
-        <div class="container">
-          <p>Copyright &copy; KSPC 2017</p>
-          <p>KSPC is located @ Thatcher Music Building, 340 N. College Ave., Claremont, CA 91711</p>
-        </div>
-      </footer>
-
+      <%= yield %>  
   </div>
-</body>
+
+  <!-- Footer -->
+  <footer class="py-3 bg-inverse">
+      <div class="container">
+        <p class="m-0 text-left text-white"> THE CLAREMONT COLLEGES </p>
+        <a class="thumbnail" href="http://hmc.edu">
+          <img class="img-responsive" src="http://kspc.org/blog/wp-content/themes/kspc2/images/hmclogo.png" alt="">
+        </a>
+      </div>
+      <div class="container">
+          <p class="m-0 text-left text-white">Copyright &copy; KSPC 2017</p>
+          <p class="m-0 text-left text-white">KSPC is located @ Thatcher Music Building, 340 N. College Ave., Claremont, CA 91711</p>
+      </div>
+      <!-- /.container -->
+  </footer>
+
 <!-- /.container -->
 <style>body{padding-top: 70px;}</style>
 </html>
