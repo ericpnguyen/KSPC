@@ -30,6 +30,7 @@
   <h4>There are no archives containing the term <%= params[:search] %></h4>
 <% end %>
 <br>
+<div class="row">
 <% @archives.each_with_index do |archive, i| %>
   <div class="archive card text-center">
     <div class="thumbnails">
@@ -81,6 +82,7 @@
     </div>
   </div>
 <% end %>
+</div>
 <!-- Render page links -->
 <%= will_paginate @posts %>
 

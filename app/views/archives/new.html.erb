@@ -6,12 +6,11 @@
 <% else %>
 <h2>New Archive</h2>
 <hr>
-<%=
+<%#
   require "google_drive"
   session = GoogleDrive::Session.from_config("config.json")
-  session.files.each do |file|
-    p file.title
-  end
+  ws = session.spreadsheet_by_key("1BUERgBpEUUJHG4_rgqWVlJaJPjjVUPXCcEEr_K-hltk").worksheets[0]
+  value = ws[3, 1]
 %>
 <%= form_for @archive, html: {class: "new-archive", multipart: true } do |f| %>
   <div class="form-group">
@@ -35,8 +34,8 @@
     <%= f.text_field :tag_list, {'class' => 'form-control', 'data-role' => 'tagsinput', 'value' => ''} %>
   </div>
   <div class="form-group">
-    <%= f.label :feature %><br>
-    <%= f.check_box :feature, {class: "form-control", required: true} %>
+    <%= f.label :feature %>
+    <%= check_box_tag 'feature' %>
   </div>
   <%= f.submit 'Submit', {class: 'btn btn-success'} %>
 <% end %>
