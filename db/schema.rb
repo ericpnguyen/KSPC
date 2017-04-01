@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170308231820) do
+ActiveRecord::Schema.define(version: 20170331025358) do
 
   create_table "abouts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "content",    limit: 65535
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20170308231820) do
     t.datetime "media_updated_at"
     t.string   "description"
     t.date     "date"
+    t.boolean  "featured"
   end
 
   create_table "contacts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

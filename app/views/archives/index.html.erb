@@ -46,7 +46,7 @@
               deletebutton = button_to "Delete", archive_path(archive),
                                 remote: true, 
                                 method: :delete,
-                                data: { confirm: "Are you sure?" },
+                                data: { confirm: "Delete this archive entry?" },
                                 class: "btn btn-danger"
             end
             link_to image_tag(archive.media.url(:thumb)), archive.media.url,
