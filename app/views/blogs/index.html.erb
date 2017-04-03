@@ -1,28 +1,131 @@
-<h1>Blog</h1>
+<head>
+    <%= stylesheet_link_tag "blogs" %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
 <div class="container">
-    <% @blogs.each do |blog| %>
-      <%= blog.title %>
-      <%= image_tag blog.image.url(:medium) %>
-      <br>
-      <p>Author: <%= blog.author %></p>
-      <p>Written: <%= blog.updated_at %></p>
-      <%= raw blog.content.truncate(358) %>
-      <br>
-      <%= link_to "READ MORE", blog_path(blog) %>
-      <br>
-      <div class="row">
-        <div class="col">
-          <%= button_to "Edit Post", edit_blog_path(blog), {class: 'btn btn-success', method: "get"} %>
+    <div class="row">
+
+        <!-- Blog Index -->
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col">
+                    <h1>Blog
+                        <small>Home</small>
+                    </h1>
+                </div>
+                <div class="col">
+                    <div class="text-right">
+                        <%= button_to "New Post", new_blog_path, {class: 'btn btn-success', method: "get"} %>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic Content -->
+            <% @blogs.each do |blog| %>
+            <%= link_to blog_path(blog) do %>
+            <h2><%= blog.title %></h2>
+            <% end %>
+            <p class="lead">by
+                <%= blog.author %></p>
+            <p>
+                <span class="fa fa-clock-o red-icon"></span>
+                Posted
+                <%= blog.created_at.strftime('%b %d, %Y') %></p>
+            <hr>
+            <%= image_tag blog.image.url, {class: 'img-fluid'} %>
+            <hr>
+            <%= raw blog.content.truncate(358) %>
+            <br>
+            <%= link_to "Read More", blog_path(blog),  {class: 'btn btn-primary', method: "get"} %>
+            <hr>
+            <% end %>
+
+            <!-- Pager -->
+            <ul class="pagination">
+                <li class="page-item">
+                    <a href="#" class="page-link" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a href="#" class="page-link" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div class="col">
-          <div class="text-right">
-            <%= link_to "Delete Post", blog_path(blog), class: "btn btn-danger", data: {:confirm => "Are you sure?"}, method: :delete %>          </div>
+
+        <!-- Blog Sidebar Widgets Column -->
+        <div class="col-md-4">
+
+            <!-- Blog Search Well -->
+            <div class="card card-block bg-faded">
+                <h4>Blog Search</h4>
+                <div class="input-group">
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                            <span class="fa fa-search"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Blog Categories Well -->
+            <div class="card card-block bg-faded">
+                <h4>Blog Categories</h4>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <ul class="list-unstyled">
+                            <!-- Placeholder Categories -->
+                            <li>
+                                <a href="#">Category Name</a>
+                            </li>
+                            <li>
+                                <a href="#">Category Name</a>
+                            </li>
+                            <li>
+                                <a href="#">Category Name</a>
+                            </li>
+                            <li>
+                                <a href="#">Category Name</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.col-lg-6 -->
+                    <div class="col-lg-6">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">Category Name</a>
+                            </li>
+                            <li>
+                                <a href="#">Category Name</a>
+                            </li>
+                            <li>
+                                <a href="#">Category Name</a>
+                            </li>
+                            <li>
+                                <a href="#">Category Name</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.col-lg-6 -->
+                </div>
+                <!-- /.row -->
+            </div>
+
+            <hr>
+
+            <!-- Side Widget Well -->
+            <div class="card card-block bg-faded">
+                <h4>Side Widget Well</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
+            </div>
         </div>
-      </div>
-      <br>
-    <% end %>
-  </div>
-  <br>
-  <br>
-  <%= button_to "New Post", new_blog_path, {class: 'btn btn-success', method: "get"} %>
+    </div>
+</div>
+<br>
+<br>
 </div>

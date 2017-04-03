@@ -14,6 +14,19 @@
     <%= @blog.author %></p>
 <hr>
 <div><%= raw @blog.content %></div>
+
+<div class="row">
+    <div class="col">
+        <%= button_to "Edit Post", edit_blog_path(@blog), {class: 'btn btn-success', method: "get"} %>
+    </div>
+    <div class="col">
+        <div class="text-right">
+            <%= link_to "Delete Post", blog_path(@blog), class: "btn btn-danger", data: {:confirm => "Are you sure?"}, method: :delete %>
+        </div>
+    </div>
+</div>
+
+<hr>
 <h3><script id="dsq-count-scr" src="//kspc-1.disqus.com/count.js" async></script>
     Comments</h2>
 <%= render 'disqus' %>
