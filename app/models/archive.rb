@@ -1,9 +1,10 @@
 class Archive < ApplicationRecord
-  def self.search(search)
+  def self.search(search, sortTitle, sortUploaded, sortDate)
     search_length = search.split.length
-    if search_length > 0
-      # this section of code feels hacky but I wasn't find another way to make it work
-
+    if search_length == 0
+      # no search terms so display all. This seems like easiest way to select all
+      searchResult = where("title LIKE ?", "%#{search}%")
+    else
       # find the where section that the ActsAsTaggableOn gem generates
       tag_where = tagged_with(search.split, :any => true).to_sql.partition("WHERE").last
 
@@ -11,6 +12,21 @@ class Archive < ApplicationRecord
       individual_search_terms_x2 = search.split.flat_map{
         |name| ["title LIKE '%#{name}%'", "description LIKE '%#{name}%'"] }
 
+      if sortTitle || sortUploaded || sortDate
+        searchResult = where(individual_search_terms_x2.join(' OR ') + ' OR ' + tag_where)
+      end
+    end
+
+    if sortTitle
+      searchResult.order("title ASC")
+    elsif sortUploaded
+      searchResult.order("updated_at DESC")
+    elsif sortDate
+      searchResult.order("date DESC")
+    elsif search_length == 0
+      searchResult
+    # a search was done but not sorting type was specified so do best match
+    else
       # generate a where query ordered by number of search matches. Inspired by:
       # http://stackoverflow.com/questions/3289095/order-by-maximum-condition-match
       query = "SELECT *
@@ -34,9 +50,6 @@ class Archive < ApplicationRecord
       results = results.map{|x| find(x['id'])}
 
       results
-    else
-      # no search terms so display all. This seems like easiest way to select all
-      where("title LIKE ?", "%#{search}%")
     end
 
   end

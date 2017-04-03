@@ -26,6 +26,24 @@
 <%= submit_tag "Search" %>
 <% end %>
 
+<%= form_tag(archives_path, :method => "get", id: "sort-title-form") do %>
+<%= hidden_field_tag :sortTitle, "true" %>
+<%= hidden_field_tag :search, params[:search] %>
+<%= submit_tag "Sort By Title" %>
+<% end %>
+
+<%= form_tag(archives_path, :method => "get", id: "sort-uploaded-form") do %>
+<%= hidden_field_tag :sortUploaded, "true" %>
+<%= hidden_field_tag :search, params[:search] %>
+<%= submit_tag "Sort By Uploaded Date" %>
+<% end %>
+
+<%= form_tag(archives_path, :method => "get", id: "sort-date-form") do %>
+<%= hidden_field_tag :sortDate, "true" %>
+<%= hidden_field_tag :search, params[:search] %>
+<%= submit_tag "Sort By Date" %>
+<% end %>
+
 <% if @archives.blank? %>
   <h4>There are no archives containing the term <%= params[:search] %></h4>
 <% end %>
