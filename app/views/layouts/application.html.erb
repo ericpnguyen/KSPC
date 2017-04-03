@@ -6,6 +6,13 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- Font Awesome Style Sheet -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Font body for all pages -->
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+
   </head>
 
   <!-- Navigation -->
@@ -29,15 +36,8 @@
                   <li class="<%= 'active' if current_page?(expos_path) %>">
                     <%= link_to "EXPO", expos_path, class: "nav-item nav-link" %>
                   </li>
-                  <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown Example
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownExample">
-                          <a class="dropdown-item" href="">Link 1</a>
-                          <a class="dropdown-item" href="">Link 2</a>
-                          <a class="dropdown-item" href="">Link 3</a>
-                      </div>
+                  <li class="<%= 'active' if current_page?(program_schedule_index_path) %>">
+                    <%= link_to "Program Schedule", program_schedule_index_path, class: "nav-item nav-link" %>
                   </li>
                   <li>
                     <%= link_to "Store", 'http://coopstore.pomona.edu/collections/kspc', class: "nav-item nav-link" %>
@@ -45,9 +45,15 @@
                   <li class="<%= 'active' if current_page?(contacts_path) %>">
                     <%= link_to "Contact", contacts_path, class: "nav-item nav-link" %>
                   </li>
-                  <li class="<%= 'active' if current_page?(program_schedule_index_path) %>">
-                    <%= link_to "Program Schedule", program_schedule_index_path, class: "nav-item nav-link" %>
-                  </li>
+                  <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/KSPCOnline/">
+                    <span class="fa fa-facebook"></span>
+                  </a>
+                  <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/kspcradio/">
+                    <span class="fa fa-instagram"></span>
+                  </a>
+                  <a class="btn btn-social-icon btn-twitter" href="https://twitter.com/kspc">
+                    <span class="fa fa-twitter"></span>
+                  </a>
               </ul>
               <%- if admin_signed_in? %>
                 <ul class="navbar-nav">
@@ -63,7 +69,7 @@
   </nav>
 
   <!-- Page Content -->
-  <div class="container white content">
+  <div class="white content">
       <%= yield %>  
   </div>
 
@@ -83,5 +89,5 @@
   </footer>
 
 <!-- /.container -->
-<style>body{padding-top: 70px;}</style>
+<style>body{padding-top: 56px;}</style>
 </html>
