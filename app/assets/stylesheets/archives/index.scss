@@ -46,3 +46,8 @@
 audio {
   width: 265px;
 }
+
+#search-form, #sort-title-form, #sort-uploaded-form, #sort-date-form {
+  display: inline-block;
+  margin-bottom: 5px
+}
