@@ -1,28 +1,55 @@
 class Archive < ApplicationRecord
-  def self.search(search)
+  def self.search(search, sortTitle, sortUploaded, sortDate)
     search_length = search.split.length
-    if search_length > 0
-      # had to be very hacky in this if since I could not .or the result of a
-      # mysql where which I wrote with the result of a tagged_with despite them
-      # having the same structure so far as I could tell from extensive testing.
-      # Was getting a ArgumentError that they must be structurally compatable
-      # and that they had incompatable values
-
+    if search_length == 0
+      # no search terms so display all. This seems like easiest way to select all
+      searchResult = where("title LIKE ?", "%#{search}%")
+    else
       # find the where section that the ActsAsTaggableOn gem generates
       tag_where = tagged_with(search.split, :any => true).to_sql.partition("WHERE").last
 
-      # generate a list of [searchterm1, searchterm1, searchterm2, searchterm2, ...]
-      individual_search_terms_x2 = search.split.flat_map{ |name| ["%#{name}%", "%#{name}%"] }
+      # generate a list of where conditions
+      individual_search_terms_x2 = search.split.flat_map{
+        |name| ["title LIKE '%#{name}%'", "description LIKE '%#{name}%'"] }
 
-      # create the where query which will combine searching title, description,
-      # and the where term given by ActsAsTaggableOn joining by OR to display
-      # the maximal possible matches
-      where_term = [(["title LIKE ? OR description LIKE ?"] * search_length + [tag_where]).join(' OR ')] \
-              + individual_search_terms_x2
-      where(where_term)
+      if sortTitle || sortUploaded || sortDate
+        searchResult = where(individual_search_terms_x2.join(' OR ') + ' OR ' + tag_where)
+      end
+    end
+
+    if sortTitle
+      searchResult.order("title ASC")
+    elsif sortUploaded
+      searchResult.order("updated_at DESC")
+    elsif sortDate
+      searchResult.order("date DESC")
+    elsif search_length == 0
+      searchResult
+    # a search was done but not sorting type was specified so do best match
     else
-      # no search terms so display all. This seems like easiest way to select all
-      where("title LIKE ?", "%#{search}%")
+      # generate a where query ordered by number of search matches. Inspired by:
+      # http://stackoverflow.com/questions/3289095/order-by-maximum-condition-match
+      query = "SELECT *
+      FROM (SELECT *,
+                ("
+      individual_search_terms_x2.each do |cond|
+        query += 'CASE WHEN ' + cond + ' THEN 1 ELSE 0 END + '
+      end
+      query += 'CASE WHEN ' + tag_where + ' THEN 1 ELSE 0 END '
+      query += ") AS numMatches
+        FROM archives
+       ) xxx
+      WHERE numMatches > 0
+      ORDER BY numMatches DESC"
+      results = ActiveRecord::Base.connection.exec_query(query)
+
+      # to preserve order we return a list of Archives instead of an active record
+      # relation. Feels like this could have a negative impact on performance of
+      # search but haven't thought of better solution yet (think one should exist
+      # since we are essentially double querying just to fix types).
+      results = results.map{|x| find(x['id'])}
+
+      results
     end
 
   end
