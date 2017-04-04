@@ -1,18 +1,13 @@
 <%= stylesheet_link_tag "archives/new" %>
 <%- if !admin_signed_in? %>
     <script type="text/javascript">
-    window.location.href="/archives"
+    window.location.href="/archive"
   </script>
 <% else %>
-<h2>New Archive</h2>
+<h2>New Archive Entry</h2>
 <hr>
-<%#
-  require "google_drive"
-  session = GoogleDrive::Session.from_config("config.json")
-  ws = session.spreadsheet_by_key("1BUERgBpEUUJHG4_rgqWVlJaJPjjVUPXCcEEr_K-hltk").worksheets[0]
-  value = ws[3, 1]
-%>
-<%= form_for @archive, html: {class: "new-archive", multipart: true } do |f| %>
+<%= form_for @archive, url: create_archive_path(@archive),
+      html: {class: "new-archive", multipart: true } do |f| %>
   <div class="form-group">
     <%= f.label :media %>
     <%= f.file_field :media, {class: "form-control", required: true} %>

@@ -8,6 +8,7 @@ Devise.secret_key = '097ba96c3052a5542a3abd521c98d78e88bddc0a6d014d0eae78f00ded0
 Rails.application.config.assets.precompile += %w( video-js.swf vjs.eot vjs.svg vjs.ttf vjs.woff )
 Rails.application.config.assets.precompile += %w( archives/index )
 Rails.application.config.assets.precompile += %w( archives/new )
+Rails.application.config.assets.precompile += %w( mains/admin )
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 
