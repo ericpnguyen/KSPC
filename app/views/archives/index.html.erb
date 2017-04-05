@@ -1,19 +1,108 @@
-<h1>Archives</h1>
+<%= stylesheet_link_tag "archives/new" %>
+<%= stylesheet_link_tag "archives/index" %>
+
+<div class="row">
+    <div class="col-md-6"><h1>Welcome to the KSPC Archive</h1></div>
+    <div class="col-md-6 text-right">
+      <%- if admin_signed_in? %>
+        <%= button_to "New Archive Entry", new_archive_path,
+              {class: 'btn btn-success', method: "get"} %>
+      <% end %>
+    </div>
+</div>
+<br>
+
+<iframe src='http://goo.gl/AEt5Rm'
+        width='100%'
+        height='650'
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen
+        frameborder='0'>
+</iframe>
+<br>
+
+<%= form_tag(archives_path, :method => "get", id: "search-form") do %>
+<%= text_field_tag :search, params[:search], placeholder: "Search Archives" %>
+<%= submit_tag "Search" %>
+<% end %>
+
+<%= form_tag(archives_path, :method => "get", id: "sort-title-form") do %>
+<%= hidden_field_tag :sortTitle, "true" %>
+<%= hidden_field_tag :search, params[:search] %>
+<%= submit_tag "Sort By Title" %>
+<% end %>
+
+<%= form_tag(archives_path, :method => "get", id: "sort-uploaded-form") do %>
+<%= hidden_field_tag :sortUploaded, "true" %>
+<%= hidden_field_tag :search, params[:search] %>
+<%= submit_tag "Sort By Uploaded Date" %>
+<% end %>
+
+<%= form_tag(archives_path, :method => "get", id: "sort-date-form") do %>
+<%= hidden_field_tag :sortDate, "true" %>
+<%= hidden_field_tag :search, params[:search] %>
+<%= submit_tag "Sort By Date" %>
+<% end %>
+
+<% if @archives.blank? %>
+  <h4>There are no archives containing the term <%= params[:search] %></h4>
+<% end %>
 <br>
 <div class="row">
-  <% @archives.each do |archive| %>
-    <div class="archive card text-center">
-      <%- if archive.media.content_type.start_with?("image") %>
-        <%= image_tag archive.media.url, {width: '265', class: 'card-img-top'} %>
-      <% else %>
-        <%= audio_tag archive.media.url, :controls => true %>
-      <% end %>
-      <div class="card-block">
-        <h5 class="archive-title"><%= archive.title %></h5>
-      </div>
+<% @archives.each_with_index do |archive, i| %>
+  <div class="archive card text-center">
+    <div class="thumbnails">
+        <%- if archive.media.content_type.start_with?("image") %>
+          <%=
+            taglist = "<div class='tag-box'>"
+            archive.tag_list.each do |tag|
+              taglist += "<span class='tag'>" + tag + "</span>"
+            end
+            taglist += "</div>"
+            deletebutton = ""
+            if admin_signed_in?
+              deletebutton = button_to "Delete", archive_path(archive),
+                                remote: true, 
+                                method: :delete,
+                                data: { confirm: "Delete this archive entry?" },
+                                class: "btn btn-danger"
+            end
+            link_to image_tag(archive.media.url(:thumb)), archive.media.url,
+            data: {
+              toggle: "lightbox",
+              title: archive.title,
+              footer: "<div style='width: 100%'>
+                        <div class='row'>
+                          <div class='col-md-6'>" +
+                            archive.description +
+                          "</div>
+                          <div class='col-md-6 text-right'>" +
+                            deletebutton +
+                          "</div>
+                        </div>" +
+                        taglist +
+                      "</div>",
+            }
+          %>
+        <% else %>
+          <%= videojs_rails class: "video-js vjs-default-skin",
+            sources: {mp4: archive.media.url, type:'audio/mp3'},
+            setup: "{}",
+            poster: archive.media.url(:thumb),
+            width: "250",
+            height: "250"
+          %>
+        <% end %>
     </div>
-  <% end %>
+    <div class="card-block">
+      <h5 class="archive-title"><%= archive.title %></h5>
+      <div><%= archive.date %></div>
+    </div>
+  </div>
+<% end %>
 </div>
+<!-- Render page links -->
+<%= will_paginate @posts %>
 
 <br>
-<%= button_to "New Archive", new_archive_path, {class: 'btn btn-success', method: "get"} %>

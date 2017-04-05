@@ -65,13 +65,15 @@
               <% end %>
           </div>
       </div>
-
   </nav>
 
   <!-- Page Content -->
   <div class="white content">
-      <%= yield %>  
-  </div>
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+    <% end %>
+    <%= yield %>
+    <hr>
 
   <!-- Footer -->
   <footer class="footer py-3 bg-inverse">

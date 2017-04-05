@@ -9,6 +9,9 @@ Rails.application.routes.draw do
 
   get '/admin' => 'mains#admin'
 
+  get '/archive(.:format)', to: 'archives#index', as: 'archives'
+  post '/archives(.:format)', to: 'archives#create', as: 'create_archive'
+
   root 'mains#index'
   resources :program_schedule
   resources :abouts

@@ -1,12 +1,37 @@
-<h2>New Archive</h2>
+<%= stylesheet_link_tag "archives/new" %>
+<%- if !admin_signed_in? %>
+    <script type="text/javascript">
+    window.location.href="/archive"
+  </script>
+<% else %>
+<h2>New Archive Entry</h2>
 <hr>
-
-<%= form_for @archive, html: { multipart: true } do |f| %>
-  <%= f.label :media %>
-  <%= f.file_field :media, {required: true} %>
-  <br>
-  <%= f.label :title %>
-  <%= f.text_area :title, {required: true} %>
-  <br>
+<%= form_for @archive, url: create_archive_path(@archive),
+      html: {class: "new-archive", multipart: true } do |f| %>
+  <div class="form-group">
+    <%= f.label :media %>
+    <%= f.file_field :media, {class: "form-control", required: true} %>
+  </div>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, {class: "form-control", required: true} %>
+  </div>
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, {class: "form-control", required: true} %>
+  </div>
+  <div class="form-group">
+    <%= f.label :date %>
+    <%= f.date_field :date, {class: "form-control", required: true} %>
+  </div>
+  <div class="form-group">
+    <%= f.label :tag_list %><br>
+    <%= f.text_field :tag_list, {'class' => 'form-control', 'data-role' => 'tagsinput', 'value' => ''} %>
+  </div>
+  <div class="form-group">
+    <%= f.label :featured %>
+    <%= check_box_tag 'featured' %>
+  </div>
   <%= f.submit 'Submit', {class: 'btn btn-success'} %>
+<% end %>
 <% end %>

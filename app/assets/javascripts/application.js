@@ -14,6 +14,11 @@
 //= require tether
 //= require bootstrap-sprockets
 //= require jquery_ujs
+//= require video
 //= require turbolinks
 //= require_tree .
 //= require tinymce
+//= require bootstrap-tagsinput
+//= require lightbox-bootstrap
+//= require_tree .
+
