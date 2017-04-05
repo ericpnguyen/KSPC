@@ -2,7 +2,6 @@
 <%= stylesheet_link_tag "archives/index" %>
 
 <div class="row">
-    <div class="col-md-6"><h1>Welcome to the KSPC Archive</h1></div>
     <div class="col-md-6 text-right">
       <%- if admin_signed_in? %>
         <%= button_to "New Archive Entry", new_archive_path,
