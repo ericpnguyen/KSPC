@@ -2,65 +2,63 @@
     <%= stylesheet_link_tag "blogs" %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
-<div class="container">
-    <div class="row">
+<div class="row">
 
-        <!-- Blog Index -->
-        <div class="col-md-8">
-            <div class="row">
-                <div class="col">
-                    <h1>Blog
-                        <small>Home</small>
-                    </h1>
-                </div>
-                <div class="col">
-                    <div class="text-right">
-                        <%= button_to "New Post", new_blog_path, {class: 'btn btn-success', method: "get"} %>
-                    </div>
+    <!-- Blog Index -->
+    <div class="col-md-8">
+        <div class="row">
+            <div class="col">
+                <h1>Blog
+                    <small>Home</small>
+                </h1>
+            </div>
+            <div class="col">
+                <div class="text-right">
+                    <%= button_to "New Post", new_blog_path, {class: 'btn btn-success', method: "get"} %>
                 </div>
             </div>
-
-            <!-- Dynamic Content -->
-            <% @blogs.each do |blog| %>
-            <%= link_to blog_path(blog) do %>
-            <h2><%= blog.title %></h2>
-            <% end %>
-            <p class="lead">by
-                <%= blog.author %></p>
-            <p>
-                <span class="fa fa-clock-o red-icon"></span>
-                Posted
-                <%= blog.created_at.strftime('%b %d, %Y') %></p>
-            <hr>
-            <%= image_tag blog.image.url, {class: 'img-fluid'} %>
-            <hr>
-            <%= raw blog.content.truncate(358) %>
-            <br>
-            <%= link_to "Read More", blog_path(blog),  {class: 'btn btn-primary', method: "get"} %>
-            <hr>
-            <% end %>
-
-            <!-- Pager -->
-            <ul class="pagination">
-                <li class="page-item">
-                    <a href="#" class="page-link" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a href="#" class="page-link" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
-            </ul>
         </div>
 
-        <!-- Blog Sidebar Widgets Column -->
-        <div class="col-md-4">
-            <%= render "blogs/sidebar" %>
-        </div>
+        <!-- Dynamic Content -->
+        <% @blogs.each do |blog| %>
+        <%= link_to blog_path(blog) do %>
+        <h2><%= blog.title %></h2>
+        <% end %>
+        <p class="lead">by
+            <%= blog.author %></p>
+        <p>
+            <span class="fa fa-clock-o red-icon"></span>
+            Posted
+            <%= blog.created_at.strftime('%b %d, %Y') %></p>
+        <hr>
+        <%= image_tag blog.image.url, {class: 'img-fluid'} %>
+        <hr>
+        <%= raw blog.content.truncate(358) %>
+        <br>
+        <%= link_to "Read More", blog_path(blog),  {class: 'btn btn-primary', method: "get"} %>
+        <hr>
+        <% end %>
+
+        <!-- Pager -->
+        <ul class="pagination">
+            <li class="page-item">
+                <a href="#" class="page-link" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item">
+                <a href="#" class="page-link" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Blog Sidebar Widgets Column -->
+    <div class="col-md-4">
+        <%= render "blogs/sidebar" %>
     </div>
 </div>
-<br>
-<br>
 </div>
+<br>
+<br>

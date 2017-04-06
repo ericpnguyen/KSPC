@@ -1,108 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="css/modern-business.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="css/modern-business.css" rel="stylesheet">
+        <!-- Font Awesome Style Sheet -->
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <!-- Font Awesome Style Sheet -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
 
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+        <style>
+            /* Ugly hacks to fix the container within navbar functionality - should be fixed in Bootstrap 4 beta */
 
-    <style>
-    /* Ugly hacks to fix the container within navbar functionality - should be fixed in Bootstrap 4 beta */
+            .navbar-toggler {
+                z-index: 1;
+            }
+            @media (max-width: 576px) {
+                nav > .container {
+                    width: 100%;
+                }
+            }
+            /* Temporary fix for img-fluid sizing within the carousel */
 
-    .navbar-toggler {
-        z-index: 1;
-    }
+            .carousel-item-next,
+            .carousel-item-prev,
+            .carousel-item.active {
+                display: block;
+            }
 
-    @media (max-width: 576px) {
-        nav > .container {
-            width: 100%;
-        }
-    }
-    /* Temporary fix for img-fluid sizing within the carousel */
+        </style>
+    </head>
 
-    .carousel-item.active,
-    .carousel-item-next,
-    .carousel-item-prev {
-        display: block;
-    }
-    </style>
-
-</head>
-
-<body>
-
-    <header>
-    <div class="break">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-            <!-- Slide One - Set the background image for this slide in the line below -->
-            <div class="carousel-item active" style="background-image: url(http://www.planwallpaper.com/static/images/blue_ocean-dsc00251-1080p.jpg)">
-                <div class="carousel-caption d-none d-md-block">
-                    <h3>First Slide</h3>
-                    <p>This is a description for the first slide.</p>
+    <body>
+        <header>
+            <div class="break">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <!-- Slide One - Set the background image for this slide in the line below -->
+                        <div class="carousel-item active" style="background-image: url(http://www.planwallpaper.com/static/images/blue_ocean-dsc00251-1080p.jpg)">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>First Slide</h3>
+                                <p>This is a description for the first slide.</p>
+                            </div>
+                        </div>
+                        <!-- Slide Two - Set the background image for this slide in the line below -->
+                        <div class="carousel-item" style="background-image: url(http://www.planwallpaper.com/static/images/6982679-1080p-wallpapers-hd.jpg)">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>Second Slide</h3>
+                                <p>This is a description for the second slide.</p>
+                            </div>
+                        </div>
+                        <!-- Slide Three - Set the background image for this slide in the line below -->
+                        <div class="carousel-item" style="background-image: url(http://www.planwallpaper.com/static/images/1080p-wallpapers-desktop.jpg)">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>Third Slide</h3>
+                                <p>This is a description for the third slide.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
             </div>
-            <!-- Slide Two - Set the background image for this slide in the line below -->
-            <div class="carousel-item" style="background-image: url(http://www.planwallpaper.com/static/images/6982679-1080p-wallpapers-hd.jpg)">
-                <div class="carousel-caption d-none d-md-block">
-                    <h3>Second Slide</h3>
-                    <p>This is a description for the second slide.</p>
-                </div>
-            </div>
-            <!-- Slide Three - Set the background image for this slide in the line below -->
-            <div class="carousel-item" style="background-image: url(http://www.planwallpaper.com/static/images/1080p-wallpapers-desktop.jpg)">
-                <div class="carousel-caption d-none d-md-block">
-                    <h3>Third Slide</h3>
-                    <p>This is a description for the third slide.</p>
-                </div>
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-  </div>
-    </header>
+        </header>
 
-    <!-- Page Content -->
-    <div class="container">
+        <!-- Page Content -->
 
         <!-- Recent Blog Section -->
         <h2>Recent Blog Heading</h2>
 
-        <div class="row">
+        <hr>
 
+        <div class="row">
             <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
                     <a href="#"><img class="card-img-top img-fluid" src="http://placehold.it/700x400" alt=""></a>
                     <div class="card-block">
-                        <h4 class="card-title"><a href="#">Blog One</a></h4>
+                        <h4 class="card-title">
+                            <a href="#">Blog One</a>
+                        </h4>
                         <p class="card-text">Blog Text</p>
                         <!--- MAKE THIS DYNAMIC
                         <% @blog.each do |blog| %>
@@ -121,7 +120,9 @@
                 <div class="card h-100">
                     <a href="#"><img class="card-img-top img-fluid" src="http://placehold.it/700x400" alt=""></a>
                     <div class="card-block">
-                        <h4 class="card-title"><a href="#">Blog Two</a></h4>
+                        <h4 class="card-title">
+                            <a href="#">Blog Two</a>
+                        </h4>
                         <p class="card-text">Blog Text</p>
 
                     </div>
@@ -131,7 +132,9 @@
                 <div class="card h-100">
                     <a href="#"><img class="card-img-top img-fluid" src="http://placehold.it/700x400" alt=""></a>
                     <div class="card-block">
-                        <h4 class="card-title"><a href="#">Blog Three</a></h4>
+                        <h4 class="card-title">
+                            <a href="#">Blog Three</a>
+                        </h4>
                         <p class="card-text">Blog Text</p>
                     </div>
                 </div>
@@ -140,7 +143,9 @@
                 <div class="card h-100">
                     <a href="#"><img class="card-img-top img-fluid" src="http://placehold.it/700x400" alt=""></a>
                     <div class="card-block">
-                        <h4 class="card-title"><a href="#">Blog Four</a></h4>
+                        <h4 class="card-title">
+                            <a href="#">Blog Four</a>
+                        </h4>
                         <p class="card-text">Blog Text</p>
                     </div>
                 </div>
@@ -149,7 +154,9 @@
                 <div class="card h-100">
                     <a href="#"><img class="card-img-top img-fluid" src="http://placehold.it/700x400" alt=""></a>
                     <div class="card-block">
-                        <h4 class="card-title"><a href="#">Blog Five</a></h4>
+                        <h4 class="card-title">
+                            <a href="#">Blog Five</a>
+                        </h4>
                         <p class="card-text">Blog Text</p>
                     </div>
                 </div>
@@ -158,66 +165,51 @@
                 <div class="card h-100">
                     <a href="#"><img class="card-img-top img-fluid" src="http://placehold.it/700x400" alt=""></a>
                     <div class="card-block">
-                        <h4 class="card-title"><a href="#">Blog Six</a></h4>
+                        <h4 class="card-title">
+                            <a href="#">Blog Six</a>
+                        </h4>
                         <p class="card-text">Blog Text</p>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- /.row -->
-
-        <!-- Features Section -->
-        <div class="row">
-            <div class ="col-lg-6">
-                <br><br>
-                <p> SIGN UP FOR THE "SPACED OUT" EMAIL NEWSLETTER </p>
-                <br>
-                <p>Upcoming giveaways, concerts, events and charts delivered to your inbox! </p>
-                <%= render "subscribers/form", subscriber: @subscriber %>
-                <!-- TODO: Figure out which plugins to include on homepage -->
-            </div>
-            <div class="col-lg-6">
-                <img class="img-fluid rounded" src="http://placehold.it/700x450" alt="">
-            </div>
-        </div
-        <!-- /.row -->
 
         <hr>
 
-        <!-- Call to Action Section -->
+        <!-- Features Section -->
         <div class="row">
-            <div class="col-md-8">
-
-            <div class ="col-4">
-                <p>Today on KSPC </p>
-
-                <div class="widget-box">
-                    <h3>Recent spins on KSPC</h3>
-                    <div data-station="kspc" data-num="3" data-time="1" data-nolinks="1" id="spinitron-nowplaying"></div>
-                    <script src="//spinitron.com/js/npwidget.js"></script>
-                </div>
-                <div>
-                  <a class="twitter-timeline" href="https://twitter.com/kspc">Recent Tweets</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div>
+            <div class="col">
+                <h3>Subscribe</h3>
+                <br><br>
+                <p>
+                    SIGN UP FOR THE "SPACED OUT" EMAIL NEWSLETTER</p>
+                <br>
+                <p>Upcoming giveaways, concerts, events and charts delivered to your inbox!</p>
+                <%= render "subscribers/form", subscriber: @subscriber %>
+            </div>
+            <div class="col">
+                <h3>Recent spins on KSPC</h3>
+                <div data-station="kspc" data-num="3" data-time="1" data-nolinks="1" id="spinitron-nowplaying"></div>
+                <script src="//spinitron.com/js/npwidget.js"></script>
+            </div>
+            <div class="col">
+                <a class="twitter-timeline" data-height="400" data-theme="light" data-link-color="#E81C4F" href="https://twitter.com/kspc">Recent Tweets</a>
+                <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         </div>
-    </div>
 
-    <!-- /.container -->
+        <!-- jQuery Version 3.1.1 -->
+        <script src="js/jquery.js"></script>
 
-    <!-- jQuery Version 3.1.1 -->
-    <script src="js/jquery.js"></script>
+        <!-- Tether -->
+        <script src="js/tether.min.js"></script>
 
-    <!-- Tether -->
-    <script src="js/tether.min.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Script to Activate the Carousel -->
-    <script>
-    $('.carousel').carousel()
-    </script>
-
-</body>
+        <!-- Script to Activate the Carousel -->
+        <script>
+            $('.carousel').carousel()
+        </script>
+    </body>
 </html>
