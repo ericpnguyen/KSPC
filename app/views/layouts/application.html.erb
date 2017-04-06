@@ -68,7 +68,7 @@
   </nav>
 
   <!-- Page Content -->
-  <div class="white content">
+  <div class="container white content">
     <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>"><%= value %></div>
     <% end %>
@@ -76,6 +76,7 @@
     <hr>
 
   <!-- Footer -->
+  <div class="break">
   <footer class="footer py-3 bg-inverse">
       <div class="container">
         <p class="m-0 text-left text-white"> THE CLAREMONT COLLEGES </p>
@@ -89,6 +90,7 @@
       </div>
       <!-- /.container -->
   </footer>
+</div>
 
 <!-- /.container -->
 <style>body{padding-top: 56px;}</style>
