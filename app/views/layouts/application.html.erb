@@ -14,40 +14,38 @@
     <%= link_to "KSPC", root_url, class: "navbar-brand"%>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="<%= 'active' if current_page?(root_path) %>">
-          <%= link_to "Home", root_path, class: "nav-item nav-link" %>
+        <li class="nav-item<%= ' active' if current_page?(root_path) %>">
+          <%= link_to "Home", root_path, class: "nav-link" %>
         </li>
-        <li>
-          <%= link_to "Store", 'http://coopstore.pomona.edu/collections/kspc', class: "nav-item nav-link" %>
+        <li class="nav-item">
+          <%= link_to "Store", 'http://coopstore.pomona.edu/collections/kspc', class: "nav-link" %>
         </li>
-        <li class="<%= 'active' if current_page?(abouts_path) %>">
-          <%= link_to "About", abouts_path, class: "nav-item nav-link" %>
+        <li class="nav-item<%= ' active' if current_page?(abouts_path) %>">
+          <%= link_to "About", abouts_path, class: "nav-link" %>
         </li>
-        <li class="<%= 'active' if current_page?(blogs_blog_path) %>">
-          <%= link_to "Blog", blogs_blog_path, class: "nav-item nav-link" %>
+        <li class="nav-item<%= ' active' if current_page?(blogs_blog_path) %>">
+          <%= link_to "Blog", blogs_blog_path, class: "nav-link" %>
         </li>
-        <li class="<%= 'active' if current_page?(archives_path) %>">
-          <%= link_to "Archive", archives_path, class: "nav-item nav-link" %>
+        <li class="nav-item<%= ' active' if current_page?(archives_path) %>">
+          <%= link_to "Archive", archives_path, class: "nav-link" %>
         </li>
-        <li class="<%= 'active' if current_page?(expos_path) %>">
-          <%= link_to "EXPO", expos_path, class: "nav-item nav-link" %>
+        <li class="nav-item<%= ' active' if current_page?(expos_path) %>">
+          <%= link_to "EXPO", expos_path, class: "nav-link" %>
         </li>
-        <li class="<%= 'active' if current_page?(mains_media_path) %>">
-          <%= link_to "Media", mains_media_path, class: "nav-item nav-link" %>
+        <li class="nav-item<%= ' active' if current_page?(mains_media_path) %>">
+          <%= link_to "Media", mains_media_path, class: "nav-link" %>
         </li>
-        <li class="<%= 'active' if current_page?(contacts_path) %>">
-          <%= link_to "Contact", new_contact_path, class: "nav-item nav-link" %>
+        <li class="nav-item<%= ' active' if current_page?(contacts_path) %>">
+          <%= link_to "Contact", new_contact_path, class: "nav-link" %>
         </li>
       </ul>
-      <!-- TODO: Make these admin buttons align right -->
+      <ul class="navbar-nav ml-auto">
       <%- if admin_signed_in? %>
-        <ul class="navbar-nav">
-          <li class="<%= 'active' if current_page?(mains_admin_path) %>">
-            <%= link_to "Admin", mains_admin_path, class: "nav-item nav-link" %>
-          </li>
-          <%= link_to "Logout", destroy_admin_session_path, method: :delete, class: "nav-item nav-link" %>
-        </ul>
+        <li class="nav-item">
+          <%= link_to "Logout Admin", destroy_admin_session_path, method: :delete, class: "nav-link" %>
+        </li>
       <% end %>
+      </ul>
     </div>
   </nav>
 

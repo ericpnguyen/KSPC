@@ -33,7 +33,7 @@ class ArchivesController < ApplicationController
     if @archive.save
       flash[:success] = "Upload successful!"
     else
-      flash[:error] = @archive.errors.full_messages
+      flash[:danger] = @archive.errors.full_messages
       return
     end
 

@@ -51,26 +51,21 @@ class Archive < ApplicationRecord
 
       results
     end
-
   end
+
   acts_as_taggable
-  has_attached_file :media, :styles => {:thumb => {:geometry => "250x250#", :format => 'jpg', :time => 0}}, :default_url => "/images/missing.png"
-  validates_attachment_content_type :media, 
-    :content_type => [
-      "image/jpg",
-      "image/jpeg", 
-      "image/png", 
-      "image/gif",
-      'audio/mpeg',
-      'audio/x-mpeg',
-      'audio/mp3',
-      'audio/x-mp3',
-      'audio/mpeg3',
-      'audio/x-mpeg3',
-      'audio/mpg',
-      'audio/x-mpg',
-      'audio/x-mpegaudio',
-      'video/mp4',
-      'video/x-msvideo'
-    ]
+  has_attached_file :media, styles: lambda { |a| a.instance.check_file_type}, :default_url => "missing.png"
+  validates_attachment_content_type :media, :content_type => /.*/
+
+  def check_file_type
+    if is_image_type?
+      {:thumb => {:geometry => "250x250#", :format => 'jpg', :time => 0}}
+    else
+      {}
+    end
+  end
+
+  def is_image_type?
+    media_content_type =~ %r(image)
+  end
 end
