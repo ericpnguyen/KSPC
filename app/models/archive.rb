@@ -1,5 +1,5 @@
 class Archive < ApplicationRecord
-  def self.search(search, sortTitle, sortUploaded, sortDate)
+  def self.search(search, sortMethod, image, audio, video)
     search_length = search.split.length
     if search_length == 0
       # no search terms so display all. This seems like easiest way to select all
@@ -12,16 +12,30 @@ class Archive < ApplicationRecord
       individual_search_terms_x2 = search.split.flat_map{
         |name| ["title LIKE '%#{name}%'", "description LIKE '%#{name}%'"] }
 
-      if sortTitle || sortUploaded || sortDate
-        searchResult = where(individual_search_terms_x2.join(' OR ') + ' OR ' + tag_where)
+      # generate the sql asking clause for only showing correct media types
+      mediaTypes = []
+      if image and image != ""
+        mediaTypes.push("media_content_type LIKE 'image%'")
+      end
+      if audio and audio != ""
+        mediaTypes.push("media_content_type LIKE 'audio%'")
+      end
+      if video and video != ""
+        mediaTypes.push("media_content_type LIKE 'video%'")
+      end
+      mediaTypes = mediaTypes.join(' OR ')
+
+      if sortMethod && sortMethod != "none"
+        searchResult = where('(' + mediaTypes + ') AND (' +
+          individual_search_terms_x2.join(' OR ') + ' OR ' + tag_where + ')')
       end
     end
 
-    if sortTitle
+    if sortMethod == "sortTitle"
       searchResult.order("title ASC")
-    elsif sortUploaded
+    elsif sortMethod == "sortUploaded"
       searchResult.order("updated_at DESC")
-    elsif sortDate
+    elsif sortMethod == "sortDate"
       searchResult.order("date DESC")
     elsif search_length == 0
       searchResult
@@ -39,7 +53,7 @@ class Archive < ApplicationRecord
       query += ") AS numMatches
         FROM archives
        ) xxx
-      WHERE numMatches > 0
+      WHERE numMatches > 0 AND (#{mediaTypes})
       ORDER BY numMatches DESC"
       results = ActiveRecord::Base.connection.exec_query(query)
 
