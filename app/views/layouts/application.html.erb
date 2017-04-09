@@ -1,97 +1,119 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>KSPC 88.7FM</title>
-    <%= csrf_meta_tags %>
+    <head>
+        <title>KSPC 88.7FM</title>
+        <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <!-- Font Awesome Style Sheet -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <!-- Font Awesome Style Sheet -->
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <!-- Font body for all pages -->
-    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+        <!-- Font body for all pages -->
+        <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
 
-  </head>
+    </head>
 
-  <!-- Navigation -->
-  <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="container">
-          <a class="navbar-brand" href="index.html"><%= link_to "KSPC", root_url, class: "navbar-brand"%></a>
-          <div class="collapse navbar-collapse" id="navbarExample">
-              <ul class="navbar-nav ml-auto">
-                  <li class="<%= 'active' if current_page?(abouts_path) %>">
-                    <%= link_to "About", abouts_path, class: "nav-item nav-link" %>
-                  </li>
-                  <li class="<%= 'active' if current_page?(blogs_path) %>">
-                    <%= link_to "Blog", blogs_path, class: "nav-item nav-link" %>
-                  </li>
-                  <li class="<%= 'active' if current_page?(archives_path) %>">
-                    <%= link_to "Archives", archives_path, class: "nav-item nav-link" %>
-                  </li>
-                  <li class="<%= 'active' if current_page?(expos_path) %>">
-                    <%= link_to "EXPO", expos_path, class: "nav-item nav-link" %>
-                  </li>
-                  <li class="<%= 'active' if current_page?(program_schedule_index_path) %>">
-                    <%= link_to "Program Schedule", program_schedule_index_path, class: "nav-item nav-link" %>
-                  </li>
-                  <li>
-                    <%= link_to "Store", 'http://coopstore.pomona.edu/collections/kspc', class: "nav-item nav-link" %>
-                  </li>
-                  <li class="<%= 'active' if current_page?(contacts_path) %>">
-                    <%= link_to "Contact", contacts_path, class: "nav-item nav-link" %>
-                  </li>
-                  <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/KSPCOnline/">
-                    <span class="fa fa-facebook"></span>
-                  </a>
-                  <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/kspcradio/">
-                    <span class="fa fa-instagram"></span>
-                  </a>
-                  <a class="btn btn-social-icon btn-twitter" href="https://twitter.com/kspc">
-                    <span class="fa fa-twitter"></span>
-                  </a>
-              </ul>
-              <%- if admin_signed_in? %>
-                <ul class="navbar-nav">
-                  <li class="<%= 'active' if current_page?(mains_admin_path) %>">
-                    <%= link_to "Admin", mains_admin_path, class: "nav-item nav-link" %>
-                  </li>
-                  <%= link_to "Logout", destroy_admin_session_path, method: :delete, class: "nav-item nav-link" %>
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><%= link_to "KSPC", root_url, class: "navbar-brand"%></a>
+            <div class="collapse navbar-collapse" id="navbarExample">
+                <ul class="navbar-nav ml-auto">
+                    <li class="<%= 'active' if current_page?(abouts_path) %>">
+                        <%= link_to "About", abouts_path, class: "nav-item nav-link" %>
+                    </li>
+                    <li class="<%= 'active' if current_page?(blogs_path) %>">
+                        <%= link_to "Blog", blogs_path, class: "nav-item nav-link" %>
+                    </li>
+                    <li class="<%= 'active' if current_page?(archives_path) %>">
+                        <%= link_to "Archives", archives_path, class: "nav-item nav-link" %>
+                    </li>
+                    <li class="<%= 'active' if current_page?(expos_path) %>">
+                        <%= link_to "EXPO", expos_path, class: "nav-item nav-link" %>
+                    </li>
+                    <li class="<%= 'active' if current_page?(program_schedule_index_path) %>">
+                        <%= link_to "Program Schedule", program_schedule_index_path, class: "nav-item nav-link" %>
+                    </li>
+                    <li>
+                        <%= link_to "Store", 'http://coopstore.pomona.edu/collections/kspc', class: "nav-item nav-link" %>
+                    </li>
+                    <li class="<%= 'active' if current_page?(contacts_path) %>">
+                        <%= link_to "Contact", contacts_path, class: "nav-item nav-link" %>
+                    </li>
+                    <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/KSPCOnline/">
+                        <span class="fa fa-facebook"></span>
+                    </a>
+                    <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/kspcradio/">
+                        <span class="fa fa-instagram"></span>
+                    </a>
+                    <a class="btn btn-social-icon btn-twitter" href="https://twitter.com/kspc">
+                        <span class="fa fa-twitter"></span>
+                    </a>
                 </ul>
-              <% end %>
-          </div>
-      </div>
-  </nav>
+                <%- if admin_signed_in? %>
+                <ul class="navbar-nav">
+                    <li class="<%= 'active' if current_page?(mains_admin_path) %>">
+                        <%= link_to "Admin", mains_admin_path, class: "nav-item nav-link" %>
+                    </li>
+                    <%= link_to "Logout", destroy_admin_session_path, method: :delete, class: "nav-item nav-link" %>
+                </ul>
+                <% end %>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Page Content -->
-  <div class="container white content">
-    <% flash.each do |key, value| %>
-      <div class="alert alert-<%= key %>"><%= value %></div>
-    <% end %>
-    <%= yield %>
-    <br>
+    <!-- Page Content -->
+    <div class="container white content">
+        <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+        <% end %>
+        <%= yield %>
+        <br>
+    </div>
 
-  <!-- Footer -->
-  <div class="break">
-  <footer class="footer py-3 bg-inverse">
-      <div class="container">
-        <p class="m-0 text-left text-white"> THE CLAREMONT COLLEGES </p>
-        <a class="thumbnail" href="http://hmc.edu">
-          <img class="img-responsive" src="http://kspc.org/blog/wp-content/themes/kspc2/images/hmclogo.png" alt="">
-        </a>
-      </div>
-      <div class="container">
-          <p class="m-0 text-left text-white">Copyright &copy; KSPC 2017</p>
-          <p class="m-0 text-left text-white">KSPC is located @ Thatcher Music Building, 340 N. College Ave., Claremont, CA 91711</p>
-      </div>
-      <!-- /.container -->
-  </footer>
-</div>
+    <!-- Footer -->
+    <div class="break">
+        <footer class="footer py-3 bg-inverse">
+            <div class="container">
+                <p class="m-0 text-left text-white">THE CLAREMONT COLLEGES</p>
+                <a class="thumbnail" href="http://pomona.edu/">
+                    <img class="img-responsive" src="https://cloud.githubusercontent.com/assets/5604374/24841570/531aa334-1d3c-11e7-8a9c-2d8e659f326c.png" alt="">
+                </a>
+                <a class="thumbnail" href="http://cmc.edu/">
+                    <img class="img-responsive" src="http://kspc.org/blog/wp-content/themes/kspc2/images/cmc-logo.png" alt="">
+                </a>
+                <a class="thumbnail" href="http://hmc.edu">
+                    <img class="img-responsive" src="http://kspc.org/blog/wp-content/themes/kspc2/images/hmclogo.png" alt="">
+                </a>
+                <a class="thumbnail" href="http://pitzer.edu/">
+                    <img class="img-responsive" src="http://kspc.org/blog/wp-content/themes/kspc2/images/pitzer-logo.png" alt="">
+                </a>
+                <a class="thumbnail" href="http://scrippscollege.edu/">
+                    <img class="img-responsive" src="https://cloud.githubusercontent.com/assets/5604374/24841594/cf9d4614-1d3c-11e7-8c43-3a161906f602.png" alt="">
+                </a>
+                <br><br>
+                <div class="row">
+                    <div class="col">
+                        <p class="m-0 text-left text-white">Copyright &copy; KSPC 2017</p>
+                        <p class="m-0 text-left text-white">Thatcher Music Building, 340 N. College Ave., Claremont, CA 91711</p>
+                    </div>
+                    <div class="col">
+                        <p class="m-0 text-left text-white">In-Studio Request Line: (909) 626-KSPC (5772)</p>
+                        <p class="m-0 text-left text-white">Business Line: (909) 621-8157</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 
-<!-- /.container -->
-<style>body{padding-top: 56px;}</style>
+    <style>
+        body {
+            padding-top: 56px;
+        }
+    </style>
 </html>
