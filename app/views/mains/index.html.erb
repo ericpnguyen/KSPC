@@ -90,8 +90,8 @@
         <!-- Page Content -->
 
         <!-- Recent Blog Section -->
+        <br>
         <h2>Recent Blog Heading</h2>
-
         <hr>
 
         <div class="row">
@@ -180,15 +180,16 @@
         <div class="row">
             <div class="col">
                 <h3>Subscribe</h3>
-                <br><br>
-                <p>
-                    SIGN UP FOR THE "SPACED OUT" EMAIL NEWSLETTER</p>
+                <hr>
+                <br>
+                <p>SIGN UP FOR THE "SPACED OUT" EMAIL NEWSLETTER</p>
                 <br>
                 <p>Upcoming giveaways, concerts, events and charts delivered to your inbox!</p>
                 <%= render "subscribers/form", subscriber: @subscriber %>
             </div>
             <div class="col">
                 <h3>Recent spins on KSPC</h3>
+                <hr>
                 <div data-station="kspc" data-num="3" data-time="1" data-nolinks="1" id="spinitron-nowplaying"></div>
                 <script src="//spinitron.com/js/npwidget.js"></script>
             </div>

@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag "blogs" %>
 <%= tinymce %>
 <%= form_for @blog, html: { multipart: true } do |f| %>
 <div class="row">
@@ -8,10 +9,10 @@
         </div>
     </div>
     <div class="col">
-      <div class="form-group">
-          <%= f.label :author %>
-          <%= f.text_field :author, {class: "form-control", required: true} %>
-      </div>
+        <div class="form-group">
+            <%= f.label :author %>
+            <%= f.text_field :author, {class: "form-control", required: true} %>
+        </div>
     </div>
     <div class="col">
         <div class="form-group">
@@ -20,8 +21,12 @@
         </div>
     </div>
 </div>
-<%= f.text_area :content, :class => "tinymce", :rows => 20, :cols => 120 %>
-</br>
+<%= f.text_area :content, :class => "tinymce", :rows => 18, :cols => 120 %>
+<!-- </br>
+<div class="form-group">
+<%= f.label :tag_list %><br>
+<%= f.text_field :tag_list, {'class' => 'form-control', 'data-role' => 'tagsinput', 'value' => ''} %>
+</div> -->
+<br>
 <%= f.submit 'Save', {class: 'btn btn-success'} %>
 <% end %>
-<br>

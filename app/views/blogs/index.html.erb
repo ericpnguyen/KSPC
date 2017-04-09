@@ -2,6 +2,8 @@
     <%= stylesheet_link_tag "blogs" %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
+
+<br>
 <div class="row">
 
     <!-- Blog Index -->
@@ -20,7 +22,7 @@
         </div>
 
         <!-- Dynamic Content -->
-        <% @blogs.each do |blog| %>
+        <% @blogs.each_with_index do |blog, i| %>
         <%= link_to blog_path(blog) do %>
         <h2><%= blog.title %></h2>
         <% end %>
@@ -40,18 +42,7 @@
         <% end %>
 
         <!-- Pager -->
-        <ul class="pagination">
-            <li class="page-item">
-                <a href="#" class="page-link" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                </a>
-            </li>
-            <li class="page-item">
-                <a href="#" class="page-link" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                </a>
-            </li>
-        </ul>
+        <%= will_paginate @blogs %>
     </div>
 
     <!-- Blog Sidebar Widgets Column -->

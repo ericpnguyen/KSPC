@@ -3,7 +3,10 @@ class BlogsController < ApplicationController
 
   # Index action to render all blogs
   def index
-    @blogs = Blog.all.order("created_at DESC")
+    @blogs = Blog.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 10)
+    if params[:search]
+      @blogs = Blog.search(params[:search]).paginate(:page => params[:page], :per_page => 10)
+    end
   end
 
   # New action for creating blog
@@ -16,7 +19,21 @@ class BlogsController < ApplicationController
 
   # Create action saves the blog into database
   def create
-    @blog = Blog.new(permit_blog)
+    @blog = Blog.new({
+      :image => params[:blog]["image"],
+      :content => params[:blog]["content"],
+      :author => params[:blog]["author"],
+      :title => params[:blog]["title"]
+    })
+
+    # The tag list has to be saved in a different manner
+    # begin
+    #   @blog.tag_list.add(params[:blog]["tag_list"], parse: true)
+    # rescue
+    #   puts "Invalid tag list!"
+    #   redirect_to new_blog_path
+    # end
+
     if @blog.save
       flash[:notice] = "Successfully created blog!"
       redirect_to blogs_path

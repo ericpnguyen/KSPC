@@ -1,7 +1,8 @@
+<br>
 <h1>Editor</h1>
 <%= tinymce %>
 <%= form_for @contact do |f| %>
-  <%= f.text_area :content, :class => "tinymce", :rows => 40, :cols => 120 %>
-  <%= f.submit 'Save', {class: 'btn btn-success'} %>
-<% end %>
+<%= f.text_area :content, :class => "tinymce", :rows => 18, :cols => 120 %>
 <br>
+<%= f.submit 'Save', {class: 'btn btn-success'} %>
+<% end %>

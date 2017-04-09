@@ -2,6 +2,11 @@
 <div class="card card-block bg-faded">
     <h4>Blog Search</h4>
     <div class="input-group">
+        <!-- <%= form_tag(blogs_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Search Blogs" %>
+        <%= submit_tag "Search" %>
+        <% end %> -->
+
         <input type="text" class="form-control">
         <span class="input-group-btn">
             <button class="btn btn-default" type="button">
@@ -60,7 +65,8 @@
 
 <!-- Side Widget Well -->
 <div class="widget-box">
-  <a class="twitter-timeline" data-height="1000" data-theme="light" data-link-color="#E81C4F" href="https://twitter.com/kspc">Recent Tweets</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <a class="twitter-timeline" data-height="1000" data-theme="light" data-link-color="#E81C4F" href="https://twitter.com/kspc">Recent Tweets</a>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
 <br>
