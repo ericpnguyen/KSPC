@@ -25,31 +25,34 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-            <div class="input-group" id="adv-search">
-                <%= text_field_tag :search, params[:search], placeholder: "Search Archives" , class: "form-control" %>
-                <div class="input-group-btn">
-                    <div class="btn-group" role="group">
-                        <div class="dropdown dropdown-lg">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>
-                            <div class="dropdown-menu dropdown-menu-right" role="menu">
-                              Search for:
-                              <label> <%= check_box_tag 'showImages' , 1, true %> Images </label>
-                              <label> <%= check_box_tag 'showAudio', 1, true%> Audio </label>
-                              <label> <%= check_box_tag 'showVideo', 1, true %> Video </label>
-                              <br>
-                              Sort By:
-                              <label> <%= radio_button_tag :sortMethod, 'none', :checked => true %> Relevance </label>
-                              <label> <%= radio_button_tag :sortMethod, 'sortTitle' %> Title </label>
-                              <label> <%= radio_button_tag :sortMethod, 'sortDate' %> Date </label>
-                              <label> <%= radio_button_tag :sortMethod, 'sortUploaded' %> Date Uploaded </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <%= submit_tag "Search" %>
+      <div class="input-group" id="adv-search">
+        <%= text_field_tag :search, params[:search], placeholder: "Search Archives" , class: "form-control" %>
+        <div class="input-group-btn">
+          <div class="btn-group" role="group">
+            <div class="dropdown dropdown-lg">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>
+              <div class="dropdown-menu dropdown-menu-right" role="menu">
+                Search for:
+                <label> <%= check_box_tag 'showImages' , 1, true %> Images </label>
+                <label> <%= check_box_tag 'showAudio', 1, true%> Audio </label>
+                <label> <%= check_box_tag 'showVideo', 1, true %> Video </label>
+                <br>
+                Sort By:
+                <label> <%= radio_button_tag :sortMethod, 'none', :checked => true %> Relevance </label>
+                <label> <%= radio_button_tag :sortMethod, 'sortTitle' %> Title </label>
+                <label> <%= radio_button_tag :sortMethod, 'sortDate' %> Date </label>
+                <label> <%= radio_button_tag :sortMethod, 'sortUploaded' %> Date Uploaded </label>
+                <br>
+                <label> <%= radio_button_tag :sortMethod, 'sortTitleZ' %> Title Z-A </label>
+                <label> <%= radio_button_tag :sortMethod, 'sortDateOld' %> Date Old-New</label>
+                <label> <%= radio_button_tag :sortMethod, 'sortUploadedOld' %> Date Uploaded Old-New </label>
+              </div>
             </div>
           </div>
         </div>
+        <%= submit_tag "Search" %>
+      </div>
+    </div>
   </div>
 </div>
 <% end %>

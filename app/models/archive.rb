@@ -37,6 +37,12 @@ class Archive < ApplicationRecord
       searchResult.order("updated_at DESC")
     elsif sortMethod == "sortDate"
       searchResult.order("date DESC")
+    elsif sortMethod == "sortTitleZ"
+      searchResult.order("title DESC")
+    elsif sortMethod == "sortUploadedOld"
+      searchResult.order("updated_at ASC")
+    elsif sortMethod == "sortDateOld"
+      searchResult.order("date ASC")
     elsif search_length == 0
       searchResult
     # a search was done but not sorting type was specified so do best match
