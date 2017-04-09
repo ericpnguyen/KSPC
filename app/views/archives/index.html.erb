@@ -1,6 +1,5 @@
 <%= stylesheet_link_tag "archives/new" %>
 <%= stylesheet_link_tag "archives/index" %>
-
 <%- if admin_signed_in? %>
   <div class="row">
     <div class="col-md-6"></div>
@@ -21,7 +20,8 @@
 </iframe>
 <br>
 
-<%= form_tag(archives_path, :method => "get", id: "search-form") do %>
+<div id="searchBar"></div>
+<%= form_tag(archives_path+'#searchBar', :method => "get", id: "search-form") do %>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
