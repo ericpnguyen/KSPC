@@ -133,7 +133,7 @@
             },
             class: "block-context-menu"
         else
-          link_to image_tag("defaultImage.png"),
+          link_to image_tag(archive.media.url(:thumb)),
             "http://localhost:3000" + archive.media.url,
             data: {
               toggle: "lightbox",

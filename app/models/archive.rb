@@ -80,9 +80,15 @@ class Archive < ApplicationRecord
   def check_file_type
     if is_image_type?
       {:thumb => {:geometry => "250x250#", :format => 'jpg', :time => 0}}
+    elsif is_video_type?
+      {:thumb => {:geometry => "250x250#", :format => 'jpg', :time => 0}}
     else
       {}
     end
+  end
+    
+  def is_video_type?
+    media_content_type =~ %r(video)
   end
 
   def is_image_type?
