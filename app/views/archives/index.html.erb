@@ -57,33 +57,6 @@
 </div>
 <% end %>
 
-<%= form_tag(archives_path, :method => "get", id: "sort-title-form") do %>
-<%= hidden_field_tag :sortMethod, "sortTitle" %>
-<%= hidden_field_tag :search, params[:search] %>
-<%= hidden_field_tag :showImages, params[:showImages] %>
-<%= hidden_field_tag :showAudio, params[:showAudio] %>
-<%= hidden_field_tag :showVideo, params[:showVideo] %>
-<%= submit_tag "Sort By Title" %>
-<% end %>
-
-<%= form_tag(archives_path, :method => "get", id: "sort-uploaded-form") do %>
-<%= hidden_field_tag :sortMethod, "sortUploaded" %>
-<%= hidden_field_tag :search, params[:search] %>
-<%= hidden_field_tag :showImages, params[:showImages] %>
-<%= hidden_field_tag :showAudio, params[:showAudio] %>
-<%= hidden_field_tag :showVideo, params[:showVideo] %>
-<%= submit_tag "Sort By Uploaded Date" %>
-<% end %>
-
-<%= form_tag(archives_path, :method => "get", id: "sort-date-form") do %>
-<%= hidden_field_tag :sortMethod, "sortDate" %>
-<%= hidden_field_tag :search, params[:search] %>
-<%= hidden_field_tag :showImages, params[:showImages] %>
-<%= hidden_field_tag :showAudio, params[:showAudio] %>
-<%= hidden_field_tag :showVideo, params[:showVideo] %>
-<%= submit_tag "Sort By Date" %>
-<% end %>
-
 <% if @archives.blank? %>
   <h4>There are no archives containing the term <%= params[:search] %></h4>
 <% end %>
