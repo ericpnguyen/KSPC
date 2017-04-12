@@ -5,6 +5,13 @@ Migrating to Ruby on Rails
 
 # Changelog
 
+### Cha, 4/12 - Wordpress Migration
+Please do the following to migate all blogs from wordpress
+1. Run 'rake wordpress:import' When it works it will print a lot of stuff (all the contents) and migrate it to blogs.
+2. The images are too large to put on github, so I put in on Google drive link: https://drive.google.com/open?id=0B8CcBOaEIxGHZjNKc210eU1yalU
+Put this folder in 'public/' Most pictures are in this folder, but some old ones use pic hosting service and may or may not be expired.
+
+
 ### Judy, 3/25 - Blog & contact/email page controller
 Blog editing, updating, deleting implemented. Formatting and Disqus comment feature finished for individual blog showings. Later, the blog front page will look nice too. Admin under kspc.auto@gmail.com can monitor comments.
 ![screen shot 2017-03-25 at 4 13 07 pm](https://cloud.githubusercontent.com/assets/5604374/24326872/f5ef4f10-1175-11e7-8246-b8cf4f097362.png)
