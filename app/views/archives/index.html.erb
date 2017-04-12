@@ -32,20 +32,36 @@
             <div class="dropdown dropdown-lg">
               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>
               <div class="dropdown-menu dropdown-menu-right" role="menu">
+
                 Search for:
-                <label> <%= check_box_tag 'showImages' , 1, true %> Images </label>
-                <label> <%= check_box_tag 'showAudio', 1, true%> Audio </label>
-                <label> <%= check_box_tag 'showVideo', 1, true %> Video </label>
+                <!-- THE LINE BELOW THIS IS COMMENT LOOKS LIKE A COMMENT BUT IS NOT!!!
+                     Without putting it in a comment it displays true or false which is undesirable -->
+                <!-- <%= @all_unchecked = !(params[:showImages] || params[:showAudio] || params[:showVideo]) %> -->
+                <label> <%= check_box_tag 'showImages' , 1,
+                params[:showImages] ? true : @all_unchecked %> Images </label>
+                <label> <%= check_box_tag 'showAudio', 1,
+                params[:showAudio] ? true : @all_unchecked%> Audio </label>
+                <label> <%= check_box_tag 'showVideo', 1,
+                params[:showVideo] ? true : @all_unchecked %> Video </label>
+
                 <br>
+
                 Sort By:
-                <label> <%= radio_button_tag :sortMethod, 'none', :checked => true %> Relevance </label>
-                <label> <%= radio_button_tag :sortMethod, 'sortTitle' %> Title </label>
-                <label> <%= radio_button_tag :sortMethod, 'sortDate' %> Date </label>
-                <label> <%= radio_button_tag :sortMethod, 'sortUploaded' %> Date Uploaded </label>
+                <label> <%= radio_button_tag :sortMethod, 'none', true %> Relevance </label>
+                <label> <%= radio_button_tag :sortMethod, 'sortTitle',
+                params[:sortMethod]=='sortTitle' %> Title </label>
+                <label> <%= radio_button_tag :sortMethod, 'sortDate',
+                params[:sortMethod]=='sortDate' %> Date </label>
+                <label> <%= radio_button_tag :sortMethod, 'sortUploaded',
+                params[:sortMethod]=='sortUploaded' %> Date Uploaded </label>
                 <br>
-                <label> <%= radio_button_tag :sortMethod, 'sortTitleZ' %> Title Z-A </label>
-                <label> <%= radio_button_tag :sortMethod, 'sortDateOld' %> Date Old-New</label>
-                <label> <%= radio_button_tag :sortMethod, 'sortUploadedOld' %> Date Uploaded Old-New </label>
+                <label> <%= radio_button_tag :sortMethod, 'sortTitleZ',
+                params[:sortMethod]=='sortTitleZ' %> Title Z-A </label>
+                <label> <%= radio_button_tag :sortMethod, 'sortDateOld',
+                params[:sortMethod]=='sortDateOld' %> Date Old-New</label>
+                <label> <%= radio_button_tag :sortMethod, 'sortUploadedOld',
+                params[:sortMethod]=='sortUploadedOld' %> Date Uploaded Old-New </label>
+
               </div>
             </div>
           </div>
