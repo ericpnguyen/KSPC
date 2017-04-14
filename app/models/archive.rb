@@ -1,9 +1,22 @@
 class Archive < ApplicationRecord
   def self.search(search, sortMethod, image, audio, video)
     search_length = search.split.length
+
+    # generate the sql asking clause for only showing correct media types
+    mediaTypes = []
+    if image and image != ""
+      mediaTypes.push("media_content_type LIKE 'image%'")
+    end
+    if audio and audio != ""
+      mediaTypes.push("media_content_type LIKE 'audio%'")
+    end
+    if video and video != ""
+      mediaTypes.push("media_content_type LIKE 'video%'")
+    end
+    mediaTypes = mediaTypes.join(' OR ')
+
     if search_length == 0
-      # no search terms so display all. This seems like easiest way to select all
-      searchResult = where("title LIKE ?", "%#{search}%")
+      searchResult = where(mediaTypes)
     else
       # find the where section that the ActsAsTaggableOn gem generates
       tag_where = tagged_with(search.split, :any => true).to_sql.partition("WHERE").last
@@ -11,19 +24,6 @@ class Archive < ApplicationRecord
       # generate a list of where conditions
       individual_search_terms_x2 = search.split.flat_map{
         |name| ["title LIKE '%#{name}%'", "description LIKE '%#{name}%'"] }
-
-      # generate the sql asking clause for only showing correct media types
-      mediaTypes = []
-      if image and image != ""
-        mediaTypes.push("media_content_type LIKE 'image%'")
-      end
-      if audio and audio != ""
-        mediaTypes.push("media_content_type LIKE 'audio%'")
-      end
-      if video and video != ""
-        mediaTypes.push("media_content_type LIKE 'video%'")
-      end
-      mediaTypes = mediaTypes.join(' OR ')
 
       if sortMethod && sortMethod != "none"
         searchResult = where('(' + mediaTypes + ') AND (' +
