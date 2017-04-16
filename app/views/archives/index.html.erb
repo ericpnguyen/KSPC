@@ -28,9 +28,9 @@
       <div class="input-group" id="adv-search">
         <%= text_field_tag :search, params[:search], placeholder: "Search Archives" , class: "form-control" %>
         <div class="input-group-btn">
-          <div class="btn-group" role="group">
-            <div class="dropdown dropdown-lg">
-              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>
+          <div class="btn-group dropdown dropdown-lg" role="group">
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>
               <div class="dropdown-menu dropdown-menu-right" onClick="event.stopPropagation();" role="menu">
 
                 Search for:
@@ -64,9 +64,11 @@
 
               </div>
             </div>
-          </div>
+            <%= button_tag(type: "submit", class: "btn btn-primary") do %>
+              Search <i class="icon-repeat"></i>
+            <% end %>
+            </div>
         </div>
-        <%= submit_tag "Search" %>
       </div>
     </div>
   </div>
