@@ -44,7 +44,8 @@
   position: relative;
 }
 
-h2 { 
+h2 {
+  pointer-events: none; 
   text-align: left;
   position: absolute; 
   top: 150px; 
