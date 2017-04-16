@@ -66,6 +66,9 @@ h2 span {
   top: 30px; 
   position: absolute; 
   font-size: 75%;
+  max-width: 200px;
+  height: 28px;
+  overflow:hidden;
 }
 
 h2 date { 
