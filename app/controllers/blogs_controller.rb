@@ -27,19 +27,18 @@ class BlogsController < ApplicationController
     })
 
     # The tag list has to be saved in a different manner
-    # begin
-    #   @blog.tag_list.add(params[:blog]["tag_list"], parse: true)
-    # rescue
-    #   puts "Invalid tag list!"
-    #   redirect_to new_blog_path
-    # end
+    begin
+      @blog.tag_list.add(params[:blog]["tag_list"], parse: true)
+    rescue
+      puts "Invalid tag list!"
+      redirect_to blogs_path
+    end
 
     if @blog.save
       flash[:notice] = "Successfully created blog!"
-      redirect_to blogs_path
     else
       flash[:alert] = "Error creating new blog!"
-      render :new
+      return
     end
   end
 
