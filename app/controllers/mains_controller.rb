@@ -1,7 +1,7 @@
 class MainsController < ApplicationController
   def index
   	@subscriber = Subscriber.new
-    @blog = Blog.all
+    @blog = Blog.last(3).reverse
   end
 
   def media

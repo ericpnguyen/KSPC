@@ -95,27 +95,27 @@
         <hr>
 
         <div class="row">
+          <% @blog.each do |blog| %>
             <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top img-fluid" src="http://placehold.it/700x400" alt=""></a>
+
+                    <%= link_to image_tag(blog.image.url(:medium), :class=>"card-img-top img-fluid"), blog_path(blog) %>
+
                     <div class="card-block">
                         <h4 class="card-title">
-                            <a href="#">Blog One</a>
+                            <a href="#"><%= blog.title %></a>
                         </h4>
-                        <p class="card-text">Blog Text</p>
-                        <!--- MAKE THIS DYNAMIC
-                        <% @blog.each do |blog| %>
-                        <h6><%= blog.title %></h6>
-                        <br>
-                        <%= link_to image_tag(blog.image.url(:medium), :class=>"img-responsive"), blog_path(blog) %>
-                        <p>by <%= blog.author %></p>
-                        <dateComment>Date Posted: <%= blog.updated_at %></dateComment>
-                        <p><%= raw blog.content.truncate(358) %><p>
-                        <% end %>
-                      -->
+                        <p class="card-text">
+                          <br>
+                          <p>by <%= blog.author %></p>
+                          <dateComment>Date Posted: <%= blog.created_at.strftime('%b %d, %Y') %></dateComment>
+                          <p><%= raw blog.content.truncate(358) %></p>
+                        </p>
                     </div>
                 </div>
             </div>
+        <% end %>
+        <!--
             <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
                     <a href="#"><img class="card-img-top img-fluid" src="http://placehold.it/700x400" alt=""></a>
@@ -139,6 +139,7 @@
                     </div>
                 </div>
             </div>
+          -->
         </div>
 
         <hr>
