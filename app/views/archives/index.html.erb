@@ -76,7 +76,13 @@
 <% end %>
 
 <% if @archives.blank? %>
-  <h4>There are no archives containing the term <%= params[:search] %></h4>
+  <br>
+  <% if params[:search].include? " "%>
+    <% words = params[:search].sub! " ", ", " %>
+    <h4>There are no archives containing the terms <%= words %></h4>
+  <% else %>
+    <h4>There are no archives containing the term <%= params[:search] %></h4>
+  <%end%>
 <% end %>
 <br>
 <div class="row">

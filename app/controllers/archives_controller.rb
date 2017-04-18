@@ -22,6 +22,14 @@ class ArchivesController < ApplicationController
       :date => params[:archive]["date"],
       :featured => params["featured"]
     })
+
+    # Prevent erroring if year is too large
+    if @archive.date.year > 9999
+        flash[:danger] = "Year must be between 0 and 9999, inclusive"
+        redirect_to new_archive_path
+        return
+    end
+
     # The tag list has to be saved in a different manner
     begin
       @archive.tag_list.add(params[:archive]["tag_list"], parse: true)
