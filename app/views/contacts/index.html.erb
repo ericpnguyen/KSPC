@@ -4,6 +4,7 @@
     <div class="col">
         <% @contacts.each do |contact| %>
         <%= raw contact.content %>
+        <%- if admin_signed_in? %>
         <div class="row">
             <div class="col">
                 <%= button_to "Edit Content", edit_contact_path(contact), {class: 'btn btn-success', method: "get"} %>
@@ -16,10 +17,13 @@
         </div>
         <br>
         <% end %>
+        <% end %>
+        <%- if admin_signed_in? %>
         <br>
         <br>
         <%= button_to "New Content", new_contact_path, {class: 'btn btn-success', method: "get"} %>
         <br>
+        <% end %>
     </div>
     <div class="col">
         <%= render :partial => "emails/new" %>

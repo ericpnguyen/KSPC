@@ -2,21 +2,25 @@
 <h1>Expo</h1>
 <div class="container">
     <% @expos.each do |expo| %>
-      <%= raw expo.content %>
-      <div class="row">
+    <%= raw expo.content %>
+    <%- if admin_signed_in? %>
+    <div class="row">
         <div class="col">
-          <%= button_to "Edit Content", edit_expo_path(expo), {class: 'btn btn-success', method: "get"} %>
+            <%= button_to "Edit Content", edit_expo_path(expo), {class: 'btn btn-success', method: "get"} %>
         </div>
         <div class="col">
-          <div class="text-right">
-            <%= link_to "Delete Content", expo_path(expo), class: "btn btn-danger", data: {:confirm => "Are you sure?"}, method: :delete %>
-          </div>
+            <div class="text-right">
+                <%= link_to "Delete Content", expo_path(expo), class: "btn btn-danger", data: {:confirm => "Are you sure?"}, method: :delete %>
+            </div>
         </div>
-      </div>
-      <br>
+    </div>
+    <br>
     <% end %>
-  </div>
-  <br>
-  <br>
-  <%= button_to "New Content", new_expo_path, {class: 'btn btn-success', method: "get"} %>
+    <% end %>
+</div>
+<%- if admin_signed_in? %>
+<br>
+<br>
+<%= button_to "New Content", new_expo_path, {class: 'btn btn-success', method: "get"} %>
+<% end %>
 </div>

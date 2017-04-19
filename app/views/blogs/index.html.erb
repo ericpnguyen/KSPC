@@ -14,11 +14,13 @@
                     <small>Home</small>
                 </h1>
             </div>
+            <%- if admin_signed_in? %>
             <div class="col">
                 <div class="text-right">
                     <%= button_to "New Post", new_blog_path, {class: 'btn btn-success', method: "get"} %>
                 </div>
             </div>
+            <% end %>
         </div>
 
         <!-- Dynamic Content -->
