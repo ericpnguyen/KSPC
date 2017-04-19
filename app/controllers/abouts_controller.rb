@@ -15,7 +15,7 @@ class AboutsController < ApplicationController
   def create
     @about = About.new(permit_about)
     if @about.save
-      flash[:notice] = "Successfully created about!"
+      flash[:success] = "Successfully created about!"
       redirect_to abouts_path
     else
       flash[:alert] = "Error creating new about!"
@@ -30,7 +30,7 @@ class AboutsController < ApplicationController
   # Update action updates the about with the new information
   def update
     if @about.update_attributes(permit_about)
-      flash[:notice] = "Successfully updated about!"
+      flash[:success] = "Successfully updated about!"
       redirect_to abouts_path
     else
       flash[:alert] = "Error updating about!"
@@ -42,7 +42,7 @@ class AboutsController < ApplicationController
   def destroy
     @about = About.find(params[:id])
     if @about.destroy
-      flash[:notice] = "Successfully deleted about!"
+      flash[:success] = "Successfully deleted about!"
       redirect_to abouts_path
     else
       flash[:alert] = "Error updating about!"

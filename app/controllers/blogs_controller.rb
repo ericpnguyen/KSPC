@@ -1,6 +1,4 @@
 class BlogsController < ApplicationController
-  before_action :find_blog, only: [:edit, :update, :show, :delete]
-
   # Index action to render all blogs
   def index
     @blogs = Blog.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 10)
@@ -31,15 +29,16 @@ class BlogsController < ApplicationController
       @blog.tag_list.add(params[:blog]["tag_list"], parse: true)
     rescue
       puts "Invalid tag list!"
-      redirect_to blogs_path
+      redirect_to new_blog_path
     end
 
     if @blog.save
-      flash[:notice] = "Successfully created blog!"
+      flash[:success] = "Successfully created blog!"
     else
       flash[:alert] = "Error creating new blog!"
       return
     end
+    redirect_to blogs_path
   end
 
   # Edit action retrives the blog and renders the edit page
@@ -49,7 +48,7 @@ class BlogsController < ApplicationController
   # Update action updates the blog with the new information
   def update
     if @blog.update_attributes(permit_blog)
-      flash[:notice] = "Successfully updated blog!"
+      flash[:success] = "Successfully updated blog!"
       redirect_to blogs_path
     else
       flash[:alert] = "Error updating blog!"
@@ -65,7 +64,7 @@ class BlogsController < ApplicationController
   def destroy
     @blog = Blog.find(params[:id])
     if @blog.destroy
-      flash[:notice] = "Successfully deleted blog!"
+      flash[:success] = "Successfully deleted blog!"
       redirect_to blogs_path
     else
       flash[:alert] = "Error updating blog!"

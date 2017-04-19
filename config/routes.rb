@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   get '/archive(.:format)', to: 'archives#index', as: 'archives'
   post '/archives(.:format)', to: 'archives#create', as: 'create_archive'
 
+  get '/blogs(.:format)', to: 'blogs#index', as: 'blogs'
+  post '/blogs(.:format)', to: 'blogs#create', as: 'create_blog'
+
   root 'mains#index'
   resources :program_schedule
   resources :abouts

@@ -15,7 +15,7 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(permit_contact)
     if @contact.save
-      flash[:notice] = "Successfully created content!"
+      flash[:success] = "Successfully created content!"
       redirect_to contacts_path
     else
       flash[:alert] = "Error creating new content!"
@@ -30,7 +30,7 @@ class ContactsController < ApplicationController
   # Update action updates the content with the new information
   def update
     if @contact.update_attributes(permit_contact)
-      flash[:notice] = "Successfully updated content!"
+      flash[:success] = "Successfully updated content!"
       redirect_to contacts_path
     else
       flash[:alert] = "Error updating content!"
@@ -42,7 +42,7 @@ class ContactsController < ApplicationController
   def destroy
     @contact = Contact.find(params[:id])
     if @contact.destroy
-      flash[:notice] = "Successfully deleted contact!"
+      flash[:success] = "Successfully deleted contact!"
       redirect_to contacts_path
     else
       flash[:alert] = "Error updating contact!"
