@@ -8,7 +8,12 @@
 #
 # And be sure to use new-style password hashing:
 #   http://dev.mysql.com/doc/refman/5.7/en/old-client.html
-#
+# mysql://b006cd7098cac3:199377e3@us-cdbr-iron-east-03.cleardb.net/heroku_e2f89edc8fb23fd?reconnect=true
+# DBHOST : us-cdbr-iron-east-03.cleardb.net
+# DATABASE : heroku_e2f89edc8fb23fd
+# USER : b006cd7098cac3
+# PASS: 199377e3
+
 default: &default
   adapter: mysql2
   encoding: utf8
