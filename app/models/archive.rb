@@ -88,7 +88,7 @@ class Archive < ApplicationRecord
     if is_image_type?
       {:thumb => {:geometry => "250x250#", :format => 'jpg', :time => 0}}
     elsif is_video_type?
-      {} # {:thumb => {:geometry => "250x250#", :format => 'jpg', :time => 0}}
+      {:thumb => {:geometry => "250x250#", :format => 'jpg', :time => 0}}
     else
       {}
     end
