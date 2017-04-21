@@ -74,8 +74,15 @@ class Archive < ApplicationRecord
   end
 
   acts_as_taggable
-  has_attached_file :media, styles: lambda { |a| a.instance.check_file_type}, :default_url => "missing.png"
+  has_attached_file :media,
+    styles: lambda { |a| a.instance.check_file_type},
+    :default_url => "missing.png"
   validates_attachment_content_type :media, :content_type => /.*/
+  # Optional cover art for audio
+  has_attached_file :cover,
+    styles: lambda { |a| a.instance.check_file_type},
+    :default_url => "defaultImage.png"
+  validates_attachment_content_type :cover, content_type: /\Aimage\/.*\z/
 
   def check_file_type
     if is_image_type?

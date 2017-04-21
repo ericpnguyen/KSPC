@@ -17,6 +17,7 @@ class ArchivesController < ApplicationController
   def create
     @archive = Archive.new({
       :media => params[:archive]["media"],
+      :cover => params[:archive]["cover"],
       :title => params[:archive]["title"],
       :description => params[:archive]["description"],
       :date => params[:archive]["date"],
@@ -80,7 +81,7 @@ class ArchivesController < ApplicationController
     # Return a "list" of the form values given for each required parameter
     def permit_archive
       params.require(:archive).permit(
-        :media, :title, :description, :date, :tag_list, :featured)
+        :media, :cover, :title, :description, :date, :tag_list, :featured)
     end
 
     def getTimeline
