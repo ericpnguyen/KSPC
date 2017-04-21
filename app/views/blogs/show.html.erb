@@ -19,7 +19,7 @@
             <%= @blog.author %></p>
         <hr>
         <div><%= raw @blog.content %></div>
-
+        <%- if admin_signed_in? %>
         <div class="row">
             <div class="col">
                 <%= button_to "Edit Post", edit_blog_path(@blog), {class: 'btn btn-success', method: "get"} %>
@@ -30,7 +30,7 @@
                 </div>
             </div>
         </div>
-
+        <% end %>
         <hr>
         <h3>
             <script id="dsq-count-scr" src="//kspc-1.disqus.com/count.js" async></script>

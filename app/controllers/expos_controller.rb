@@ -15,7 +15,7 @@ class ExposController < ApplicationController
   def create
     @expo = Expo.new(permit_expo)
     if @expo.save
-      flash[:notice] = "Successfully created expo!"
+      flash[:success] = "Successfully created expo!"
       redirect_to expos_path
     else
       flash[:alert] = "Error creating new expo!"
@@ -30,7 +30,7 @@ class ExposController < ApplicationController
   # Update action updates the expo with the new information
   def update
     if @expo.update_attributes(permit_expo)
-      flash[:notice] = "Successfully updated expo!"
+      flash[:success] = "Successfully updated expo!"
       redirect_to expos_path
     else
       flash[:alert] = "Error updating expo!"
@@ -46,7 +46,7 @@ class ExposController < ApplicationController
   def destroy
     @expo = Expo.find(params[:id])
     if @expo.destroy
-      flash[:notice] = "Successfully deleted expo!"
+      flash[:success] = "Successfully deleted expo!"
       redirect_to expos_path
     else
       flash[:alert] = "Error updating expo!"

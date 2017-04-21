@@ -14,6 +14,9 @@ Rails.application.config.assets.precompile += %w( mains/admin )
 
 # Precompile additional assets.
 Rails.application.config.assets.precompile += %w( blogs.css )
+Rails.application.config.assets.precompile += %w( program_schedule/index )
+Rails.application.config.assets.precompile += %w( mains/index )
+
 
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )

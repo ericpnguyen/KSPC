@@ -2,6 +2,7 @@
 <h1>About</h1>
 <% @abouts.each do |about| %>
 <%= raw about.content %>
+<%- if admin_signed_in? %>
 <div class="row">
     <div class="col">
         <%= button_to "Edit Content", edit_about_path(about), {class: 'btn btn-success', method: "get"} %>
@@ -14,7 +15,10 @@
 </div>
 <br>
 <% end %>
+<% end %>
+<%- if admin_signed_in? %>
 <br>
 <br>
 <%= button_to "New Content", new_about_path, {class: 'btn btn-success', method: "get"} %>
+<% end %>
 </div>
