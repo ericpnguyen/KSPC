@@ -110,11 +110,10 @@
 
                     <div class="card-block">
                         <h4 class="card-title">
-                            <a href="#"><%= blog.title %></a>
+                            <%= blog.title %>
                         </h4>
                         <p class="card-text">
 
-                          <br/>
                           <dateComment>Date Posted: <%= blog.created_at.strftime('%b %d, %Y') %></dateComment>
                           <!--<p><%= raw blog.content.truncate(358) %></p>-->
                         </p>
