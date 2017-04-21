@@ -1,4 +1,6 @@
 class BlogsController < ApplicationController
+  before_action :find_blog, only: [:edit, :update, :show, :delete]
+
   # Index action to render all blogs
   def index
     @blogs = Blog.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 10)
