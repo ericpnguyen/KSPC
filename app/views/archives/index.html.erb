@@ -28,10 +28,10 @@
       <div class="input-group" id="adv-search">
         <%= text_field_tag :search, params[:search], placeholder: "Search Archives" , class: "form-control" %>
         <div class="input-group-btn">
-          <div class="btn-group" role="group">
-            <div class="dropdown dropdown-lg">
-              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>
-              <div class="dropdown-menu dropdown-menu-right" role="menu">
+          <div class="btn-group dropdown dropdown-lg" role="group">
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>
+              <div class="dropdown-menu dropdown-menu-right" onClick="event.stopPropagation();" role="menu">
 
                 Search for:
                 <!-- THE LINE BELOW THIS IS COMMENT LOOKS LIKE A COMMENT BUT IS NOT!!!
@@ -64,9 +64,11 @@
 
               </div>
             </div>
-          </div>
+            <%= button_tag(type: "submit", class: "btn btn-primary") do %>
+              Search <i class="icon-repeat"></i>
+            <% end %>
+            </div>
         </div>
-        <%= submit_tag "Search" %>
       </div>
     </div>
   </div>
@@ -74,7 +76,13 @@
 <% end %>
 
 <% if @archives.blank? %>
-  <h4>There are no archive entries containing the term <%= params[:search] %></h4>
+  <br>
+  <% if params[:search].include? " "%>
+    <% words = params[:search].sub! " ", ", " %>
+    <h4>There are no archive entries containing the terms <%= words %></h4>
+  <% else %>
+    <h4>There are no archive entries containing the term <%= params[:search] %></h4>
+  <%end%>
 <% end %>
 <br>
 <div class="row">

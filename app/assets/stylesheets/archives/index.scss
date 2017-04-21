@@ -44,7 +44,8 @@
   position: relative;
 }
 
-h2 { 
+h2 {
+  pointer-events: none; 
   text-align: left;
   position: absolute; 
   top: 150px; 
@@ -66,6 +67,10 @@ h2 span {
   top: 30px; 
   position: absolute; 
   font-size: 75%;
+  width: 230px;
+  height: 28px;
+  overflow:hidden;
+  word-wrap: break-word
 }
 
 h2 date { 
@@ -89,8 +94,10 @@ audio {
   margin-bottom: 5px;
 }
 
+
 /* start section for dropwdown search copy pasted from
    http://bootsnipp.com/snippets/featured/advanced-dropdown-search */
+
 .dropdown.dropdown-lg .dropdown-menu {
     margin-top: -1px;
     padding: 6px 20px;
@@ -121,14 +128,14 @@ audio {
 
 @media screen and (min-width: 768px) {
     #adv-search {
-        width: 566px;
+        width: 570px;
         margin-left: -30px;
     }
     .dropdown.dropdown-lg {
         position: static !important;
     }
     .dropdown.dropdown-lg .dropdown-menu {
-        min-width: 500px;
+        min-width: 485px;
     }
 }
 /* end section for dropdown search */
