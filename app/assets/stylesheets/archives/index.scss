@@ -152,3 +152,21 @@ video::-webkit-media-controls-panel {
     width: calc(100% + 30px); /* Adjust as needed */
 }
 
+audio::-internal-media-controls-download-button {
+    display:none;
+}
+
+audio::-webkit-media-controls-enclosure {
+    overflow:hidden;
+}
+
+audio::-webkit-media-controls-panel {
+    width: calc(100% + 30px); /* Adjust as needed */
+}
+
+audio[name=media] {
+  opacity: 0.75;
+  transform: translateY(-100%);
+  width: 100%;
+}
+

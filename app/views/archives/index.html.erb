@@ -117,20 +117,22 @@
             }
         elsif archive.media.content_type.start_with?("audio")
           link_to image_tag(archive.cover.url),
-            "http://localhost:3000" + archive.media.url,
+            archive.cover.url,
             data: {
               toggle: "lightbox",
               title: archive.title,
-              footer: "<div>
-                        <div>" + archive.description + "</div>" +
+              footer: "<div>" +
+                        "<div id='audio-path' hidden>" +
+                          archive.media.url +
+                        "</div>" +
+                        "<div>" + archive.description + "</div>" +
                         taglist +
                       "</div>",
-              type: "video",
             },
-            class: "block-context-menu"
+            class: "add-audio-tag"
         else
           link_to image_tag(archive.media.url(:thumb)),
-            "http://localhost:3000" + archive.media.url,
+            archive.media.url,
             data: {
               toggle: "lightbox",
               title: archive.title,
