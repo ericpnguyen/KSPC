@@ -9,6 +9,7 @@
 }
 
 .thumbnails {
+  position:relative;
   height: 250px;
   object-fit: none;
   overflow: hidden;
@@ -43,15 +44,129 @@
   position: relative;
 }
 
+h2 {
+  pointer-events: none; 
+  text-align: left;
+  position: absolute; 
+  top: 150px; 
+  left: 0; 
+  width: 100%; 
+  height:100px;
+  background:linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.9));;
+  color: white; 
+  letter-spacing: -1px;  
+  padding: 15px; 
+
+  /* opacity setting */
+  filter:alpha(opacity=90);    /* ie  */
+  opacity: 0.9;    /* css standard, currently it works in most modern browsers like firefox,  */
+}
+
+h2 span { 
+  font-weight:bold;
+  top: 30px; 
+  position: absolute; 
+  font-size: 75%;
+  width: 230px;
+  height: 28px;
+  overflow:hidden;
+  word-wrap: break-word
+}
+
+h2 date { 
+  top: 60px; 
+  position: absolute; 
+  font-size: 50%;
+}
+
+.delete-button {
+  position: absolute;
+  right: -2px;
+  z-index: 1;
+}
+
 audio {
   width: 265px;
 }
 
-#search-form, #sort-title-form, #sort-uploaded-form, #sort-date-form {
+#sort-title-form, #sort-uploaded-form, #sort-date-form {
   display: inline-block;
   margin-bottom: 5px;
 }
-#sort-title-form, #sort-uploaded-form, #sort-date-form
-{
-  float:right;
+
+
+/* start section for dropwdown search copy pasted from
+   http://bootsnipp.com/snippets/featured/advanced-dropdown-search */
+
+.dropdown.dropdown-lg .dropdown-menu {
+    margin-top: -1px;
+    padding: 6px 20px;
 }
+.input-group-btn .btn-group {
+    display: flex !important;
+}
+.btn-group .btn {
+    border-radius: 0;
+    margin-left: -1px;
+}
+.btn-group .btn:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.btn-group .form-horizontal .btn[type="submit"] {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0;
+}
+.form-group .form-control:last-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+    #adv-search {
+        width: 570px;
+        margin-left: -30px;
+    }
+    .dropdown.dropdown-lg {
+        position: static !important;
+    }
+    .dropdown.dropdown-lg .dropdown-menu {
+        min-width: 485px;
+    }
+}
+/* end section for dropdown search */
+
+video::-internal-media-controls-download-button {
+    display:none;
+}
+
+video::-webkit-media-controls-enclosure {
+    overflow:hidden;
+}
+
+video::-webkit-media-controls-panel {
+    width: calc(100% + 30px); /* Adjust as needed */
+}
+
+audio::-internal-media-controls-download-button {
+    display:none;
+}
+
+audio::-webkit-media-controls-enclosure {
+    overflow:hidden;
+}
+
+audio::-webkit-media-controls-panel {
+    width: calc(100% + 30px); /* Adjust as needed */
+}
+
+audio[name=media] {
+  opacity: 0.75;
+  transform: translateY(-100%);
+  width: 100%;
+}
+

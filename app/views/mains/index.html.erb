@@ -100,12 +100,10 @@
                             <a href="#"><%= blog.title %></a>
                         </h4>
                         <p class="card-text">
-                            <br>
-                            <p>by
-                                <%= blog.author %></p>
-                            <dateComment>Date Posted:
-                                <%= blog.created_at.strftime('%b %d, %Y') %></dateComment>
-                            <p><%= raw blog.content.truncate(358) %></p>
+
+                          <br/>
+                          <dateComment>Date Posted: <%= blog.created_at.strftime('%b %d, %Y') %></dateComment>
+                          <!--<p><%= raw blog.content.truncate(358) %></p>-->
                         </p>
                     </div>
                 </div>

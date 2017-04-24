@@ -1,18 +1,18 @@
 <%= stylesheet_link_tag "archives/new" %>
 <%= stylesheet_link_tag "archives/index" %>
 
-<div class="row">
+<%- if admin_signed_in? %>
+  <div class="row">
+    <div class="col-md-6"></div>
     <div class="col-md-6 text-right">
-      <%- if admin_signed_in? %>
-        <%= button_to "New Archive Entry", new_archive_path,
-              {class: 'btn btn-success', method: "get"} %>
-      <% end %>
+      <%= button_to "New Archive Entry", new_archive_path,
+        {class: 'btn btn-success', method: "get"} %>
     </div>
-</div>
-<br>
+  </div>
+<% end %>
 
 <div class="break">
-    <iframe src='http://goo.gl/AEt5Rm'
+    <iframe src='https://goo.gl/AEt5Rm'
             width='100%'
             height='650'
             webkitallowfullscreen
@@ -23,86 +23,139 @@
 </div>
 <br>
 
-<%= form_tag(archives_path, :method => "get", id: "search-form") do %>
-<%= text_field_tag :search, params[:search], placeholder: "Search Archives" %>
-<%= submit_tag "Search" %>
-<% end %>
+<div id="searchBar"></div>
+<%= form_tag(archives_path+'#searchBar', :method => "get", id: "search-form") do %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="input-group" id="adv-search">
+        <%= text_field_tag :search, params[:search], placeholder: "Search Archives" , class: "form-control" %>
+        <div class="input-group-btn">
+          <div class="btn-group dropdown dropdown-lg" role="group">
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>
+              <div class="dropdown-menu dropdown-menu-right" onClick="event.stopPropagation();" role="menu">
 
-<%= form_tag(archives_path, :method => "get", id: "sort-title-form") do %>
-<%= hidden_field_tag :sortTitle, "true" %>
-<%= hidden_field_tag :search, params[:search] %>
-<%= submit_tag "Sort By Title" %>
-<% end %>
+                Search for:
+                <!-- THE LINE BELOW THIS IS COMMENT LOOKS LIKE A COMMENT BUT IS NOT!!!
+                     Without putting it in a comment it displays true or false which is undesirable -->
+                <!-- <%= @all_unchecked = !(params[:showImages] || params[:showAudio] || params[:showVideo]) %> -->
+                <label> <%= check_box_tag 'showImages' , 1,
+                params[:showImages] ? true : @all_unchecked %> Images </label>
+                <label> <%= check_box_tag 'showAudio', 1,
+                params[:showAudio] ? true : @all_unchecked%> Audio </label>
+                <label> <%= check_box_tag 'showVideo', 1,
+                params[:showVideo] ? true : @all_unchecked %> Video </label>
 
-<%= form_tag(archives_path, :method => "get", id: "sort-uploaded-form") do %>
-<%= hidden_field_tag :sortUploaded, "true" %>
-<%= hidden_field_tag :search, params[:search] %>
-<%= submit_tag "Sort By Uploaded Date" %>
-<% end %>
+                <br>
 
-<%= form_tag(archives_path, :method => "get", id: "sort-date-form") do %>
-<%= hidden_field_tag :sortDate, "true" %>
-<%= hidden_field_tag :search, params[:search] %>
-<%= submit_tag "Sort By Date" %>
+                Sort By:
+                <label> <%= radio_button_tag :sortMethod, 'none', true %> Relevance </label>
+                <label> <%= radio_button_tag :sortMethod, 'sortTitle',
+                params[:sortMethod]=='sortTitle' %> Title </label>
+                <label> <%= radio_button_tag :sortMethod, 'sortDate',
+                params[:sortMethod]=='sortDate' %> Date </label>
+                <label> <%= radio_button_tag :sortMethod, 'sortUploaded',
+                params[:sortMethod]=='sortUploaded' %> Date Uploaded </label>
+                <br>
+                <label> <%= radio_button_tag :sortMethod, 'sortTitleZ',
+                params[:sortMethod]=='sortTitleZ' %> Title Z-A </label>
+                <label> <%= radio_button_tag :sortMethod, 'sortDateOld',
+                params[:sortMethod]=='sortDateOld' %> Date Old-New</label>
+                <label> <%= radio_button_tag :sortMethod, 'sortUploadedOld',
+                params[:sortMethod]=='sortUploadedOld' %> Date Uploaded Old-New </label>
+
+              </div>
+            </div>
+            <%= button_tag(type: "submit", class: "btn btn-primary") do %>
+              Search <i class="icon-repeat"></i>
+            <% end %>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <% end %>
 
 <% if @archives.blank? %>
-  <h4>There are no archives containing the term <%= params[:search] %></h4>
+  <br>
+  <% if params[:search] and params[:search].include? " "%>
+    <% words = params[:search].sub! " ", ", " %>
+    <h4>There are no archive entries containing the terms <%= words %></h4>
+  <% else %>
+    <h4>There are no archive entries containing the term <%= params[:search] %></h4>
+  <%end%>
 <% end %>
 <br>
 <div class="row">
 <% @archives.each_with_index do |archive, i| %>
   <div class="archive card text-center">
     <div class="thumbnails">
-        <%- if archive.media.content_type.start_with?("image") %>
-          <%=
-            taglist = "<div class='tag-box'>"
-            archive.tag_list.each do |tag|
-              taglist += "<span class='tag'>" + tag + "</span>"
-            end
-            taglist += "</div>"
-            deletebutton = ""
-            if admin_signed_in?
-              deletebutton = button_to "Delete", archive_path(archive),
-                                remote: true,
-                                method: :delete,
-                                data: { confirm: "Delete this archive entry?" },
-                                class: "btn btn-danger"
-            end
-            link_to image_tag(archive.media.url(:thumb)), archive.media.url,
+
+      <%=
+        if admin_signed_in?
+          button_to "×", archive_path(archive),
+            remote: true, 
+            method: :delete,
+            data: { confirm: "Delete this archive entry?" },
+            class: "close delete-button"
+        end
+      %>
+      <%=
+        taglist = "<div class='tag-box'>"
+        archive.tag_list.each do |tag|
+          taglist += "<span class='tag'>" + tag + "</span>"
+        end
+        taglist += "</div>"
+        if archive.media.content_type.start_with?("image")
+          link_to image_tag(archive.media.url(:thumb)),
+            archive.media.url,
             data: {
               toggle: "lightbox",
               title: archive.title,
-              footer: "<div style='width: 100%'>
-                        <div class='row'>
-                          <div class='col-md-6'>" +
-                            archive.description +
-                          "</div>
-                          <div class='col-md-6 text-right'>" +
-                            deletebutton +
-                          "</div>
-                        </div>" +
+              footer: "<div>
+                        <div>" + archive.description + "</div>" +
                         taglist +
                       "</div>",
             }
-          %>
-        <% else %>
-          <%= videojs_rails class: "video-js vjs-default-skin",
-            sources: {mp4: archive.media.url, type:'audio/mp3'},
-            setup: "{}",
-            poster: archive.media.url(:thumb),
-            width: "250",
-            height: "250"
-          %>
-        <% end %>
-    </div>
-    <div class="card-block">
-      <h5 class="archive-title"><%= archive.title %></h5>
-      <div><%= archive.date %></div>
+        elsif archive.media.content_type.start_with?("audio")
+          link_to image_tag(archive.cover.url),
+            archive.cover.url,
+            data: {
+              toggle: "lightbox",
+              title: archive.title,
+              footer: "<div>" +
+                        "<div id='audio-path' hidden>" +
+                          archive.media.url +
+                        "</div>" +
+                        "<div>" + archive.description + "</div>" +
+                        taglist +
+                      "</div>",
+            },
+            class: "add-audio-tag"
+        else
+          link_to image_tag(archive.media.url(:thumb)),
+            archive.media.url,
+            data: {
+              toggle: "lightbox",
+              title: archive.title,
+              footer: "<div>
+                        <div>" + archive.description + "</div>" +
+                        taglist +
+                      "</div>",
+              type: "video",
+            },
+            class: "block-context-menu"
+        end
+      %>
+      <h2><span><%= archive.title %></span>
+        <br /><date><%= archive.date %></date></h2>
     </div>
   </div>
 <% end %>
 </div>
+
 <!-- Render page links -->
 <%= will_paginate @posts %>
 

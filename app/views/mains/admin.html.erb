@@ -6,16 +6,17 @@
   <%= form_for(:admin, :url => session_path(:admin)) do |f| %>
     <div class="form-group">
       <%= f.label :email %>
-      <%= f.text_field :email, {class: "form-control"} %>
+      <%= f.text_field :email,
+        {class: "form-control", tabindex: 1, autofocus: true} %>
     </div>
     <div class="form-group">
       <%= f.label :password %>
       <%= link_to "Forgot your password?", new_password_path(:admin),
-            {class: "forgot-password"} %>
-      <%= f.password_field :password, {class: "form-control"} %>
+            {class: "forgot-password", tabindex: 5} %>
+      <%= f.password_field :password, {class: "form-control", tabindex: 2} %>
     </div>
-    <%= f.submit 'Sign in', {class: 'btn btn-success'} %><br>
-    <%= f.check_box :remember_me %>
+    <%= f.submit 'Sign in', {class: 'btn btn-success', tabindex: 3} %><br>
+    <%= f.check_box :remember_me, {tabindex: 4, checked: true} %>
     <%= f.label :remember_me %>
   <% end %>
   </div>

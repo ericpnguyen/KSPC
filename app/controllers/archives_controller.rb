@@ -4,7 +4,13 @@ class ArchivesController < ApplicationController
   def index
     @archives = Archive.paginate(:page => params[:page], :per_page => 10)
     if params[:search]
-      @archives = Archive.search(params[:search], params[:sortTitle], params[:sortUploaded], params[:sortDate])
+      if !params[:showImages] and !params[:showAudio] and !params[:showVideo]
+        params[:showImages] = true
+        params[:showAudio] = true
+        params[:showVideo] = true
+      end
+      @archives = Archive.search(params[:search], params[:sortMethod],
+        params[:showImages], params[:showAudio], params[:showVideo])
         .paginate(:page => params[:page], :per_page => 10)
     end
   end
@@ -16,11 +22,20 @@ class ArchivesController < ApplicationController
   def create
     @archive = Archive.new({
       :media => params[:archive]["media"],
+      :cover => params[:archive]["cover"],
       :title => params[:archive]["title"],
       :description => params[:archive]["description"],
       :date => params[:archive]["date"],
       :featured => params["featured"]
     })
+
+    # Prevent erroring if year is too large
+    if @archive.date.year > 9999
+        flash[:danger] = "Year must be between 0 and 9999, inclusive"
+        redirect_to new_archive_path
+        return
+    end
+
     # The tag list has to be saved in a different manner
     begin
       @archive.tag_list.add(params[:archive]["tag_list"], parse: true)
@@ -33,7 +48,7 @@ class ArchivesController < ApplicationController
     if @archive.save
       flash[:success] = "Upload successful!"
     else
-      flash[:error] = @archive.errors.full_messages
+      flash[:danger] = @archive.errors.full_messages
       return
     end
 
@@ -79,7 +94,7 @@ class ArchivesController < ApplicationController
     # Return a "list" of the form values given for each required parameter
     def permit_archive
       params.require(:archive).permit(
-        :media, :title, :description, :date, :tag_list, :featured)
+        :media, :cover, :title, :description, :date, :tag_list, :featured)
     end
 
     def getTimeline
