@@ -1,9 +1,22 @@
 class Archive < ApplicationRecord
-  def self.search(search, sortTitle, sortUploaded, sortDate)
+  def self.search(search, sortMethod, image, audio, video)
     search_length = search.split.length
+
+    # generate the sql asking clause for only showing correct media types
+    mediaTypes = []
+    if image and image != ""
+      mediaTypes.push("media_content_type LIKE 'image%'")
+    end
+    if audio and audio != ""
+      mediaTypes.push("media_content_type LIKE 'audio%'")
+    end
+    if video and video != ""
+      mediaTypes.push("media_content_type LIKE 'video%'")
+    end
+    mediaTypes = mediaTypes.join(' OR ')
+
     if search_length == 0
-      # no search terms so display all. This seems like easiest way to select all
-      searchResult = where("title LIKE ?", "%#{search}%")
+      searchResult = where(mediaTypes)
     else
       # find the where section that the ActsAsTaggableOn gem generates
       tag_where = tagged_with(search.split, :any => true).to_sql.partition("WHERE").last
@@ -12,17 +25,24 @@ class Archive < ApplicationRecord
       individual_search_terms_x2 = search.split.flat_map{
         |name| ["title LIKE '%#{name}%'", "description LIKE '%#{name}%'"] }
 
-      if sortTitle || sortUploaded || sortDate
-        searchResult = where(individual_search_terms_x2.join(' OR ') + ' OR ' + tag_where)
+      if sortMethod && sortMethod != "none"
+        searchResult = where('(' + mediaTypes + ') AND (' +
+          individual_search_terms_x2.join(' OR ') + ' OR ' + tag_where + ')')
       end
     end
 
-    if sortTitle
+    if sortMethod == "sortTitle"
       searchResult.order("title ASC")
-    elsif sortUploaded
+    elsif sortMethod == "sortUploaded"
       searchResult.order("updated_at DESC")
-    elsif sortDate
+    elsif sortMethod == "sortDate"
       searchResult.order("date DESC")
+    elsif sortMethod == "sortTitleZ"
+      searchResult.order("title DESC")
+    elsif sortMethod == "sortUploadedOld"
+      searchResult.order("updated_at ASC")
+    elsif sortMethod == "sortDateOld"
+      searchResult.order("date ASC")
     elsif search_length == 0
       searchResult
     # a search was done but not sorting type was specified so do best match
@@ -39,7 +59,7 @@ class Archive < ApplicationRecord
       query += ") AS numMatches
         FROM archives
        ) xxx
-      WHERE numMatches > 0
+      WHERE numMatches > 0 AND (#{mediaTypes})
       ORDER BY numMatches DESC"
       results = ActiveRecord::Base.connection.exec_query(query)
 
@@ -51,26 +71,34 @@ class Archive < ApplicationRecord
 
       results
     end
-
   end
+
   acts_as_taggable
-  has_attached_file :media, :styles => {:thumb => {:geometry => "250x250#", :format => 'jpg', :time => 0}}, :default_url => "/images/missing.png"
-  validates_attachment_content_type :media, 
-    :content_type => [
-      "image/jpg",
-      "image/jpeg", 
-      "image/png", 
-      "image/gif",
-      'audio/mpeg',
-      'audio/x-mpeg',
-      'audio/mp3',
-      'audio/x-mp3',
-      'audio/mpeg3',
-      'audio/x-mpeg3',
-      'audio/mpg',
-      'audio/x-mpg',
-      'audio/x-mpegaudio',
-      'video/mp4',
-      'video/x-msvideo'
-    ]
+  has_attached_file :media,
+    styles: lambda { |a| a.instance.check_file_type},
+    :default_url => "missing.png"
+  validates_attachment_content_type :media, :content_type => /.*/
+  # Optional cover art for audio
+  has_attached_file :cover,
+    styles: lambda { |a| a.instance.check_file_type},
+    :default_url => "/images/defaultImage.png"
+  validates_attachment_content_type :cover, content_type: /\Aimage\/.*\z/
+
+  def check_file_type
+    if is_image_type?
+      {:thumb => {:geometry => "250x250#", :format => 'jpg', :time => 0}}
+    elsif is_video_type?
+      {:thumb => {:geometry => "250x250#", :format => 'jpg', :time => 0}}
+    else
+      {}
+    end
+  end
+    
+  def is_video_type?
+    media_content_type =~ %r(video)
+  end
+
+  def is_image_type?
+    media_content_type =~ %r(image)
+  end
 end

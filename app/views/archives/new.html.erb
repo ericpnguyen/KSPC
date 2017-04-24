@@ -10,7 +10,17 @@
       html: {class: "new-archive", multipart: true } do |f| %>
   <div class="form-group">
     <%= f.label :media %>
-    <%= f.file_field :media, {class: "form-control", required: true} %>
+    <%= f.file_field :media,
+      {
+        class: "form-control",
+        required: true,
+        onchange: "fileInputChange(this)"
+      }
+    %>
+  </div>
+  <div class="form-group" id="cover-upload">
+    <%= f.label :cover %>
+    <%= f.file_field :cover, {class: "form-control"} %>
   </div>
   <div class="form-group">
     <%= f.label :title %>
@@ -18,7 +28,7 @@
   </div>
   <div class="form-group">
     <%= f.label :description %>
-    <%= f.text_area :description, {class: "form-control", required: true} %>
+    <%= f.text_area :description, {class: "form-control"} %>
   </div>
   <div class="form-group">
     <%= f.label :date %>
@@ -26,7 +36,8 @@
   </div>
   <div class="form-group">
     <%= f.label :tag_list %><br>
-    <%= f.text_field :tag_list, {'class' => 'form-control', 'data-role' => 'tagsinput', 'value' => ''} %>
+    <%= f.text_field :tag_list,
+      {'class' => 'form-control', 'data-role' => 'tagsinput', 'value' => ''} %>
   </div>
   <div class="form-group">
     <%= f.label :featured %>
