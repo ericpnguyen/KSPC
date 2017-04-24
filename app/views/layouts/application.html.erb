@@ -24,36 +24,36 @@
             <a class="navbar-brand" href="index.html"><%= link_to "KSPC", root_url, class: "navbar-brand"%></a>
             <div class="collapse navbar-collapse" id="navbarExample">
                 <ul class="navbar-nav ml-auto">
-                    <li class="<%= 'active' if current_page?(abouts_path) %>">
-                        <%= link_to "About", abouts_path, class: "nav-item nav-link" %>
-                    </li>
-                    <li class="<%= 'active' if current_page?(blogs_path) %>">
-                        <%= link_to "Blog", blogs_path, class: "nav-item nav-link" %>
-                    </li>
-                    <li class="<%= 'active' if current_page?(archives_path) %>">
-                        <%= link_to "Archives", archives_path, class: "nav-item nav-link" %>
-                    </li>
-                    <li class="<%= 'active' if current_page?(expos_path) %>">
-                        <%= link_to "EXPO", expos_path, class: "nav-item nav-link" %>
-                    </li>
-                    <li class="<%= 'active' if current_page?(program_schedule_index_path) %>">
-                        <%= link_to "Program Schedule", program_schedule_index_path, class: "nav-item nav-link" %>
-                    </li>
-                    <li>
-                        <%= link_to "Store", 'http://coopstore.pomona.edu/collections/kspc', class: "nav-item nav-link" %>
-                    </li>
-                    <li class="<%= 'active' if current_page?(contacts_path) %>">
-                        <%= link_to "Contact", contacts_path, class: "nav-item nav-link" %>
-                    </li>
-                    <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/KSPCOnline/">
-                        <span class="fa fa-facebook"></span>
-                    </a>
-                    <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/kspcradio/">
-                        <span class="fa fa-instagram"></span>
-                    </a>
-                    <a class="btn btn-social-icon btn-twitter" href="https://twitter.com/kspc">
-                        <span class="fa fa-twitter"></span>
-                    </a>
+                        <li class="<%= 'active' if current_page?(abouts_path) %>">
+                            <%= link_to "About", abouts_path, class: "nav-item nav-link" %>
+                        </li>
+                        <li class="<%= 'active' if current_page?(blogs_path) %>">
+                            <%= link_to "Blog", blogs_path, class: "nav-item nav-link" %>
+                        </li>
+                        <li class="<%= 'active' if current_page?(archives_path) %>">
+                            <%= link_to "Archives", archives_path, class: "nav-item nav-link" %>
+                        </li>
+                        <li class="<%= 'active' if current_page?(expos_path) %>">
+                            <%= link_to "EXPO", expos_path, class: "nav-item nav-link" %>
+                        </li>
+                        <li class="<%= 'active' if current_page?(program_schedule_index_path) %>">
+                            <%= link_to "Program Schedule", program_schedule_index_path, class: "nav-item nav-link" %>
+                        </li>
+                        <li>
+                            <%= link_to "Store", 'http://coopstore.pomona.edu/collections/kspc', class: "nav-item nav-link" %>
+                        </li>
+                        <li class="<%= 'active' if current_page?(contacts_path) %>">
+                            <%= link_to "Contact", contacts_path, class: "nav-item nav-link" %>
+                        </li>
+                        <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/KSPCOnline/">
+                            <span class="fa fa-facebook"></span>
+                        </a>
+                        <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/kspcradio/">
+                            <span class="fa fa-instagram"></span>
+                        </a>
+                        <a class="btn btn-social-icon btn-twitter" href="https://twitter.com/kspc">
+                            <span class="fa fa-twitter"></span>
+                        </a>
                 </ul>
                 <%- if admin_signed_in? %>
                 <ul class="navbar-nav">
@@ -80,23 +80,34 @@
     <div class="break">
         <footer class="footer py-3 bg-inverse">
             <div class="container">
-                <p class="m-0 text-left text-white">THE CLAREMONT COLLEGES</p>
-                <a class="thumbnail" href="http://pomona.edu/">
-                    <img class="img-responsive" src="https://cloud.githubusercontent.com/assets/5604374/24841570/531aa334-1d3c-11e7-8a9c-2d8e659f326c.png" alt="">
-                </a>
-                <a class="thumbnail" href="http://cmc.edu/">
-                    <img class="img-responsive" src="http://kspc.org/blog/wp-content/themes/kspc2/images/cmc-logo.png" alt="">
-                </a>
-                <a class="thumbnail" href="http://hmc.edu">
-                    <img class="img-responsive" src="http://kspc.org/blog/wp-content/themes/kspc2/images/hmclogo.png" alt="">
-                </a>
-                <a class="thumbnail" href="http://pitzer.edu/">
-                    <img class="img-responsive" src="http://kspc.org/blog/wp-content/themes/kspc2/images/pitzer-logo.png" alt="">
-                </a>
-                <a class="thumbnail" href="http://scrippscollege.edu/">
-                    <img class="img-responsive" src="https://cloud.githubusercontent.com/assets/5604374/24841594/cf9d4614-1d3c-11e7-8c43-3a161906f602.png" alt="">
-                </a>
-                <br><br>
+                <p class="m-0 text-left text-white">The Claremont Colleges</p>
+                <div class="row">
+                    <div class="col">
+                    <a class="thumbnail" href="http://pomona.edu/">
+                        <img class="img-responsive" src="https://cloud.githubusercontent.com/assets/5604374/24841570/531aa334-1d3c-11e7-8a9c-2d8e659f326c.png" alt="">
+                    </a>
+                    </div>
+                    <div class="col">
+                    <a class="thumbnail" href="http://cmc.edu/">
+                        <img class="img-responsive" src="http://kspc.org/blog/wp-content/themes/kspc2/images/cmc-logo.png" alt="">
+                    </a>
+                    </div>
+                    <div class="col">
+                    <a class="thumbnail" href="http://hmc.edu">
+                        <img class="img-responsive" src="http://kspc.org/blog/wp-content/themes/kspc2/images/hmclogo.png" alt="">
+                    </a>
+                    </div>
+                    <div class="col">
+                    <a class="thumbnail" href="http://pitzer.edu/">
+                        <img class="img-responsive" src="http://kspc.org/blog/wp-content/themes/kspc2/images/pitzer-logo.png" alt="">
+                    </a>
+                    </div>
+                    <div class="col">
+                    <a class="thumbnail" href="http://scrippscollege.edu/">
+                        <img class="img-responsive" src="https://cloud.githubusercontent.com/assets/5604374/24841594/cf9d4614-1d3c-11e7-8c43-3a161906f602.png" alt="">
+                    </a>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col">
                         <p class="m-0 text-left text-white">Copyright &copy; KSPC 2017</p>
@@ -113,7 +124,7 @@
 
     <style>
         body {
-            padding-top: 56px;
+            padding-top: 54px;
         }
     </style>
 </html>
