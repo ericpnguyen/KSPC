@@ -5,14 +5,19 @@ Migrating to Ruby on Rails
 
 # Changelog
 
-### Tina, 4/17 - Dynamic Home Page, also it's hosted on the remote server (Heroku)! See here: 
-https://kspcdev.herokuapp.com/ 
+### Tina, 4/17 - Dynamic Home Page, also it's hosted on the remote server (Heroku)! See here:
+
+Changes:
+execjs was causing compilation errors when deploying on Heroku. A quick fix (by disabling the uglifier) in production.rb was used.
+program schedule URL has to be https:/ or it will not work. 
+
+https://kspcdev.herokuapp.com/
 Here's how to push your own changes onto the server (currently.) Eventually we'd want to make an account for Erica or Luke.
-But for now:
 
 You can follow this tutorial: https://devcenter.heroku.com/articles/getting-started-with-rails4
-The commands you need are: you install (brew install heroku) then you login (heroku login) with my credentials (tzhu@g.hmc.edu, password: ____ i'll provide later). Then, you can run (heroku create) in the KSPC folder. Then we run (git push heroku master) to push to heroku's remote server. Also, since we used mySQL you might need to do the commands:  https://devcenter.heroku.com/articles/cleardb under "Provisioning the add-on" to config it to use the ClearDb mySQL add-on.
-Then, do (heroku run:detached rake db:migrate) see here: http://stackoverflow.com/questions/17237809/heroku-run-rake-dbmigrate-command-error . It should work then. 
+The commands you need are: you install (brew install heroku) then you login (heroku login) with my credentials (tzhu@g.hmc.edu, password: message me on facebook for it). Then, you can run (heroku create) in the KSPC folder. Then we run (git push heroku master) to push
+to heroku's remote server. Also, since we used mySQL you might need to do the commands:  https://devcenter.heroku.com/articles/cleardb under "Provisioning the add-on" to config it to use the ClearDb mySQL add-on.
+Then, do (heroku run:detached rake db:migrate) see here: http://stackoverflow.com/questions/17237809/heroku-run-rake-dbmigrate-command-error . It should work then.
 Note: Please alert others to be sure of your changes before pushing to remote server just in case.  
 
 ### Cha, 4/12 - Wordpress Migration
@@ -28,7 +33,7 @@ Blog editing, updating, deleting implemented. Formatting and Disqus comment feat
 
 I've also added functionality and content editing to the contact page. All messages will go to kspc.auto@gmail.com as Cha set up.
 
-Lastly, I made TODO notes for the homepage and formatted the subscriber form to be consistent with our bootstrap theme. 
+Lastly, I made TODO notes for the homepage and formatted the subscriber form to be consistent with our bootstrap theme.
 
 ### Cha, 3/19 - Sending emails after signing up
 In the homepage the subscription email will be sent when someone signups.
