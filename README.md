@@ -1,14 +1,28 @@
 # KSPC Aesthetics/Archive
 
-TODO: Write a project description
+Our website provides the user with information on events related to KSPC, the online radio station centered at Pomona College. In particular, we updated the website from its previous version to add more information about the history of the station and make the website compatible with the archived framework, which will host a large amount of audio, video and image files that are easily searchable and intuitive to upload. Users can browse the website to listen to past recordings, see upcoming broadcasts and events, and also learn the history of the station from the archived files.  
 
 ## Installation
 
-TODO: Describe the installation process
+Ensure you have MySQL server running and ImageMagik on your machine. Now run the following commands:
+
+`bundle install`
+
+`rake db:migrate`
+
+`rails s `
+
+For troubleshooting:
+
+1. Mac Users only: MySQL install reference https://gist.github.com/nrollr/a8d156206fa1e53c6cd6 ImageMagik install reference http://stackoverflow.com/questions/7053996/how-do-i-install-imagemagick-with-homebrew
+
+2. 'secrets.yml' is not in the repo so if the error about 'secretkey in development ... missing' please add the file back in the local repo under `config`. You can recover it from this commit: https://github.com/shiftswitchy/KSPC/blob/a50e9ba564076fd525eab2c43076581181d8c538/config/secrets.yml
+
+3. In 'database.yml' some of us have different socket path to mysql. I've seen that it will be one of the two '/var/run/mysqld/mysqld.sock' or '/tmp/mysql.sock' please change them accordingly if you get an error about 'socket path <PATHNAME> ... not found'. Also please don't set password in mysql, but if it has been set change it back to empty string.
 
 ## Usage
 
-TODO: Write usage instructions
+Once on the website, you may create an admin account under localhost:3000/admin. Login and begin editing content with the different green buttons enabled on the admin view. These buttons are on the about, expo, blog, archive, and contact tabs. See our changelog for additional details and screenshots.
 
 ## Contributing
 
@@ -28,14 +42,28 @@ TODO: Write credits
 
 ## License
 
-TODO: Write license
+MIT License
 
+Copyright (c) 2017 KSPC
 
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-# README
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-### kspc.org
-Migrating to Ruby on Rails
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
 
 # Changelog
 
