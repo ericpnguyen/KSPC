@@ -16,13 +16,13 @@ For troubleshooting:
 
 1. Mac Users only: MySQL install reference https://gist.github.com/nrollr/a8d156206fa1e53c6cd6 ImageMagik install reference http://stackoverflow.com/questions/7053996/how-do-i-install-imagemagick-with-homebrew
 
-2. 'secrets.yml' is not in the repo so if the error about 'secretkey in development ... missing' please add the file back in the local repo under `config`. You can recover it from this commit: https://github.com/shiftswitchy/KSPC/blob/a50e9ba564076fd525eab2c43076581181d8c538/config/secrets.yml
+2. The full `secrets.yml` is not in the repo so if the error about 'secretkey in development ... missing' please add the file back in the local repo under `config`. The current file should work, but if needed you can recover the old one from this commit: https://github.com/shiftswitchy/KSPC/blob/a50e9ba564076fd525eab2c43076581181d8c538/config/secrets.yml
 
-3. In 'database.yml' some of us have different socket path to mysql. I've seen that it will be one of the two '/var/run/mysqld/mysqld.sock' or '/tmp/mysql.sock' please change them accordingly if you get an error about 'socket path <PATHNAME> ... not found'. Also please don't set password in mysql, but if it has been set change it back to empty string.
+3. In `database.yml` some of us have different socket path to mysql. We've seen that it will be one of the two `/var/run/mysqld/mysqld.sock` or `/tmp/mysql.sock` please change them accordingly if you get an error about 'socket path <PATHNAME> ... not found'. Also please don't set password in mysql, but if it has been set change it back to empty string.
 
 ## Usage
 
-Once on the website, you may create an admin account under localhost:3000/admin. Login and begin editing content with the different green buttons enabled on the admin view. These buttons are on the about, expo, blog, archive, and contact tabs. See our changelog for additional details and screenshots.
+Once on the website, you may create an admin account under localhost:3000/admin. Login and begin editing content with the different green buttons enabled on the admin view. These buttons are on the about, expo, blog, archive, and contact tabs. See our changelog in History for additional details and screenshots.
 
 ## Contributing
 
@@ -33,39 +33,6 @@ Once on the website, you may create an admin account under localhost:3000/admin.
 5. Submit a pull request :D
 
 ## History
-
-TODO: Write history
-
-## Credits
-
-TODO: Write credits
-
-## License
-
-MIT License
-
-Copyright (c) 2017 KSPC
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-
-# Changelog
 
 ### Tina, 4/17 - Dynamic Home Page, also it's hosted on the remote server (Heroku)! See here:
 
@@ -115,19 +82,49 @@ Only thing that's a little off is that the real URL for the admin page is /mains
 The About and Expo pages contain general info, but we do not want that info to be static. Now you can use a rich text editor (tinymce used by Evernote, LinkedIn, WordPress, and more) to edit the content through our front-end. Admin privileges will be added later.
 ![screen 3/5](https://cloud.githubusercontent.com/assets/5604374/23595793/8c201926-01d9-11e7-8c11-b9ab6fd9d82a.png)
 
-Read Cha's update for solving errors. My change on master reverted #2 to work for mac. Windows developers need to change it back.
-
 ### Cha, 3/5 - Add contact page and fix homepage
 Fix homepage to work with bootstrap 4 format, and create new database for contact page.
 
-Changes that may cause errors
-
-1. 'secrets.yml' is not pushed (in gitignore) so if the error about 'secretkey in development ... missing' please add the file back in the local repo.
-
-2. In 'database.yml' some of us have different socket path to mysql. I've seen that it will be one of the two '/var/run/mysqld/mysqld.sock' or '/tmp/mysql.sock' please change them accordingly if you get an error about 'socket path <PATHNAME> ... not found'. Also please don't set
-password in mysql, but if it has been set change it back to empty string.
-
-3. 'rake db:migrate' or 'rake db:create' may need to be run if there is an error like 'database <DATABASE_NAME> not found'.
-
 ### Gus, 2/25 - Created archive controller/model
 The archive page now has it's own controller for the CSS, html, etc. It can now be developed somewhat independently of the rest of the page. To accompany this new controller, I also created a new model (like a class) for an archive. This model has a title field and a file attachment via PaperClip. Currently it just supports images, but other file types can be added via archive.rb. Most of the code for the archive page currently resides in archives/new.html.erb, archives/index.html.erb, archive.rb, and archives_controller.rb
+
+## Credits
+
+Website developed by [Judy Lin](https://github.com/jurdz), [Eric Nguyen](https://github.com/shiftswitchy), [Natchanon Suaysom](https://github.com/nsuaysom), and [Christina Zhu](https://github.com/zhutineer).
+
+Archive developed by [Gus Callaway](https://github.com/gustebeast), [Matthew Gee](https://github.com/0ffkilter), [Daniel Sonner](https://github.com/danielsonner), and [Reiko Tojo](https://github.com/hmc-cs-rtojo).
+
+With help from several guides including:
+- Ruby on Rails: http://guides.rubyonrails.org/
+- Bootstrap: https://github.com/twbs/bootstrap-rubygem
+- MySQL: https://rubygems.org/gems/mysql/versions/2.9.1
+- Tinymce Gem/Plugin: https://github.com/spohlenz/tinymce-rails, https://www.tinymce.com/docs/
+- Paperclip Gem: https://github.com/thoughtbot/paperclip
+- Devise Gem: https://github.com/plataformatec/devise
+- Disqus Plugin: https://disqus.com/api/docs/
+- Spinitron Plugin: https://spinitron.com/doc/special-topics/web-integration/
+- Twitter Plugin: https://dev.twitter.com/web/overview
+
+## License
+
+MIT License
+
+Copyright (c) 2017 KSPC
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
