@@ -1,4 +1,4 @@
-# Project Name
+# KSPC Aesthetics/Archive
 
 TODO: Write a project description
 
