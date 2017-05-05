@@ -4,11 +4,16 @@ Our website provides the user with information on events related to KSPC, the on
 
 ## Installation
 
+Install imagemagick:
+brew install imagemagick
+
 Ensure you have MySQL server running and ImageMagik on your machine. Now run the following commands:
+If you get a socket error it is probable the MySQL server is not running.
 
 `bundle install`
 
-`rake db:migrate`
+To create the database:
+`rake db:reset`
 
 `rails s `
 
@@ -18,7 +23,7 @@ For troubleshooting:
 
 2. The full `secrets.yml` is not in the repo so if the error about 'secretkey in development ... missing' please add the file back in the local repo under `config`. The current file should work, but if needed you can recover the old one from this commit: https://github.com/shiftswitchy/KSPC/blob/a50e9ba564076fd525eab2c43076581181d8c538/config/secrets.yml
 
-3. In `database.yml` some of us have different socket path to mysql. We've seen that it will be one of the two `/var/run/mysqld/mysqld.sock` or `/tmp/mysql.sock` please change them accordingly if you get an error about 'socket path <PATHNAME> ... not found'. Also please don't set password in mysql, but if it has been set change it back to empty string.
+3. In `config/database.yml` some of us have different socket path to mysql. We've seen that it will be one of the two `/var/run/mysqld/mysqld.sock` or `/tmp/mysql.sock` please change them accordingly if you get an error about 'socket path <PATHNAME> ... not found'. Also please don't set password in mysql, but if it has been set change it back to empty string.
 
 ## Usage
 
