@@ -23,12 +23,12 @@ For troubleshooting:
 
 2. The MySQL socket path is found in config/database.yml and defaults to /tmp/mysql.sock .  If you are getting a socket error with MySQL running check the socket path in /etc/mysql/my.cnf and edit the socket path in config/database.yml if necessary.  
 
-3. If you get an error message regarding secret_key_base you can generate the secret with ''''rake secret'''' and export it to config/secrets.yml with the format
+3. If you get an error message regarding secret_key_base you can generate the secret with ```rake secret``` and export it to config/secrets.yml with the format
 
-''''
+```
 development:
   secret_key_base: <secret_here>
-''''
+```
 
 ## Usage
 
