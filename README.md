@@ -21,9 +21,7 @@ For troubleshooting:
 
 1. Mac Users only: MySQL install reference https://gist.github.com/nrollr/a8d156206fa1e53c6cd6 ImageMagik install reference http://stackoverflow.com/questions/7053996/how-do-i-install-imagemagick-with-homebrew
 
-2. The full `secrets.yml` is not in the repo so if the error about 'secretkey in development ... missing' please add the file back in the local repo under `config`. The current file should work, but if needed you can recover the old one from this commit: https://github.com/shiftswitchy/KSPC/blob/a50e9ba564076fd525eab2c43076581181d8c538/config/secrets.yml
-
-3. In `config/database.yml` some of us have different socket path to mysql. We've seen that it will be one of the two `/var/run/mysqld/mysqld.sock` or `/tmp/mysql.sock` please change them accordingly if you get an error about 'socket path <PATHNAME> ... not found'. Also please don't set password in mysql, but if it has been set change it back to empty string.
+2. In `config/database.yml` some of us have different socket path to mysql. We've seen that it will be one of the two `/var/run/mysqld/mysqld.sock` or `/tmp/mysql.sock` please change them accordingly if you get an error about 'socket path <PATHNAME> ... not found'. Also please don't set password in mysql, but if it has been set change it back to empty string.
 
 ## Usage
 
