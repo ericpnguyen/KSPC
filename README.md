@@ -21,7 +21,14 @@ For troubleshooting:
 
 1. Mac Users only: MySQL install reference https://gist.github.com/nrollr/a8d156206fa1e53c6cd6 ImageMagik install reference http://stackoverflow.com/questions/7053996/how-do-i-install-imagemagick-with-homebrew
 
-2. In `config/database.yml` some of us have different socket path to mysql. We've seen that it will be one of the two `/var/run/mysqld/mysqld.sock` or `/tmp/mysql.sock` please change them accordingly if you get an error about 'socket path <PATHNAME> ... not found'. Also please don't set password in mysql, but if it has been set change it back to empty string.
+2. The MySQL socket path is found in config/database.yml and defaults to /tmp/mysql.sock .  If you are getting a socket error with MySQL running check the socket path in /etc/mysql/my.cnf and edit the socket path in config/database.yml if necessary.  
+
+3. If you get an error message regarding secret_key_base you can generate the secret with ''''rake secret'''' and export it to config/secrets.yml with the format
+
+''''
+development:
+  secret_key_base: <secret_here>
+''''
 
 ## Usage
 
