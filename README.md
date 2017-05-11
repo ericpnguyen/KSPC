@@ -5,9 +5,10 @@ Our website provides the user with information on events related to KSPC, the on
 ## Installation
 
 Install imagemagick:
-brew install imagemagick
+`brew install imagemagick`
 
 Ensure you have MySQL server running and ImageMagik on your machine. Now run the following commands:
+
 If you get a socket error it is probable the MySQL server is not running.
 
 `bundle install`
@@ -17,7 +18,7 @@ To create the database:
 
 `rails s `
 
-For troubleshooting:
+Troubleshooting:
 
 1. Mac Users only: MySQL install reference https://gist.github.com/nrollr/a8d156206fa1e53c6cd6 ImageMagik install reference http://stackoverflow.com/questions/7053996/how-do-i-install-imagemagick-with-homebrew
 
@@ -33,6 +34,13 @@ development:
 ## Usage
 
 Once on the website, you may create an admin account under localhost:3000/admin. Login and begin editing content with the different green buttons enabled on the admin view. These buttons are on the about, expo, blog, archive, and contact tabs. See our changelog in History for additional details and screenshots.
+
+## Known Limitations
+
+- Not all content is editable. For example, the homepage banner photo and the website footer are static. However, every other tab should have editing features.
+- Blog searching and organizing interface is imeplemented without backend support, so there is no functionality in the blog side bar.
+- Whenever we push a new site version to Heroku, we lose media that was uploaded to the previous live version. We have not found a solution for this problem
+- The WordPress migration does not adapt well to our project. We have made efforts to store kspc's old large image files externally among a couple solutions. The migration is still not ready for production.
 
 ## Contributing
 
